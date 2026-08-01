@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#04122a"/><stop offset="1" stop-color="#07183a"/></linearGradient>
+    <radialGradient id="rg" cx="40%" cy="30%"><stop offset="0" stop-color="#f472b6" stop-opacity="0.12"/><stop offset="1" stop-color="#000814" stop-opacity="0"/></radialGradient>
+    <filter id="gbl"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <rect x="92" y="72" width="1416" height="756" rx="26" fill="url(#rg)"/>
+  <g filter="url(#gbl)">
+    <g transform="translate(160,160)">
+      <rect x="0" y="0" width="420" height="360" rx="16" fill="#03243f"/>
+      <g transform="translate(48,36)" fill="#f472b6" opacity="0.95">
+        <circle cx="80" cy="80" r="48"/>
+        <path d="M200 40 L260 80 L200 120 L200 40" fill="#ff9" opacity="0.9"/>
+      </g>
+    </g>
+    <g transform="translate(640,160)">
+      <rect x="0" y="0" width="760" height="420" rx="18" fill="#042a45"/>
+      <g transform="translate(44,40)" fill="#7ff">
+        <rect x="0" y="0" width="220" height="220" rx="12"/>
+        <rect x="260" y="20" width="360" height="240" rx="12"/>
+      </g>
+    </g>
+  </g>
+  <text x="120" y="820" fill="#7ef" font-family="Inter, Arial" font-size="28">Graphic Design</text>
+</svg>
