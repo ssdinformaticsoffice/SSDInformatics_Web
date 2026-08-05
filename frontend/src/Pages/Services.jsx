@@ -132,10 +132,10 @@ const Services = () => {
   return (
     <section
       ref={containerRef}
-      className="py-20 overflow-hidden relative"
+      className="py-16 sm:py-20 overflow-hidden relative bg-[#020617]"
       style={{
-        background:
-          "linear-gradient(135deg, #03112F 0%, #061F4A 25%, #082C6C 50%, #0B3C91 75%, #0B3C91 100%)",
+        backgroundImage:
+          "radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.12) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 45%), linear-gradient(to bottom, #020617 0%, #050b18 50%, #030712 100%)",
       }}
     >
       {/* Subtle grid overlay */}
@@ -153,7 +153,7 @@ const Services = () => {
       {/* Radial glow effects */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#0B3C91]/20 rounded-full blur-3xl"
+          className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-3xl"
           animate={{
             x: [0, 30, 0],
             y: [0, -30, 0],
@@ -165,7 +165,7 @@ const Services = () => {
           }}
         />
         <motion.div
-          className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-[#2563EB]/10 rounded-full blur-3xl"
+          className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-3xl"
           animate={{
             x: [0, -30, 0],
             y: [0, 30, 0],
@@ -177,7 +177,7 @@ const Services = () => {
           }}
         />
         <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#082C6C]/30 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900/15 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -188,12 +188,12 @@ const Services = () => {
             ease: "easeInOut",
           }}
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-[#0B3C91]/5 to-[#03112F]/20" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-blue-950/5 to-slate-950/30" />
       </div>
 
       {/* Hero Section */}
-      <div className="relative max-w-7xl mx-auto px-6 z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -205,10 +205,10 @@ const Services = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 mb-6"
             >
-              <Sparkles size={16} className="text-[#60A5FA]" />
-              <span className="text-sm font-semibold text-[#60A5FA] tracking-wider">
+              <Sparkles size={16} className="text-blue-400" />
+              <span className="text-sm font-semibold text-blue-400 tracking-wider">
                 OUR SERVICES
               </span>
             </motion.div>
@@ -217,11 +217,11 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight break-words"
             >
               <span className="text-white">Digital Solutions</span>
               <br />
-              <span className="bg-gradient-to-r from-[#60A5FA] via-[#93BBFC] to-[#2563EB] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-blue-300 to-indigo-500 bg-clip-text text-transparent">
                 For Your Growth
               </span>
             </motion.h1>
@@ -230,7 +230,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="mt-6 text-lg text-blue-100/80 leading-relaxed max-w-lg"
+              className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-lg"
             >
               Transform your business with cutting-edge technology solutions. We
               deliver innovation that drives results and accelerates your
@@ -241,12 +241,12 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="mt-10 flex flex-wrap gap-4"
+              className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-4"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group px-8 py-4 bg-gradient-to-r from-[#0B3C91] to-[#2563EB] text-white rounded-full font-semibold hover:shadow-lg hover:shadow-[#0B3C91]/40 flex items-center gap-2 transition-all"
+                className="group min-h-12 w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/40 flex items-center justify-center gap-2 transition-all"
               >
                 Explore Services
                 <ArrowRight
@@ -258,7 +258,7 @@ const Services = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+                className="min-h-12 w-full sm:w-auto px-8 py-4 bg-slate-900/45 backdrop-blur-sm text-white rounded-full font-semibold border border-blue-500/20 hover:bg-slate-800/60 hover:border-blue-400/50 transition-all flex items-center justify-center gap-2"
               >
                 <Play size={20} />
                 Get Quote
@@ -279,7 +279,7 @@ const Services = () => {
             >
               {/* Main blob */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-[#2563EB]/30 via-[#0B3C91]/40 to-[#061F4A]/30 rounded-full blur-2xl"
+                className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-blue-800/10 to-indigo-950/30 rounded-full blur-2xl"
                 animate={{
                   scale: [1, 1.1, 1],
                   rotate: [0, 10, 0],
@@ -308,14 +308,14 @@ const Services = () => {
                 }}
               >
                 <div className="relative">
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-[#0B3C91] to-[#061F4A] flex items-center justify-center shadow-2xl shadow-[#0B3C91]/50 border border-white/10">
-                    <div className="w-40 h-40 rounded-full bg-white/5 backdrop-blur-sm flex items-center justify-center border border-white/10">
-                      <Code2 size={80} className="text-white" />
+                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-blue-900/40 to-slate-950/60 flex items-center justify-center shadow-2xl shadow-blue-500/10 border border-blue-500/20">
+                    <div className="w-40 h-40 rounded-full bg-slate-950/40 backdrop-blur-sm flex items-center justify-center border border-blue-500/10">
+                      <Code2 size={80} className="text-blue-400" />
                     </div>
                   </div>
                   {/* Orbiting rings */}
                   <motion.div
-                    className="absolute inset-0 rounded-full border-2 border-[#2563EB]/30"
+                    className="absolute inset-0 rounded-full border-2 border-blue-500/20"
                     animate={{ rotate: 360 }}
                     transition={{
                       duration: 20,
@@ -325,7 +325,7 @@ const Services = () => {
                     style={{ width: 300, height: 300, top: -75, left: -75 }}
                   />
                   <motion.div
-                    className="absolute inset-0 rounded-full border-2 border-[#60A5FA]/20"
+                    className="absolute inset-0 rounded-full border-2 border-indigo-500/10"
                     animate={{ rotate: -360 }}
                     transition={{
                       duration: 15,
@@ -354,29 +354,29 @@ const Services = () => {
         </div>
 
         {/* Services Section Header */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-center mt-32 relative z-10"
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mt-20 sm:mt-24 lg:mt-32 relative z-10"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4">
-            <Sparkles size={16} className="text-[#60A5FA]" />
-            <span className="text-sm font-semibold text-[#60A5FA] tracking-wider">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 mb-4">
+            <Sparkles size={16} className="text-blue-400" />
+            <span className="text-sm font-semibold text-blue-400 tracking-wider">
               OUR SERVICES
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
             We Provide Best Digital Services
           </h2>
-          <p className="mt-4 text-blue-100/80 max-w-2xl mx-auto text-lg">
+          <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg">
             Comprehensive digital solutions tailored to your business needs,
             delivered with excellence and innovation.
           </p>
         </motion.div>
 
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 relative z-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-12 sm:mt-16 relative z-10">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -392,30 +392,30 @@ const Services = () => {
                 ease: "easeOut",
                 delay: index * 0.08,
               }}
-              className="relative group bg-white/5 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-[#0B3C91]/30 transition-all duration-500 border border-white/10 hover:border-white/20"
+              className="relative group bg-slate-950/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 border border-blue-500/10 hover:border-blue-400/30"
             >
               {/* Animated Border */}
               <div className="absolute inset-0 rounded-3xl pointer-events-none">
                 <motion.span
-                  className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-[#2563EB] to-[#60A5FA]"
+                  className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-blue-600 to-blue-400"
                   initial={{ width: 0 }}
                   whileHover={{ width: "100%" }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 />
                 <motion.span
-                  className="absolute top-0 right-0 w-[2px] bg-gradient-to-b from-[#2563EB] to-[#60A5FA]"
+                  className="absolute top-0 right-0 w-[2px] bg-gradient-to-b from-blue-600 to-blue-400"
                   initial={{ height: 0 }}
                   whileHover={{ height: "100%" }}
                   transition={{ duration: 0.3, delay: 0.3, ease: "easeOut" }}
                 />
                 <motion.span
-                  className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-[#2563EB] to-[#60A5FA]"
+                  className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-blue-600 to-blue-400"
                   initial={{ width: 0 }}
                   whileHover={{ width: "100%" }}
                   transition={{ duration: 0.3, delay: 0.6, ease: "easeOut" }}
                 />
                 <motion.span
-                  className="absolute bottom-0 left-0 w-[2px] bg-gradient-to-t from-[#2563EB] to-[#60A5FA]"
+                  className="absolute bottom-0 left-0 w-[2px] bg-gradient-to-t from-blue-600 to-blue-400"
                   initial={{ height: 0 }}
                   whileHover={{ height: "100%" }}
                   transition={{ duration: 0.3, delay: 0.9, ease: "easeOut" }}
@@ -423,11 +423,11 @@ const Services = () => {
               </div>
 
               {/* Glow effect on hover */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#2563EB]/0 to-[#0B3C91]/0 group-hover:from-[#2563EB]/10 group-hover:to-[#0B3C91]/20 transition-all duration-500 pointer-events-none" />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:to-indigo-500/10 transition-all duration-500 pointer-events-none" />
 
               {/* Icon */}
               <motion.div
-                className="w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#0B3C91]/30 to-[#061F4A]/30 text-[#60A5FA] group-hover:bg-gradient-to-br group-hover:from-[#0B3C91] group-hover:to-[#061F4A] group-hover:text-white transition-all duration-500 border border-white/10 group-hover:border-transparent"
+                className="w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-blue-900/30 to-indigo-950/30 text-blue-400 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-indigo-650 group-hover:text-white transition-all duration-500 border border-blue-500/10 group-hover:border-transparent"
                 whileHover={{
                   rotate: 6,
                   scale: 1.1,
@@ -438,22 +438,22 @@ const Services = () => {
               </motion.div>
 
               {/* Content */}
-              <h3 className="mt-6 text-xl font-bold text-white group-hover:text-[#60A5FA] transition-colors duration-300">
+              <h3 className="mt-6 text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
                 {service.title}
               </h3>
 
-              <p className="mt-3 text-blue-100/70 leading-relaxed group-hover:text-blue-100/90 transition-colors duration-300">
+              <p className="mt-3 text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
                 {service.description}
               </p>
 
               {/* Learn More Button */}
               <Link
                 to={`/services/${service.slug}`}
-                className="inline-flex items-center gap-2 mt-6 text-[#60A5FA] font-semibold group/link relative"
+                className="inline-flex items-center gap-2 mt-6 text-blue-400 font-semibold group/link relative"
               >
                 <span className="relative">
                   Learn More
-                  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#60A5FA] group-hover/link:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-400 group-hover/link:w-full transition-all duration-300" />
                 </span>
                 <motion.span
                   className="inline-block"
@@ -472,3 +472,4 @@ const Services = () => {
 };
 
 export default Services;
+

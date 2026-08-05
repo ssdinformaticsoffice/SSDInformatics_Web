@@ -1,4 +1,4 @@
-﻿import {
+import {
   Smartphone,
   Code2,
   Globe,
@@ -32,6 +32,9 @@
   PenTool,
   Play,
   Palette,
+  Briefcase,
+  Award,
+  TrendingUp,
 } from "lucide-react";
 
 export const servicesData = {
@@ -43,15 +46,27 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "MOBILE APP DEVELOPMENT",
+    heroTitle: {
+      before: "We Build Powerful",
+      highlight: "Mobile Apps",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 150, suffix: "+", label: "Apps Delivered" },
+      { icon: Users, numericValue: 200, suffix: "+", label: "Happy Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+    ],
     featuresTitle: "Powerful Mobile App Features",
     processTitle: "Our App Development Journey",
     techTitle: "Latest Mobile Technologies",
     industryTitle: "Mobile Solutions For Every Business",
+    whyChooseTitle: "Your Trusted Mobile App Partner",
     title: "Mobile App Development",
     subtitle: "SSD Informatics",
     description:
       "We build powerful Android and iOS applications with modern technologies.",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80",
+    image: "/images/services/hero_mobile_app_development.png",
     overview: {
       title: "Crafting Mobile Experiences That Matter",
       description:
@@ -134,18 +149,31 @@ export const servicesData = {
     trustedText: "Trusted by 200+ businesses",
     rating: "★★★★★",
     heroButtons: {
-      primary: "Get Free Quote",
+      primary: "Explore Services",
       secondary: "Contact Us",
     },
+    heroTagline: "BUILDING DIGITAL FUTURES",
+    heroTitle: {
+      before: "We Transform Ideas",
+      middle: "Into",
+      highlight: "Digital Solutions",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 50, suffix: "+", label: "Projects Delivered" },
+      { icon: Users, numericValue: 30, suffix: "+", label: "Happy Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+    ],
     featuresTitle: "Web Development Features",
     processTitle: "Our Website Development Process",
     techTitle: "Web Technologies We Use",
     industryTitle: "Web Solutions For Every Industry",
+    whyChooseTitle: "Your Trusted Web Development Partner",
     title: "Website Development",
     subtitle: "SSD Informatics",
     description:
       "We build fast, responsive, and scalable websites that help brands thrive online.",
-    image: "https://images.unsplash.com/photo-1499955085172-a104c9463ece?w=900&q=80",
+    image: "/images/services/hero_website_development.png",
     overview: {
       title: "Building Powerful Digital Experiences",
       description:
@@ -226,15 +254,27 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "DESIGN EXCELLENCE",
+    heroTitle: {
+      before: "We Craft Beautiful",
+      highlight: "User Experiences",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 80, suffix: "+", label: "Projects Completed" },
+      { icon: Users, numericValue: 100, suffix: "+", label: "Happy Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+    ],
     featuresTitle: "Interactive UX & Visual Design Features",
     processTitle: "Design Process That Drives Engagement",
     techTitle: "Design Tools We Use",
     industryTitle: "Design Solutions For Every Brand",
+    whyChooseTitle: "Your Trusted UI/UX Design Partner",
     title: "UI / UX Design",
     subtitle: "SSD Informatics",
     description:
       "We design intuitive user interfaces and seamless experiences that make every interaction delightful.",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=80",
+    image: "/images/services/hero_uiux_design.png",
     overview: {
       title: "Creating Beautiful and Usable Interfaces",
       description:
@@ -315,15 +355,27 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "ENTERPRISE SOLUTIONS",
+    heroTitle: {
+      before: "We Automate Your",
+      highlight: "Business Operations",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 50, suffix: "+", label: "ERP Deployments" },
+      { icon: Users, numericValue: 40, suffix: "+", label: "Happy Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+    ],
     featuresTitle: "ERP System Capabilities",
     processTitle: "Our ERP Implementation Process",
     techTitle: "ERP Technologies",
     industryTitle: "ERP Across Industries",
+    whyChooseTitle: "Your Trusted ERP Solutions Partner",
     title: "ERP Software Solutions",
     subtitle: "SSD Informatics",
     description:
       "We deliver custom ERP solutions that automate operations, improve visibility, and streamline processes.",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80",
+    image: "/images/services/hero_erp_software.png",
     overview: {
       title: "Transforming Business Operations with ERP",
       description:
@@ -404,10 +456,22 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "SEARCH ENGINE OPTIMIZATION",
+    heroTitle: {
+      before: "We Boost Your",
+      highlight: "Search Rankings",
+    },
+    heroStats: [
+      { icon: Search, numericValue: 300, suffix: "+", label: "Keywords Ranked" },
+      { icon: Users, numericValue: 180, suffix: "+", label: "Clients Helped" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 60, suffix: "%", label: "Avg Traffic Growth" },
+    ],
     featuresTitle: "SEO Growth Features",
     processTitle: "SEO Strategy Process",
     techTitle: "SEO Tools and Platforms",
     industryTitle: "SEO For Every Market",
+    whyChooseTitle: "Your Trusted SEO Partner",
     title: "SEO Optimization",
     subtitle: "SSD Informatics",
     description:
@@ -493,10 +557,22 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "PAID ADVERTISING",
+    heroTitle: {
+      before: "We Drive Results With",
+      highlight: "Google Ads",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 120, suffix: "+", label: "Campaigns Managed" },
+      { icon: Users, numericValue: 60, suffix: "+", label: "Happy Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 95, suffix: "%", label: "Client Satisfaction" },
+    ],
     featuresTitle: "Google Ads Features",
     processTitle: "Paid Search Campaign Process",
     techTitle: "Ad Platforms and Tools",
     industryTitle: "Ads for Every Business",
+    whyChooseTitle: "Your Trusted Google Ads Partner",
     title: "Google Ads",
     subtitle: "SSD Informatics",
     description:
@@ -582,10 +658,22 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "SOCIAL MEDIA ADVERTISING",
+    heroTitle: {
+      before: "We Scale Brands With",
+      highlight: "Meta Ads",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 150, suffix: "+", label: "Social Campaigns" },
+      { icon: Users, numericValue: 70, suffix: "+", label: "Happy Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 96, suffix: "%", label: "Client Satisfaction" },
+    ],
     featuresTitle: "Meta Ads Features",
     processTitle: "Social Ad Campaign Process",
     techTitle: "Ad Platforms We Use",
     industryTitle: "Meta Ads for Every Brand",
+    whyChooseTitle: "Your Trusted Meta Ads Partner",
     title: "Meta Ads",
     subtitle: "SSD Informatics",
     description:
@@ -671,10 +759,22 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "CREATIVE DESIGN",
+    heroTitle: {
+      before: "We Design Stunning",
+      highlight: "Brand Identities",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 300, suffix: "+", label: "Designs Delivered" },
+      { icon: Users, numericValue: 250, suffix: "+", label: "Satisfied Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+    ],
     featuresTitle: "Graphic Design Features",
     processTitle: "Design Creation Process",
     techTitle: "Design Tools We Use",
     industryTitle: "Creative Solutions For Every Brand",
+    whyChooseTitle: "Your Trusted Graphic Design Partner",
     title: "Graphic Design",
     subtitle: "SSD Informatics",
     description:
@@ -760,10 +860,22 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "VIDEO PRODUCTION",
+    heroTitle: {
+      before: "We Create Compelling",
+      highlight: "Video Stories",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 220, suffix: "+", label: "Videos Edited" },
+      { icon: Users, numericValue: 80, suffix: "+", label: "Happy Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+    ],
     featuresTitle: "Video Editing Features",
     processTitle: "Video Production Process",
     techTitle: "Editing Tools We Use",
     industryTitle: "Video Services For Every Channel",
+    whyChooseTitle: "Your Trusted Video Production Partner",
     title: "Video Editing",
     subtitle: "SSD Informatics",
     description:
@@ -849,10 +961,22 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "DIGITAL GROWTH",
+    heroTitle: {
+      before: "We Grow Your Business",
+      highlight: "Digitally",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 220, suffix: "+", label: "Campaigns Launched" },
+      { icon: Users, numericValue: 150, suffix: "+", label: "Happy Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 95, suffix: "%", label: "Client Retention" },
+    ],
     featuresTitle: "Digital Marketing Features",
     processTitle: "Our Digital Marketing Process",
     techTitle: "Marketing Platforms We Use",
     industryTitle: "Digital Growth For Every Industry",
+    whyChooseTitle: "Your Trusted Digital Marketing Partner",
     title: "Digital Marketing",
     subtitle: "SSD Informatics",
     description:
@@ -938,15 +1062,27 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "MERN STACK DEVELOPMENT",
+    heroTitle: {
+      before: "We Build Scalable",
+      highlight: "Software Solutions",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 140, suffix: "+", label: "Software Projects" },
+      { icon: Users, numericValue: 60, suffix: "+", label: "Happy Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+    ],
     featuresTitle: "Software Development Features",
     processTitle: "Our Software Delivery Process",
     techTitle: "Software Technologies We Use",
     industryTitle: "Custom Software for Every Business",
+    whyChooseTitle: "Your Trusted Software Development Partner",
     title: "Software Development",
     subtitle: "SSD Informatics",
     description:
       "We build custom software systems that streamline operations, improve productivity, and support business growth.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80",
+    image: "/images/services/hero_mern_stack.png",
     overview: {
       title: "Custom Software That Solves Real Business Problems",
       description:
@@ -1027,15 +1163,27 @@ export const servicesData = {
       primary: "Get Free Quote",
       secondary: "Contact Us",
     },
+    heroTagline: "CLOUD INFRASTRUCTURE",
+    heroTitle: {
+      before: "We Power Your Business",
+      highlight: "On The Cloud",
+    },
+    heroStats: [
+      { icon: Briefcase, numericValue: 50, suffix: "+", label: "Cloud Deployments" },
+      { icon: Users, numericValue: 40, suffix: "+", label: "Happy Clients" },
+      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
+      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Uptime Guaranteed" },
+    ],
     featuresTitle: "Cloud Solution Features",
     processTitle: "Cloud Service Delivery Process",
     techTitle: "Cloud Technologies We Use",
     industryTitle: "Cloud Solutions for Every Industry",
+    whyChooseTitle: "Your Trusted Cloud Solutions Partner",
     title: "Cloud Solutions",
     subtitle: "SSD Informatics",
     description:
       "We design, deploy, and manage cloud infrastructures that deliver scalability, security, and operational efficiency.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&q=80",
+    image: "/images/services/hero_cloud_solutions.png",
     overview: {
       title: "Cloud Infrastructure Built for Growth",
       description:
