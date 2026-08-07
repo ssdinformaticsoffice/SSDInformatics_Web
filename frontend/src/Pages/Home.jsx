@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Hero from "../components/home/Hero";
+
 import AboutPreview from "../components/home/AboutPreview";
 import ServicesPreview from "../components/home/ServicesPreview";
 import WhyChooseUs from "../components/home/WhyChooseUs";
@@ -9,6 +9,7 @@ import PortfolioPreview from "../components/home/PortfolioPreview";
 import Stats from "../components/home/Stats";
 import Testimonials from "../components/home/Testimonials";
 import CTA from "../components/home/CTA";
+import HomePage from "./homePage";
 
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
@@ -27,20 +28,28 @@ const Home = () => {
   }, []);
 
   if (!homeData) {
-    return <h2>Loading...</h2>;
-  }
-
-  return (
-    <>
-      <Hero data={homeData} />
+    return (
+    
+      <>
+        <HomePage />
+        
       <AboutPreview/>
-       <ServicesPreview/>
+      <ServicesPreview/>
        <WhyChooseUs/>
        <Process/>
        <PortfolioPreview/>
        <Stats/>
        <Testimonials/>
        <CTA/>
+      </>
+    );
+  }
+
+  return (
+    <>
+      
+      
+       
     </>
   );
 };

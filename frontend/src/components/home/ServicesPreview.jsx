@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   Globe,
@@ -44,58 +45,154 @@ const services = [
 
 const ServicesPreview = () => {
   return (
-    <section className="bg-slate-900 py-16 sm:py-20 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+   <section className="relative overflow-hidden bg-slate-950 py-20 lg:py-28">
 
-        <div className="text-center">
+  {/* Background Glow */}
 
-          <span className="text-blue-400 font-semibold uppercase tracking-widest">
-            Our Services
-          </span>
+  <div className="absolute -top-32 left-0 h-96 w-96 rounded-full bg-blue-600/10 blur-[140px]" />
 
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3">
-            What We Offer
-          </h2>
+  <div className="absolute bottom-0 right-0 h-[420px] w-[420px] rounded-full bg-cyan-500/10 blur-[160px]" />
 
-          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
-            We provide complete IT solutions to help businesses grow with
-            modern technology and digital innovation.
-          </p>
+  {/* Grid */}
 
-        </div>
+  <div className="absolute inset-0 opacity-10">
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-12 sm:mt-14">
+    <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:70px_70px]" />
 
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-slate-800 border border-slate-700 rounded-2xl p-6 sm:p-8 hover:border-blue-500 transition duration-300 group"
-            >
-              <div className="text-blue-400 mb-6 group-hover:scale-110 transition">
-                {service.icon}
-              </div>
+  </div>
 
-              <h3 className="text-xl sm:text-2xl font-semibold text-white">
-                {service.title}
-              </h3>
+  <div className="relative max-w-7xl mx-auto px-6">
 
-              <p className="text-slate-400 mt-4 leading-7">
-                {service.description}
-              </p>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: .8 }}
+      className="text-center"
+    >
 
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 mt-6 text-blue-400 hover:text-blue-300"
-              >
-                Learn More
-                <ArrowRight size={18} />
-              </Link>
-            </div>
-          ))}
+      <span className="text-blue-400 font-semibold uppercase tracking-[6px]">
+        Our Services
+      </span>
 
-        </div>
+      <h2 className="mt-5 text-4xl lg:text-5xl font-bold text-white">
+        What We Offer
+      </h2>
+
+      <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-slate-400">
+        We provide complete IT solutions to help businesses grow with
+        modern technology and digital innovation.
+      </p>
+
+    </motion.div>
+
+    <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+  {services.map((service, index) => (
+
+    <motion.div
+
+      key={index}
+
+      initial={{ opacity: 0, y: 60 }}
+
+      whileInView={{ opacity: 1, y: 0 }}
+
+      transition={{ delay: index * .15 }}
+
+      viewport={{ once: true }}
+
+      whileHover={{
+        y: -12,
+      }}
+
+      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8"
+
+    >
+
+      {/* Glow */}
+
+      <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-500/10 blur-3xl opacity-0 transition duration-500 group-hover:opacity-100" />
+
+      {/* Icon */}
+
+      <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/20 text-blue-400 transition group-hover:scale-110 group-hover:rotate-6">
+
+        {service.icon}
+
       </div>
-    </section>
+
+      <h3 className="text-2xl font-semibold text-white">
+
+        {service.title}
+
+      </h3>
+
+      <p className="mt-5 leading-8 text-slate-400">
+
+        {service.description}
+
+      </p>
+
+      <Link
+
+        to="/services"
+
+        className="mt-8 inline-flex items-center gap-3 font-medium text-blue-400"
+
+      >
+
+        Learn More
+
+        <ArrowRight
+          size={18}
+          className="transition group-hover:translate-x-2"
+        />
+
+      </Link>
+
+    </motion.div>
+
+  ))}
+
+</div>
+<motion.div
+
+initial={{ opacity: 0 }}
+
+whileInView={{ opacity: 1 }}
+
+viewport={{ once: true }}
+
+className="mt-20 flex justify-center"
+
+>
+
+<Link
+
+to="/services"
+
+className="group rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-10 py-4 font-semibold text-white shadow-[0_0_30px_rgba(59,130,246,.3)] transition hover:scale-105"
+
+>
+
+Explore All Services
+
+<ArrowRight
+
+size={18}
+
+className="ml-3 inline transition group-hover:translate-x-2"
+
+/>
+
+</Link>
+
+</motion.div>
+
+</div>
+
+</section>
   );
 };
 
