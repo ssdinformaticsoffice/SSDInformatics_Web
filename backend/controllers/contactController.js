@@ -1,4 +1,5 @@
 import Contact from "../models/Contact.js";
+import Notification from "../models/Notification.js";
 
 // Create Contact Message
 export const createContact = async (req, res) => {
@@ -13,13 +14,19 @@ export const createContact = async (req, res) => {
       });
     }
 
-    // Save Message
+    // Save Contact
     const contact = await Contact.create({
       name,
       email,
       phone,
       subject,
       message,
+    });
+
+    // Save Notification
+    await Notification.create({
+      title: "New Contact Message",
+      message: `${name} sent a new inquiry.`,
     });
 
     res.status(201).json({

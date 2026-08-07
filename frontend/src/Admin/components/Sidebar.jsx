@@ -15,7 +15,7 @@ const Sidebar = () => {
   const menuItems = [
     {
       name: "Dashboard",
-      path: "/admin/dashboard",
+      path: "/admin",
       icon: LayoutDashboard,
     },
     {
@@ -48,21 +48,18 @@ const Sidebar = () => {
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("admin");
-
     navigate("/admin/login");
   };
 
   return (
-    <aside className="w-full lg:w-72 lg:min-h-screen bg-blue-900 text-white p-4 sm:p-6 flex-shrink-0">
+    <aside className="w-72 min-h-screen bg-blue-900 text-white p-6 flex flex-col">
       {/* Logo */}
-
-      <h1 className="text-xl sm:text-2xl font-bold mb-6 lg:mb-10">
+      <h1 className="text-2xl font-bold mb-10">
         SSD Informatics
       </h1>
 
       {/* Menu */}
-
-      <nav className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-3">
+      <nav className="flex flex-col gap-3">
         {menuItems.map((item, index) => {
           const Icon = item.icon;
 
@@ -71,26 +68,27 @@ const Sidebar = () => {
               key={index}
               to={item.path}
               className={({ isActive }) =>
-                `flex min-h-11 items-center gap-3 p-3 rounded-xl transition
-                  ${isActive ? "bg-blue-600" : "hover:bg-blue-800"}`
+                `flex items-center gap-3 p-3 rounded-xl transition-all duration-300 ${
+                  isActive
+                    ? "bg-blue-600 text-white"
+                    : "hover:bg-blue-800"
+                }`
               }
             >
-              <Icon size={20} className="flex-shrink-0" />
-
-              <span className="truncate">{item.name}</span>
+              <Icon size={20} />
+              <span>{item.name}</span>
             </NavLink>
           );
         })}
       </nav>
 
       {/* Logout */}
-
       <button
         onClick={logout}
-        className="flex min-h-11 items-center gap-3 mt-4 lg:mt-20 p-3 rounded-xl w-full hover:bg-red-600 transition"
+        className="mt-auto flex items-center gap-3 p-3 rounded-xl hover:bg-red-600 transition-all duration-300"
       >
-        <LogOut size={20} className="flex-shrink-0" />
-        Logout
+        <LogOut size={20} />
+        <span>Logout</span>
       </button>
     </aside>
   );

@@ -1,14 +1,9 @@
 import {
-  LayoutDashboard,
   FileText,
-  Settings,
   Users,
   MessageSquare,
-  LogOut,
   Briefcase,
 } from "lucide-react";
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
 
 const Dashboard = () => {
   const cards = [
@@ -35,52 +30,39 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-100 flex flex-col lg:flex-row">
-      <Sidebar />
+    <>
+      {/* Cards */}
+      <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
+        {cards.map((item, index) => {
+          const Icon = item.icon;
 
-      {/* Main Content */}
+          return (
+            <div
+              key={index}
+              className="bg-white p-5 sm:p-6 rounded-2xl shadow hover:shadow-xl transition"
+            >
+              <Icon className="text-blue-700 mb-4" size={35} />
 
-      <main className="flex-1 min-w-0 p-4 sm:p-6 lg:p-8">
-        {/* Topbar */}
+              <h3 className="text-gray-500">{item.title}</h3>
 
-        <Topbar />
+              <p className="text-3xl font-bold mt-2">{item.count}</p>
+            </div>
+          );
+        })}
+      </div>
 
-        {/* Cards */}
+      {/* Recent Activity */}
+      <div className="mt-8 sm:mt-10 bg-white rounded-2xl shadow p-5 sm:p-6">
+        <h3 className="text-xl font-bold mb-5">Recent Activity</h3>
 
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
-          {cards.map((item, index) => {
-            const Icon = item.icon;
-
-            return (
-              <div
-                key={index}
-                className="bg-white p-5 sm:p-6 rounded-2xl shadow hover:shadow-xl transition"
-              >
-                <Icon className="text-blue-700 mb-4" size={35} />
-
-                <h3 className="text-gray-500">{item.title}</h3>
-
-                <p className="text-3xl font-bold mt-2">{item.count}</p>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Recent Activity */}
-
-        <div className="mt-8 sm:mt-10 bg-white rounded-2xl shadow p-5 sm:p-6">
-          <h3 className="text-xl font-bold mb-5">Recent Activity</h3>
-
-          <ul className="space-y-3 text-gray-600">
-            <li>✔ New contact message received</li>
-            <li>✔ Service page updated</li>
-            <li>✔ About section modified</li>
-          </ul>
-        </div>
-      </main>
-    </div>
+        <ul className="space-y-3 text-gray-600">
+          <li>✔ New contact message received</li>
+          <li>✔ Service page updated</li>
+          <li>✔ About section modified</li>
+        </ul>
+      </div>
+    </>
   );
 };
 
 export default Dashboard;
-
