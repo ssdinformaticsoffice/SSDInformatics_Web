@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Settings = () => {
-
   const [settings, setSettings] = useState({
     companyName: "",
     websiteName: "",
@@ -12,118 +11,122 @@ const Settings = () => {
     facebook: "",
     instagram: "",
     linkedin: "",
-    footerText: ""
+    footerText: "",
   });
 
-
-  // get settings
+  // Get Settings
   const fetchSettings = async () => {
     try {
       const res = await axios.get(
         "http://localhost:5000/api/settings"
       );
 
-      if(res.data.data){
+      if (res.data.data) {
         setSettings(res.data.data);
       }
-
-    } catch(error){
+    } catch (error) {
       console.log(error);
     }
   };
 
-
-  useEffect(()=>{
+  useEffect(() => {
     fetchSettings();
-  },[]);
+  }, []);
 
-
-
-  const handleChange=(e)=>{
+  const handleChange = (e) => {
     setSettings({
       ...settings,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-
-
-  const handleSubmit=async(e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try{
-
+    try {
       await axios.post(
         "http://localhost:5000/api/settings",
         settings
       );
 
-      alert("Settings Updated");
-
-    }catch(error){
+      alert("Settings Updated Successfully");
+    } catch (error) {
       console.log(error);
     }
-
   };
 
-
-
   return (
-
-    <div className="p-4 sm:p-6 lg:p-8">
-
-      <h1 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+    <div className="p-6 lg:p-8">
+      {/* Heading */}
+      <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
         Website Settings
       </h1>
 
+      <p className="text-slate-500 mt-2 mb-8">
+        Manage your company details, contact information and social media links.
+      </p>
 
-      <form 
-      onSubmit={handleSubmit}
-      className="bg-white/10 backdrop-blur-md p-4 sm:p-6 rounded-2xl space-y-4 max-w-3xl"
+      {/* Form */}
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-5xl bg-slate-900 rounded-2xl shadow-xl border border-slate-700 p-8"
       >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {Object.keys(settings).map((key) => (
+            <div key={key}>
+              <label className="block text-sm font-medium text-slate-300 mb-2 capitalize">
+                {key.replace(/([A-Z])/g, " $1")}
+              </label>
 
+              <input
+                type="text"
+                name={key}
+                value={settings[key]}
+                onChange={handleChange}
+                placeholder={`Enter ${key.replace(/([A-Z])/g, " $1")}`}
+                className="
+                  w-full
+                  px-4
+                  py-3
+                  rounded-xl
+                  bg-slate-800
+                  border
+                  border-slate-700
+                  text-white
+                  placeholder:text-slate-500
+                  outline-none
+                  transition
+                  focus:border-blue-500
+                  focus:ring-2
+                  focus:ring-blue-500/30
+                "
+              />
+            </div>
+          ))}
+        </div>
 
-      {
-        Object.keys(settings).map((key)=>(
-
-          <input
-          key={key}
-          name={key}
-          value={settings[key]}
-          onChange={handleChange}
-          placeholder={key}
-          className="
-          w-full min-h-11 p-3 rounded-lg
-          bg-white/20
-          text-white
-          placeholder:text-blue-100
-          border border-white/20
-          "
-          />
-
-        ))
-      }
-
-
-
-      <button
-      className="
-      bg-blue-600 
-      hover:bg-blue-700
-      text-white
-      w-full sm:w-auto px-6 py-3
-      rounded-lg
-      "
-      >
-        Save Settings
-      </button>
-
-
+        {/* Button */}
+        <div className="mt-8">
+          <button
+            type="submit"
+            className="
+              bg-blue-600
+              hover:bg-blue-700
+              text-white
+              font-semibold
+              px-8
+              py-3
+              rounded-xl
+              transition
+              shadow-lg
+            "
+          >
+            Save Settings
+          </button>
+        </div>
       </form>
-
     </div>
-
-  )
-}
+  );
+};
 
 export default Settings;
