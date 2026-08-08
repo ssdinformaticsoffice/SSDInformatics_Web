@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 import AboutPreview from "../components/home/AboutPreview";
 import ServicesPreview from "../components/home/ServicesPreview";
@@ -17,7 +18,10 @@ const Home = () => {
   useEffect(() => {
     const fetchHomeData = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/home");
+        const res = await axios.get(
+          "http://localhost:5000/api/home"
+        );
+
         setHomeData(res.data.home);
       } catch (error) {
         console.log(error);
