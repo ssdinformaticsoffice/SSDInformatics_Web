@@ -9,7 +9,7 @@ import PortfolioPreview from "../components/home/PortfolioPreview";
 import Stats from "../components/home/Stats";
 import Testimonials from "../components/home/Testimonials";
 import CTA from "../components/home/CTA";
-import HomePage from "./homePage";
+import HomePage from "./HomePage";
 
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
