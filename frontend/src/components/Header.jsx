@@ -33,28 +33,58 @@ const Header = () => {
         shadow-[0_10px_35px_rgba(0,0,0,0.35)]
       "
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-
+      {/* Main Header */}
+      <div
+        className="
+          mx-auto
+          flex
+          min-h-[70px]
+          w-full
+          max-w-7xl
+          items-center
+          justify-between
+          gap-4
+          px-4
+          sm:min-h-[76px]
+          sm:px-6
+          lg:px-8
+        "
+      >
         {/* Logo */}
-        <Link to="/" onClick={() => setIsOpen(false)}>
+        <Link
+          to="/"
+          onClick={() => {
+            setIsOpen(false);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <motion.div
-            className="flex items-center cursor-pointer"
+            className="
+              flex
+              cursor-pointer
+              items-center
+              gap-1
+              sm:gap-2
+            "
             whileHover={{ scale: 1.03 }}
           >
+            {/* Logo Image */}
             <motion.img
               src={logo}
               alt="SSD Informatics Logo"
               className="
-                w-16
-                xs:w-20
-                sm:w-24
-                md:w-28
-                lg:w-24
-                xl:w-28
-                2xl:w-32
                 h-auto
+                w-12
+                shrink-0
                 object-contain
-                flex-shrink-0
+                xs:w-14
+                sm:w-16
+                md:w-20
+                lg:w-20
+                xl:w-24
               "
               whileHover={{
                 rotate: 360,
@@ -71,15 +101,18 @@ const Header = () => {
               }}
             />
 
-            <div className="-ml-7 leading-none">
+            {/* Logo Text */}
+            <div className="min-w-0 leading-none">
               <h2
                 className="
-                  text-2xl
-                  sm:text-3xl
-                  md:text-4xl
+                  truncate
+                  text-xl
                   font-extrabold
-                  text-white
                   leading-tight
+                  text-white
+                  sm:text-2xl
+                  md:text-3xl
+                  lg:text-3xl
                 "
               >
                 SSD
@@ -87,14 +120,18 @@ const Header = () => {
 
               <p
                 className="
-                  uppercase
-                  tracking-[4px]
-                  sm:tracking-[5px]
-                  text-xs
-                  sm:text-sm
-                  font-semibold
-                  text-blue-400
                   mt-0.5
+                  whitespace-nowrap
+                  text-[8px]
+                  font-semibold
+                  uppercase
+                  tracking-[2px]
+                  text-blue-400
+                  xs:text-[9px]
+                  sm:text-[10px]
+                  sm:tracking-[3px]
+                  md:text-xs
+                  md:tracking-[4px]
                 "
               >
                 Informatics
@@ -102,20 +139,37 @@ const Header = () => {
             </div>
           </motion.div>
         </Link>
-                {/* Desktop Menu */}
+
+        {/* Desktop Menu */}
         <nav className="hidden md:block">
-          <ul className="flex items-center gap-8 lg:gap-10 text-[16px] font-medium text-slate-300">
+          <ul
+            className="
+              flex
+              items-center
+              gap-7
+              text-[15px]
+              font-medium
+              text-slate-300
+              lg:gap-10
+              lg:text-[16px]
+            "
+          >
             {navLinks.map((link) => (
               <motion.li
                 key={link.path}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
-                className="relative group"
+                className="group relative"
               >
                 <Link
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className="transition-all duration-300 hover:text-cyan-300"
+                  className="
+                    whitespace-nowrap
+                    transition-all
+                    duration-300
+                    hover:text-cyan-300
+                  "
                 >
                   {link.name}
                 </Link>
@@ -124,8 +178,8 @@ const Header = () => {
                 <span
                   className="
                     absolute
-                    left-0
                     -bottom-2
+                    left-0
                     h-[2px]
                     w-0
                     rounded-full
@@ -144,13 +198,16 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           type="button"
-          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={isOpen}
           onClick={() => setIsOpen((prev) => !prev)}
           className="
             inline-flex
-            h-11
-            w-11
+            h-10
+            w-10
+            shrink-0
             items-center
             justify-center
             rounded-xl
@@ -162,14 +219,16 @@ const Header = () => {
             duration-300
             hover:border-blue-400/50
             hover:text-cyan-300
+            sm:h-11
+            sm:w-11
             md:hidden
           "
         >
-          {isOpen ? <X size={22} /> : <Menu size={22} />}
+          {isOpen ? <X size={21} /> : <Menu size={21} />}
         </button>
-
       </div>
-            {/* Mobile Menu */}
+
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.nav
@@ -178,16 +237,26 @@ const Header = () => {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="
-              md:hidden
               overflow-hidden
               border-t
               border-blue-500/10
               bg-slate-950/95
               backdrop-blur-2xl
+              md:hidden
             "
           >
-            <div className="mx-auto max-w-7xl px-4 py-4">
-              <ul className="flex flex-col gap-2 text-base font-medium">
+            <div
+              className="
+                mx-auto
+                w-full
+                max-w-7xl
+                px-4
+                py-3
+                sm:px-6
+                sm:py-4
+              "
+            >
+              <ul className="flex flex-col gap-1.5 text-base font-medium">
                 {navLinks.map((link) => (
                   <motion.li
                     key={link.path}
@@ -200,10 +269,11 @@ const Header = () => {
                       onClick={() => setIsOpen(false)}
                       className="
                         flex
+                        min-h-11
                         items-center
                         rounded-xl
                         px-4
-                        py-3
+                        py-2.5
                         text-slate-200
                         transition-all
                         duration-300

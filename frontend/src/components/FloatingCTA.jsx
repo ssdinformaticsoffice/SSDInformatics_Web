@@ -120,7 +120,7 @@ const FloatingCTA = () => {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/9140458361"
+        href="https://wa.me/7054638002"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp"
