@@ -37,7 +37,7 @@ const item = {
 
 const AboutPreview = () => {
   return (
-    <section className="relative overflow-hidden bg-[#050816] py-16 sm:py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#050816] py-10 sm:py-15 lg:py-15">
       {/* Background Glow */}
 
       <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-blue-600/20 blur-[120px]" />
@@ -158,7 +158,7 @@ const AboutPreview = () => {
                 whileHover={{
                   x: 8,
                 }}
-                className="group flex items-center justify-center gap-3 lg:justify-start"
+                className="group flex items-center md:justify-center gap-3 lg:justify-start"
               >
                 <CheckCircle className="text-blue-400 transition group-hover:text-cyan-400" />
 

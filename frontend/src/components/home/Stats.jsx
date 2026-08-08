@@ -5,22 +5,22 @@ const Stats = () => {
 
   const stats = [
     {
-      icon: <Briefcase size={35}/>,
+      icon: <Briefcase size={35} />,
       number: "150+",
       title: "Projects Completed"
     },
     {
-      icon: <Users size={35}/>,
+      icon: <Users size={35} />,
       number: "100+",
       title: "Happy Clients"
     },
     {
-      icon: <Award size={35}/>,
+      icon: <Award size={35} />,
       number: "5+",
       title: "Years Experience"
     },
     {
-      icon: <Clock size={35}/>,
+      icon: <Clock size={35} />,
       number: "24/7",
       title: "Support Available"
     }
@@ -28,48 +28,50 @@ const Stats = () => {
 
 
   return (
-    <section className="py-16 sm:py-20 bg-slate-50">
+    <section className=" group bg-slate-950/40 py-16 sm:py-20">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
           {
-            stats.map((item,index)=>(
+            stats.map((item, index) => (
 
               <motion.div
 
-              key={index}
+                key={index}
 
-              initial={{
-                opacity:0,
-                y:40
-              }}
+                initial={{
+                  opacity: 0,
+                  y: 40
+                }}
 
-              whileInView={{
-                opacity:1,
-                y:0
-              }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0
+                }}
 
-              transition={{
-                duration:0.5,
-                delay:index*0.1
-              }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1
+                }}
 
-              viewport={{
-                once:true
-              }}
+                viewport={{
+                  once: true
+                }}
 
-              className="
-              bg-white 
+                className="
+              bg-blue-900/10
               rounded-2xl
-              shadow-lg
+              shadow-md
               p-6 sm:p-8
               text-center
               hover:-translate-y-2
               transition
+              hover:shadow-blue-500/10
+              hover:border-blue-500/20
               border
-              border-slate-200
+              border-blue-500/10
               "
 
               >
@@ -86,7 +88,7 @@ const Stats = () => {
                 bg-blue-100
                 text-blue-600
                 ">
-                    {item.icon}
+                  {item.icon}
                 </div>
 
 
@@ -95,7 +97,7 @@ const Stats = () => {
                 font-bold
                 text-blue-900
                 ">
-                    {item.number}
+                  {item.number}
                 </h2>
 
 
@@ -103,7 +105,7 @@ const Stats = () => {
                 mt-3
                 text-gray-600
                 ">
-                    {item.title}
+                  {item.title}
                 </p>
 
 
