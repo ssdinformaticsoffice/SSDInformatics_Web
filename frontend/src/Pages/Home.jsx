@@ -27,7 +27,7 @@ const Home = () => {
     fetchHomeData();
   }, []);
 
-  if (!homeData) {
+ 
     return (
     
       <>
@@ -43,15 +43,7 @@ const Home = () => {
        <CTA/>
       </>
     );
-  }
 
-  return (
-    <>
-      
-      
-       
-    </>
-  );
 };
 
 export default Home;
