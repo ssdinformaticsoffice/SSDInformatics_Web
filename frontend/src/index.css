@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 @layer base {
@@ -9,30 +10,30 @@
   }
 
   html {
-  scroll-behavior: smooth;
-  background-color: #020617;
-  overflow-x: clip;
-}
+    scroll-behavior: smooth;
+    background-color: #020617;
+    overflow-x: clip;
+  }
 
-body {
-  background-image: 
-    radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, rgba(29, 78, 216, 0.05) 0%, transparent 60%),
-    linear-gradient(to bottom, #020617 0%, #050b18 50%, #030712 100%);
-  background-attachment: fixed;
-  color: #f1f5f9;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  min-height: 100vh;
-  overflow-x: clip;
-  width: 100%;
-}
+  body {
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(29, 78, 216, 0.05) 0%, transparent 60%),
+      linear-gradient(to bottom, #020617 0%, #050b18 50%, #030712 100%);
+    background-attachment: fixed;
+    color: #f1f5f9;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: clip;
+    width: 100%;
+  }
 
-#root {
-  min-height: 100vh;
-  overflow-x: clip;
-  width: 100%;
-}
+  #root {
+    min-height: 100vh;
+    overflow-x: clip;
+    width: 100%;
+  }
 
   *,
   *::before,
@@ -96,4 +97,175 @@ body {
   text-shadow: 0 0 12px rgba(34, 211, 238, 0.4);
 }
 
+
+/* ========================================
+   LOADER
+   ======================================== */
+
+
+
+.loader-container { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; overflow: hidden; background: radial-gradient( circle at 50% 50%, rgba(37, 99, 235, 0.12), transparent 30% ), linear-gradient( 135deg, #ffffff 0%, #f5f9ff 45%, #edf4ff 100% ); } /* Large moving blue light */ .loader-container::before { content: ""; position: absolute; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient( circle, rgba(37, 99, 235, 0.20) 0%, rgba(29, 78, 216, 0.10) 30%, transparent 70% ); filter: blur(35px); animation: blueOrb 7s ease-in-out infinite; } /* Second moving blue light */ .loader-container::after { content: ""; position: absolute; width: 550px; height: 550px; border-radius: 50%; background: radial-gradient( circle, rgba(59, 130, 246, 0.16) 0%, rgba(30, 64, 175, 0.07) 35%, transparent 70% ); filter: blur(30px); animation: blueOrbSecond 9s ease-in-out infinite; } /* ======================================== MOVING BLUE ORBS ======================================== */ @keyframes blueOrb { 0% { transform: translate(-45vw, -20vh) scale(0.8); } 25% { transform: translate(25vw, -30vh) scale(1); } 50% { transform: translate(40vw, 25vh) scale(1.15); } 75% { transform: translate(-25vw, 30vh) scale(0.95); } 100% { transform: translate(-45vw, -20vh) scale(0.8); } } @keyframes blueOrbSecond { 0% { transform: translate(40vw, 30vh) scale(0.8); } 25% { transform: translate(-30vw, 20vh) scale(1.1); } 50% { transform: translate(-40vw, -25vh) scale(0.9); } 75% { transform: translate(25vw, -30vh) scale(1.15); } 100% { transform: translate(40vw, 30vh) scale(0.8); } } /* ======================================== LOADER ABOVE BACKGROUND ======================================== */ .loader-wrapper { position: relative; z-index: 5; width: 130px; height: 130px; display: flex; align-items: center; justify-content: center; }
+
+/* Animated blue glow in the background */
+.loader-container::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.16) 0%,
+    rgba(59, 130, 246, 0.08) 35%,
+    transparent 70%
+  );
+
+  filter: blur(15px);
+  animation: blueGlowMove 5s ease-in-out infinite;
+}
+
+/* Second subtle glow */
+.loader-container::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(30, 64, 175, 0.10) 0%,
+    transparent 70%
+  );
+
+  filter: blur(20px);
+  animation: blueGlowMove2 6s ease-in-out infinite;
+}
+
+/* Loader stays above the background animation */
+.loader-wrapper {
+  position: relative;
+  z-index: 2;
+
+  width: 130px;
+  height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes blueGlowMove {
+  0% {
+    transform: translate(-180px, -100px) scale(0.9);
+  }
+
+  50% {
+    transform: translate(180px, 100px) scale(1.15);
+  }
+
+  100% {
+    transform: translate(-180px, -100px) scale(0.9);
+  }
+}
+
+@keyframes blueGlowMove2 {
+  0% {
+    transform: translate(180px, 120px) scale(0.8);
+  }
+
+  50% {
+    transform: translate(-150px, -120px) scale(1.1);
+  }
+
+  100% {
+    transform: translate(180px, 120px) scale(0.8);
+  }
+}
+
+
+
+.loader-wrapper {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Soft dark-blue shadow */
+  filter: drop-shadow(0 8px 18px rgba(30, 64, 175, 0.18));
+}
+
+
+
+
+
+.loader-wrapper {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.loader-bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 3;
+}
+
+.loader-progress {
+  fill: none;
+  stroke: #2563eb;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  animation: loaderProgress 2.5s linear forwards;
+}
+
+.loader-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+
+  /* Logo rotates while circle completes */
+  animation: logoRotate 2.5s linear forwards;
+}
+
+
+/* Circle: 0% → 100% */
+@keyframes loaderProgress {
+  from {
+    stroke-dashoffset: 283;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* Logo: 0° → 360° */
+@keyframes logoRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 
