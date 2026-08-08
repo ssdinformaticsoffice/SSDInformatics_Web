@@ -56,13 +56,14 @@ const Footer = () => {
             transition={{duration:.5}}
             className="
             flex 
-            flex-col 
+            md:flex-col 
             xs:flex-row
             sm:flex-col
             md:flex-row
             items-center
             sm:items-start
-            mb-6
+            mb-4
+            md:mb-6
             "
           >
 
@@ -90,7 +91,7 @@ const Footer = () => {
               }}
             />
 
-            <div className="text-center sm:text-left min-w-0 ml-0 xs:ml-2 sm:ml-0 md:ml-3">
+            <div className="text-center sm:text-left ">
 
               <h2 className="
               text-2xl 
@@ -98,7 +99,7 @@ const Footer = () => {
               md:text-4xl
               font-extrabold 
               text-white
-              break-words
+
               leading-tight
               ">
                 {settings.websiteName || "SSD"}

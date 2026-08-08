@@ -30,13 +30,13 @@ const Testimonials = () => {
 
     return (
 
-        <section className="py-16 sm:py-20 bg-gradient-to-br from-slate-850 via-slate-900 to-blue-750">
+        <section className="py-10 sm:py-15 bg-gradient-to-br from-slate-850 via-slate-900 to-blue-750">
 
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
 
-                <div className="text-center mb-12">
+                <div className="text-center mb-5">
 
                     <h2 className="
 text-3xl sm:text-4xl 
