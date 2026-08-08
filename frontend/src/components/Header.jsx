@@ -137,26 +137,41 @@ const Header = () => {
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
-        {/* Logo */}
-        <Link to="/" onClick={() => setIsOpen(false)}>
+       {/* Logo */}
+        <Link
+          to="/"
+          onClick={() => {
+            setIsOpen(false);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <motion.div
-            className="flex items-center cursor-pointer"
+            className="
+              flex
+              cursor-pointer
+              items-center
+              gap-1
+              sm:gap-2
+            "
             whileHover={{ scale: 1.03 }}
           >
+            {/* Logo Image */}
             <motion.img
               src={logo}
               alt="SSD Informatics Logo"
               className="
-                w-16
-                xs:w-20
-                sm:w-24
-                md:w-28
-                lg:w-24
-                xl:w-28
-                2xl:w-32
                 h-auto
+                w-12
+                shrink-0
                 object-contain
-                flex-shrink-0
+                xs:w-14
+                sm:w-16
+                md:w-20
+                lg:w-20
+                xl:w-24
               "
               whileHover={{
                 rotate: 360,
@@ -173,15 +188,18 @@ const Header = () => {
               }}
             />
 
-            <div className="-ml-7 leading-none">
+            {/* Logo Text */}
+            <div className="min-w-0 leading-none">
               <h2
                 className="
-                  text-2xl
-                  sm:text-3xl
-                  md:text-4xl
+                  truncate
+                  text-xl
                   font-extrabold
-                  text-white
                   leading-tight
+                  text-white
+                  sm:text-2xl
+                  md:text-3xl
+                  lg:text-3xl
                 "
               >
                 SSD
@@ -189,14 +207,18 @@ const Header = () => {
 
               <p
                 className="
-                  uppercase
-                  tracking-[4px]
-                  sm:tracking-[5px]
-                  text-xs
-                  sm:text-sm
-                  font-semibold
-                  text-blue-400
                   mt-0.5
+                  whitespace-nowrap
+                  text-[8px]
+                  font-semibold
+                  uppercase
+                  tracking-[2px]
+                  text-blue-400
+                  xs:text-[9px]
+                  sm:text-[10px]
+                  sm:tracking-[3px]
+                  md:text-xs
+                  md:tracking-[4px]
                 "
               >
                 Informatics
@@ -204,6 +226,7 @@ const Header = () => {
             </div>
           </motion.div>
         </Link>
+
 
 
         {/* Desktop Menu */}
