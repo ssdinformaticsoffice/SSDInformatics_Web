@@ -10,9 +10,13 @@ import About from "../Pages/About";
 import Services from "../Pages/Services";
 import Contact from "../Pages/Contact";
 import ServiceDetails from "../Pages/ServiceDetails";
+import { Scroll } from "lucide-react";
+import ScrollToTop from "../components/ScrollToTop";
 
 const AppRoutes = () => {
   return (
+    <>
+    <ScrollToTop />
     <Routes>
       {/* Website Routes */}
       <Route element={<MainLayout />}>
@@ -24,6 +28,7 @@ const AppRoutes = () => {
       </Route>
 
     </Routes >
+    </>
   );
 };
 
