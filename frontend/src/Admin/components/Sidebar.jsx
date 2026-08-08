@@ -49,7 +49,7 @@ const Sidebar = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("admin");
 
-    navigate("/admin/login");
+    navigate("/admin");
   };
 
   return (

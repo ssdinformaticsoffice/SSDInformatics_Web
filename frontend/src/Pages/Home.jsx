@@ -27,29 +27,29 @@ const Home = () => {
     fetchHomeData();
   }, []);
 
-  if (!homeData) {
+  
     return (
-    
+
       <>
         <HomePage />
-        
-      <AboutPreview/>
-      <ServicesPreview/>
-       <WhyChooseUs/>
-       <Process/>
-       <PortfolioPreview/>
-       <Stats/>
-       <Testimonials/>
-       <CTA/>
+
+        <AboutPreview />
+        <ServicesPreview />
+        <WhyChooseUs />
+        <Process />
+        <PortfolioPreview />
+        <Stats />
+        <Testimonials />
+        <CTA />
       </>
     );
-  }
+  
 
   return (
     <>
-      
-      
-       
+
+
+
     </>
   );
 };

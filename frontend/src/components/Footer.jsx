@@ -24,7 +24,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-slate-950 border-t border-blue-500/10 mt-12 sm:mt-16 lg:mt-20 relative overflow-hidden">
+    <footer className="bg-slate-950 border-t border-blue-500/10  relative overflow-hidden">
 
       <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
 
