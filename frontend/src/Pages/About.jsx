@@ -137,7 +137,7 @@ const About = () => {
           1. HERO SECTION
       ═══════════════════════════════════════════════════════ */}
       <section
-        className="relative overflow-hidden flex flex-col pt-20 sm:pt-28 lg:pt-32"
+        className="relative overflow-hidden flex flex-col pt-20 sm:pt-28 lg:pt-15"
         style={{
           backgroundImage:
             "radial-gradient(circle at 72% 30%, rgba(37,99,235,0.22) 0%, transparent 55%)," +
@@ -320,7 +320,7 @@ const About = () => {
       {/* ═══════════════════════════════════════════════════════
           2. WHO WE ARE
       ═══════════════════════════════════════════════════════ */}
-      <section className="py-16 sm:py-20 lg:py-24 relative">
+      <section className="py-16 sm:py-20 lg:py-14 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#050b18] to-[#020617]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -443,7 +443,7 @@ const About = () => {
       {/* ═══════════════════════════════════════════════════════
           3. MISSION & VISION
       ═══════════════════════════════════════════════════════ */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-[#050b18] relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-14 bg-[#050b18] relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -539,7 +539,7 @@ const About = () => {
       {/* ═══════════════════════════════════════════════════════
           4. WHY CHOOSE US
       ═══════════════════════════════════════════════════════ */}
-      <section className="py-16 sm:py-20 lg:py-24 relative">
+      <section className="py-16 sm:py-20 lg:py-15 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#050b18] to-[#020617]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -596,7 +596,7 @@ const About = () => {
       {/* ═══════════════════════════════════════════════════════
           5. TEAM SECTION
       ═══════════════════════════════════════════════════════ */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-[#050b18] relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-15 bg-[#050b18] relative overflow-hidden">
         <div className="absolute top-0 right-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -667,7 +667,7 @@ const About = () => {
       {/* ═══════════════════════════════════════════════════════
           6. CTA SECTION  (mirrors ServiceDetails CTA exactly)
       ═══════════════════════════════════════════════════════ */}
-      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-15 relative overflow-hidden">
         <div
           className="absolute inset-0"
           style={{

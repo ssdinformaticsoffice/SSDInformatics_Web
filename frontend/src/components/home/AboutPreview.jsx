@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import {
+  Search,
+  Palette,
+  Code2,
+  ShieldCheck,
+  Rocket,
+} from "lucide-react";
 const features = [
   "Website Development",
   "Mobile Apps",
