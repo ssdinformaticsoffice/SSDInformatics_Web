@@ -127,8 +127,12 @@ const Login = () => {
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10">
             {/* Logo for mobile */}
             <div className="lg:hidden flex items-center justify-center gap-3 mb-8">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
-                <span className="text-lg font-bold text-white">SSD</span>
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20 overflow-hidden">
+                <img
+                  src="/images/ssd white logo.png"
+                  alt="SSD logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xl font-bold text-white">SSD Informatics</span>
             </div>
