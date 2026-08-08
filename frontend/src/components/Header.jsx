@@ -31,7 +31,7 @@ const navLinks = [
         items: [
           {
             name: "Social Media Marketing",
-            path: "/services/social-media-marketing",
+            path: "/services/digital-marketing",
           },
           {
             name: "Google Ads",
