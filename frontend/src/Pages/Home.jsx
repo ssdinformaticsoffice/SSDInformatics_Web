@@ -27,23 +27,31 @@ const Home = () => {
     fetchHomeData();
   }, []);
 
- 
+  
     return (
-    
+
       <>
-      <HomePage/>
-        
-      <AboutPreview/>
-      <ServicesPreview/>
-       <WhyChooseUs/>
-       <Process/>
-       <PortfolioPreview/>
-       <Stats/>
-       <Testimonials/>
-       <CTA/>
+        <HomePage />
+
+        <AboutPreview />
+        <ServicesPreview />
+        <WhyChooseUs />
+        <Process />
+        <PortfolioPreview />
+        <Stats />
+        <Testimonials />
+        <CTA />
       </>
     );
+  
 
+  return (
+    <>
+
+
+
+    </>
+  );
 };
 
 export default Home;

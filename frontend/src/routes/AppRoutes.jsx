@@ -36,23 +36,23 @@ const AppRoutes = () => {
       </Route>
 
       {/* Admin Auth */}
-      <Route path="/admin/login" element={<Login />} />
+      <Route path="/admin" element={<Login />} />
+      <Route path="/admin/signup" element={<Signup />} />
+
+      {/* Admin Auth */}
+      <Route path="/admin" element={<Login />} />
       <Route path="/admin/signup" element={<Signup />} />
 
       {/* Admin Panel */}
-      <Route path="/admin" element={<AdminLayout />}>
-        {/* Dashboard */}
-        <Route index element={<Dashbord />} />
-        <Route path="dashboard" element={<Dashbord />} />
-
-        {/* Manage Pages */}
-        <Route path="home" element={<ManageHome />} />
-        <Route path="about" element={<ManageAbout />} />
-        <Route path="services" element={<ManageServices />} />
-        <Route path="contact" element={<ManageContact />} />
-        <Route path="settings" element={<Settings />} />
+      <Route element={<AdminLayout />}>
+        <Route path="/admin/dashboard" element={<Dashbord />} />
+        <Route path="/admin/home" element={<ManageHome />} />
+        <Route path="/admin/about" element={<ManageAbout />} />
+        <Route path="/admin/services" element={<ManageServices />} />
+        <Route path="/admin/contact" element={<ManageContact />} />
+        <Route path="/admin/settings" element={<Settings />} />
       </Route>
-    </Routes>
+    </Routes >
   );
 };
 

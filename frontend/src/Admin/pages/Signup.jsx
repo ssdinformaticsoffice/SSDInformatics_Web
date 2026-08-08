@@ -61,7 +61,7 @@ const Signup = () => {
         confirmPassword: "",
       });
 
-      navigate("/admin/login");
+      navigate("/admin");
     } catch (error) {
       alert(error.response?.data?.message || "Something went wrong");
     } finally {
