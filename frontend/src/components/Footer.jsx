@@ -218,7 +218,7 @@ const Footer = () => {
             [
               {
                 icon:<Phone size={18}/>,
-                text:settings.phone || "+91 70546 38002"
+                text:settings.phone || "+91 9235327547"
               },
               {
                 icon:<Globe size={18}/>,

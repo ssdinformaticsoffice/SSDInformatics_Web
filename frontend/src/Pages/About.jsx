@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  Target, Eye, Sparkles, Cpu, Globe, Zap, 
-  ArrowRight, ArrowDown, 
+import {
+  Target, Eye, Sparkles, Cpu, Globe, Zap,
+  ArrowRight, ArrowDown,
   Users, Clock, Award, Star, Shield, CheckCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import aboutImage from "/images/about-image.jpg";
 
 const About = () => {
   const whyChooseUs = [
@@ -52,169 +53,345 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#020617] text-white overflow-x-hidden">
-      {/* ================= ANIMATED BACKGROUND ================= */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] rounded-full bg-blue-600/5 blur-[150px] animate-pulse" />
-        <div className="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] rounded-full bg-blue-500/5 blur-[150px] animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-cyan-500/3 blur-[200px]" />
-        
-        <motion.div
-          className="absolute top-[20%] left-[10%] w-64 h-64 rounded-full bg-blue-500/5 blur-[100px]"
-          animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-[20%] right-[10%] w-80 h-80 rounded-full bg-cyan-500/5 blur-[120px]"
-          animate={{ y: [0, 30, 0], x: [0, -20, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-
+    <div className="bg-[#020617] text-white overflow-x-hidden">
       {/* ================= ABOUT US ================= */}
-      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="order-2 lg:order-1"
-            >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-                <Sparkles size={14} className="sm:w-4 sm:h-4" />
-                About SSD Informatics
-              </div>
+      <section className="relative overflow-hidden flex items-center">
+        <div className="absolute inset-0">
+          <div
+            className="
+        absolute inset-0
+        bg-cover
+        bg-center
+        bg-no-repeat
+        blur-[2px]
+        scale-105
+      "
+            style={{
+              backgroundImage: `url(${aboutImage})`,
+            }}
+          />
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                Building Technology.
-                <span className="block text-blue-400 mt-1 sm:mt-2">
-                  Growing Businesses.
-                </span>
-              </h1>
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-slate-950/75 sm:bg-slate-950/78 lg:bg-slate-950/80" />
 
-              <div className="mt-5 sm:mt-8 space-y-3 sm:space-y-4 text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed">
-                <p>
-                  <strong className="text-white">SSD Informatics Pvt. Ltd.</strong>{" "}
-                  is a technology and digital solutions company specializing in{" "}
-                  <strong className="text-blue-300">Software Development, Web Development, and Social Media Management</strong>.
-                  We help businesses build a strong digital presence through innovative technology, creative design, and effective digital strategies.
-                </p>
+          {/* Blue Tint */}
+          <div className="absolute inset-0 bg-blue-950/20" />
 
-                <p>
-                  From developing customized software and modern websites to managing social media platforms and strengthening brand visibility,
-                  we provide <strong className="text-blue-300">end-to-end digital solutions</strong> designed around our clients' unique business needs.
-                </p>
+          {/* ================= ANIMATED BLUE GLOW ================= */}
+          <motion.div
+            className="
+        absolute
+        top-[10%]
+        left-[-15%]
+        sm:left-[5%]
+        lg:left-[10%]
+        w-48
+        h-48
+        sm:w-64
+        sm:h-64
+        lg:w-72
+        lg:h-72
+        rounded-full
+        bg-blue-500/10
+        blur-[80px]
+        sm:blur-[100px]
+      "
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 20, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
 
-                <p>
-                  Our goal is to combine <strong className="text-blue-300">technology, creativity, and strategy</strong> to help businesses
-                  improve their operations, connect with their audience, and grow in the digital world.
-                </p>
+          {/* ================= ANIMATED CYAN GLOW ================= */}
+          <motion.div
+            className="
+        absolute
+        bottom-[5%]
+        right-[-15%]
+        sm:right-[5%]
+        lg:right-[10%]
+        w-56
+        h-56
+        sm:w-72
+        sm:h-72
+        lg:w-80
+        lg:h-80
+        rounded-full
+        bg-cyan-500/10
+        blur-[90px]
+        sm:blur-[120px]
+      "
+            animate={{
+              y: [0, 30, 0],
+              x: [0, -20, 0],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
 
-                <p className="text-blue-200/80 font-medium text-sm sm:text-base">
-                  "At SSD Informatics, we believe that every business deserves technology that is smart, scalable, reliable, and result-oriented."
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="order-1 lg:order-2 flex justify-center items-center"
-            >
-              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
-                <div className="absolute inset-0 rounded-full bg-blue-500/10 blur-[80px] scale-150" />
-                
-                <div className="relative aspect-square w-full bg-gradient-to-br from-blue-950/40 to-slate-900/60 rounded-2xl sm:rounded-3xl border border-blue-500/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 flex items-center justify-center overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-cyan-500/5 to-transparent" />
-                  
-                  <motion.div
-                    className="absolute inset-0"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                  >
-                    <div className="absolute top-3 sm:top-4 left-1/2 -translate-x-1/2 w-14 sm:w-20 h-14 sm:h-20 rounded-full border border-blue-400/20" />
-                    <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 w-20 sm:w-32 h-20 sm:h-32 rounded-full border border-cyan-400/20" />
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute inset-0"
-                    animate={{ rotate: -360 }}
-                    transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                  >
-                    <div className="absolute top-1/3 right-4 sm:right-6 md:right-8 w-10 sm:w-16 h-10 sm:h-16 rounded-full border border-blue-500/10" />
-                    <div className="absolute bottom-1/3 left-4 sm:left-6 md:left-8 w-14 sm:w-24 h-14 sm:h-24 rounded-full border border-cyan-500/10" />
-                  </motion.div>
-
-                  <div className="relative z-10 flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
-                    <motion.div
-                      animate={{ y: [0, -8, 0] }}
-                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    >
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-blue-500/20 blur-2xl rounded-full" />
-                        <div className="relative w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/10 border border-blue-400/30 flex items-center justify-center backdrop-blur-sm">
-                          <Cpu size={32} className="text-blue-400 sm:w-12 sm:h-12 md:w-14 md:h-14" />
-                        </div>
-                      </div>
-                    </motion.div>
-
-                    <div className="flex gap-2 sm:gap-3 md:gap-4">
-                      <motion.div
-                        animate={{ y: [0, -6, 0] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center backdrop-blur-sm"
-                      >
-                        <Globe size={16} className="text-cyan-400 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                      </motion.div>
-                      <motion.div
-                        animate={{ y: [0, -6, 0] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center backdrop-blur-sm"
-                      >
-                        <Zap size={16} className="text-blue-400 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                      </motion.div>
-                      <motion.div
-                        animate={{ y: [0, -6, 0] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center backdrop-blur-sm"
-                      >
-                        <Sparkles size={16} className="text-cyan-400 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                      </motion.div>
-                    </div>
-
-                    <motion.p
-                      animate={{ opacity: [0.6, 1, 0.6] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                      className="text-blue-300 text-[10px] sm:text-xs md:text-sm font-medium tracking-wider mt-0.5 sm:mt-1"
-                    >
-                      SSD INFORMATICS
-                    </motion.p>
-                  </div>
-
-                  <motion.div
-                    className="absolute top-1/4 left-1/4 w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-blue-400/40"
-                    animate={{ y: [0, -20, 0], x: [0, 15, 0], opacity: [0.3, 0.8, 0.3] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  />
-                  <motion.div
-                    className="absolute bottom-1/3 right-1/4 w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-cyan-400/30"
-                    animate={{ y: [0, 20, 0], x: [0, -15, 0], opacity: [0.3, 0.8, 0.3] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  />
-                </div>
-
-                <div className="absolute -inset-0.5 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-blue-500/20 via-cyan-400/20 to-blue-500/20 blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
-              </div>
-            </motion.div>
-          </div>
         </div>
+
+
+        {/* ================= CONTENT ================= */}
+        <div
+          className="
+      relative
+      z-10
+      w-full
+      max-w-5xl
+      mx-auto
+      px-4
+      sm:px-6
+      lg:px-8
+      py-16
+      sm:py-20
+      lg:py-24
+    "
+        >
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+
+            {/* ================= BADGE ================= */}
+            <div
+              className="
+          inline-flex
+          items-center
+          justify-center
+          gap-2
+          px-3
+          py-1.5
+          sm:px-4
+          sm:py-2
+          rounded-full
+          border
+          border-blue-400/30
+          bg-blue-500/10
+          text-blue-300
+          text-xs
+          sm:text-sm
+          font-medium
+          mb-5
+          sm:mb-6
+          backdrop-blur-md
+        "
+            >
+              <Sparkles size={14} className="sm:w-4 sm:h-4" />
+              About SSD Informatics
+            </div>
+
+
+            {/* ================= HEADING ================= */}
+            <h2
+              className="
+          text-3xl
+          sm:text-4xl
+          md:text-5xl
+          lg:text-6xl
+          xl:text-7xl
+          font-bold
+          leading-tight
+          text-white
+        "
+            >
+              Building Technology.
+
+              <span className="block text-blue-400 mt-1 sm:mt-2">
+                Growing Businesses.
+              </span>
+            </h2>
+
+
+            {/* ================= DESCRIPTION ================= */}
+            <div
+              className="
+          mt-6
+          sm:mt-8
+          max-w-3xl
+          mx-auto
+          space-y-4
+          sm:space-y-5
+        "
+            >
+
+              <p
+                className="
+            text-sm
+            sm:text-base
+            md:text-lg
+            lg:text-xl
+            leading-6
+            sm:leading-7
+            md:leading-8
+            text-slate-300
+          "
+              >
+                SSD Informatics is a technology and digital solutions company
+                focused on helping businesses build, grow, and succeed in the
+                digital world.
+              </p>
+
+              <p
+                className="
+            text-sm
+            sm:text-base
+            md:text-lg
+            lg:text-xl
+            leading-6
+            sm:leading-7
+            md:leading-8
+            text-slate-300
+          "
+              >
+                We provide
+                <span className="font-semibold text-white">
+                  {" "}software development, web development, and modern IT
+                  solutions
+                </span>{" "}
+                designed around your business needs.
+              </p>
+
+              <p
+                className="
+            text-sm
+            sm:text-base
+            md:text-lg
+            lg:text-xl
+            leading-6
+            sm:leading-7
+            md:leading-8
+            text-slate-300
+          "
+              >
+                Our approach combines
+                <span className="font-semibold text-blue-300">
+                  {" "}technology, creativity, and strategy
+                </span>{" "}
+                to create reliable, scalable, and result-oriented digital
+                solutions.
+              </p>
+
+            </div>
+
+
+            {/* ================= BUTTONS ================= */}
+            <div
+              className="
+          mt-8
+          sm:mt-10
+          flex
+          flex-col
+          sm:flex-row
+          justify-center
+          items-center
+          gap-3
+          sm:gap-4
+        "
+            >
+
+              <a
+                href="/services/website-development"
+                className="
+            w-full
+            sm:w-auto
+            inline-flex
+            items-center
+            justify-center
+            gap-2
+            rounded-lg
+            bg-blue-600
+            px-6
+            sm:px-7
+            py-3
+            sm:py-3.5
+            text-sm
+            font-semibold
+            text-white
+            transition
+            duration-300
+            hover:bg-blue-500
+            hover:shadow-lg
+            hover:shadow-blue-500/30
+          "
+              >
+                Explore Our Services
+                <ArrowRight size={17} />
+              </a>
+
+              <a
+                href="/contact"
+                className="
+            w-full
+            sm:w-auto
+            text-center
+            rounded-lg
+            border
+            border-slate-600
+            bg-slate-950/20
+            px-6
+            sm:px-7
+            py-3
+            sm:py-3.5
+            text-sm
+            font-semibold
+            text-white
+            backdrop-blur-sm
+            transition
+            duration-300
+            hover:border-blue-500
+            hover:bg-blue-500/10
+          "
+              >
+                Contact Us
+              </a>
+
+            </div>
+
+          </motion.div>
+
+        </div>
+
       </section>
 
       {/* ================= MISSION & VISION ================= */}
-      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-10 sm:py-15 md:py-15 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+          <h1 className="text-center text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">About Us </h1>
+          <div className="w-42 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-4 rounded-full" />
+          <div className="mt-5 sm:mt-8 space-y-3 sm:space-y-4 text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed">
+            <p>
+              <strong className="text-white">SSD Informatics Pvt. Ltd.</strong>{" "}
+              is a technology and digital solutions company specializing in{" "}
+              <strong className="text-blue-300">Software Development, Web Development, and Social Media Management</strong>.
+              We help businesses build a strong digital presence through innovative technology, creative design, and effective digital strategies.
+            </p>
+
+            <p>
+              From developing customized software and modern websites to managing social media platforms and strengthening brand visibility,
+              we provide <strong className="text-blue-300">end-to-end digital solutions</strong> designed around our clients' unique business needs.
+            </p>
+
+            <p>
+              Our goal is to combine <strong className="text-blue-300">technology, creativity, and strategy</strong> to help businesses
+              improve their operations, connect with their audience, and grow in the digital world.
+            </p>
+
+            <p className="text-blue-200/80 font-medium text-sm sm:text-base mb-10">
+              "At SSD Informatics, we believe that every business deserves technology that is smart, scalable, reliable, and result-oriented."
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -279,7 +456,7 @@ const About = () => {
       </section>
 
       {/* ================= WHY CHOOSE US - IMPROVED WITH CONTENT ================= */}
-      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-10 sm:py-10 md:py-15 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-blue-500/5 blur-[150px]" />
           <div className="absolute top-1/3 left-1/4 w-40 h-40 rounded-full bg-cyan-500/5 blur-[100px]" />
@@ -299,14 +476,14 @@ const About = () => {
               <Sparkles size={12} className="sm:w-4 sm:h-4" />
               Why Choose Us
             </div>
-            
+
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
               Why Businesses Choose{" "}
               <span className="text-blue-400">SSD Informatics</span>
             </h2>
-            
+
             <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-4 rounded-full" />
-            
+
             <p className="mt-4 sm:mt-6 text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               At SSD Informatics, we combine technology, creativity, and strategy to deliver smart, scalable, reliable, and result-oriented digital solutions designed around our clients' unique business needs.
             </p>
@@ -394,7 +571,7 @@ const About = () => {
       </section>
 
       {/* ================= PROCESS ================= */}
-      <section className="relative py-10 sm:py-14 md:py-18 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-10 sm:py-10 md:py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -496,7 +673,7 @@ const About = () => {
       </section>
 
       {/* ================= CLOSING ================= */}
-      <section className="relative py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-3 sm:py-4 px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -504,13 +681,7 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="relative z-10 max-w-4xl mx-auto text-center"
         >
-          <div className="w-12 sm:w-16 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto rounded-full mb-4" />
-          <p className="text-slate-300 text-sm sm:text-base md:text-lg font-light tracking-wide">
-            <strong className="text-blue-300 font-bold">Building Technology. Growing Businesses.</strong>
-          </p>
-          <p className="text-slate-500 text-[10px] tracking-[0.2em] uppercase mt-1.5">
-            SSD Informatics Pvt. Ltd.
-          </p>
+         
         </motion.div>
       </section>
     </div>

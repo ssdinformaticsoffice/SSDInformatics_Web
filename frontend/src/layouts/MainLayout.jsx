@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FloatingCTA from "../components/FloatingCTA";
 import Loader from "../components/Loader";
+import TopHeader from "../components/TopHeader";
 
 const MainLayout = () => {
   const [loading, setLoading] = useState(true);
@@ -15,6 +16,7 @@ const MainLayout = () => {
 
   return (
     <>
+    <TopHeader />
       <Header />
 
       <main>
