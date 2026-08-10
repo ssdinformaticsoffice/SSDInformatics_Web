@@ -55,7 +55,7 @@ const About = () => {
   return (
     <div className="bg-[#020617] text-white overflow-x-hidden">
       {/* ================= ABOUT US ================= */}
-      <section className="relative overflow-hidden flex items-center">
+      <section className="relative overflow-hidden flex items-cente]">
         <div className="absolute inset-0">
           <div
             className="
@@ -151,9 +151,9 @@ const About = () => {
       px-4
       sm:px-6
       lg:px-8
-      py-16
-      sm:py-20
-      lg:py-24
+      py-8
+      sm:py-10
+      lg:py-12
     "
         >
 
@@ -183,8 +183,8 @@ const About = () => {
           text-xs
           sm:text-sm
           font-medium
-          mb-5
-          sm:mb-6
+          mb-3
+          sm:mb-4
           backdrop-blur-md
         "
             >
@@ -202,13 +202,12 @@ const About = () => {
           lg:text-6xl
           xl:text-7xl
           font-bold
-          leading-tight
           text-white
         "
             >
               Building Technology.
 
-              <span className="block text-blue-400 mt-1 sm:mt-2">
+              <span className="block text-blue-400 ">
                 Growing Businesses.
               </span>
             </h2>
@@ -217,7 +216,7 @@ const About = () => {
             {/* ================= DESCRIPTION ================= */}
             <div
               className="
-          mt-6
+          mt-4
           sm:mt-8
           max-w-3xl
           mx-auto

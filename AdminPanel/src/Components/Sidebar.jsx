@@ -1,4 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
+
 import {
   LayoutDashboard,
   Home,
@@ -7,9 +8,15 @@ import {
   MessageSquare,
   Settings,
   LogOut,
+  X,
 } from "lucide-react";
 
-const Sidebar = () => {
+const Sidebar = ({
+  sidebarOpen,
+  setSidebarOpen,
+  isMobile = false,
+  onMobileClose,
+}) => {
   const navigate = useNavigate();
 
   const menuItems = [
@@ -50,48 +57,193 @@ const Sidebar = () => {
     localStorage.removeItem("admin");
 
     navigate("/");
+
+    if (isMobile && onMobileClose) {
+      onMobileClose();
+    }
+  };
+
+  const handleNavClick = () => {
+    if (isMobile && onMobileClose) {
+      onMobileClose();
+    }
   };
 
   return (
-    <aside className="w-full lg:w-72 lg:min-h-screen bg-blue-900 text-white p-4 sm:p-6 flex-shrink-0">
-      {/* Logo */}
+    <aside
+      className={`
+        fixed
+        lg:sticky
+        top-0
+        left-0
+        z-50
+        h-screen
+        w-[270px]
+        flex-shrink-0
+        bg-slate-950
+        text-white
+        flex
+        flex-col
+        border-r
+        border-slate-800
 
-      <h1 className="text-xl sm:text-2xl font-bold mb-6 lg:mb-10">
-        SSD Informatics
-      </h1>
+        transition-transform
+        duration-300
+        ease-in-out
 
-      {/* Menu */}
+        ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+        }
+      `}
+    >
+      {/* ==============================
+          LOGO SECTION - Large & Responsive
+      =============================== */}
 
-      <nav className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-3">
-        {menuItems.map((item, index) => {
-          const Icon = item.icon;
+      <div className="px-4 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-3 flex-1 min-w-0">
+          {/* SSD Informatics Logo - Larger */}
+          <img
+            src="/images/ssd white logo (1).png"
+            alt="SSD Informatics"
+            className="w-14 h-14 sm:w-16 sm:h-16 lg:w-[72px] lg:h-[72px] object-contain flex-shrink-0"
+          />
+          
+          {/* SSD Informatics Text - In One Line */}
+          <span className="text-base sm:text-lg lg:text-xl font-bold text-white truncate">
+            SSD Informatics
+          </span>
+        </div>
 
-          return (
-            <NavLink
-              key={index}
-              to={item.path}
-              className={({ isActive }) =>
-                `flex min-h-11 items-center gap-3 p-3 rounded-xl transition
-                  ${isActive ? "bg-blue-600" : "hover:bg-blue-800"}`
+        {/* Mobile Close Button */}
+        {isMobile && (
+          <button
+            onClick={() => {
+              if (onMobileClose) {
+                onMobileClose();
               }
-            >
-              <Icon size={20} className="flex-shrink-0" />
+            }}
+            className="
+              lg:hidden
+              w-9
+              h-9
+              rounded-lg
+              flex
+              items-center
+              justify-center
+              text-slate-400
+              hover:text-white
+              hover:bg-slate-800
+              transition
+              flex-shrink-0
+              ml-2
+            "
+          >
+            <X size={20} />
+          </button>
+        )}
+      </div>
 
-              <span className="truncate">{item.name}</span>
-            </NavLink>
-          );
-        })}
-      </nav>
+      {/* ==============================
+          MENU
+      =============================== */}
 
-      {/* Logout */}
+      <div className="flex-1 px-4 py-4 overflow-y-auto">
+        <nav className="space-y-1.5">
+          {menuItems.map((item) => {
+            const Icon = item.icon;
 
-      <button
-        onClick={logout}
-        className="flex min-h-11 items-center gap-3 mt-4 lg:mt-20 p-3 rounded-xl w-full hover:bg-red-600 transition"
-      >
-        <LogOut size={20} className="flex-shrink-0" />
-        Logout
-      </button>
+            return (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                onClick={handleNavClick}
+                className={({ isActive }) =>
+                  `
+                  group
+                  flex
+                  items-center
+                  gap-3
+                  px-3
+                  py-3
+                  rounded-xl
+                  text-sm
+                  font-medium
+                  transition-all
+                  duration-200
+                  relative
+                  overflow-hidden
+
+                  ${
+                    isActive
+                      ? `
+                        bg-gradient-to-r
+                        from-blue-600
+                        to-blue-700
+                        text-white
+                        shadow-lg
+                        shadow-blue-600/20
+                      `
+                      : `
+                        text-slate-400
+                        hover:text-white
+                        hover:bg-slate-900
+                      `
+                  }
+                  `
+                }
+              >
+                {({ isActive }) => (
+                  <>
+                    {isActive && (
+                      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-cyan-400 rounded-r-full shadow-lg shadow-cyan-400/50"></div>
+                    )}
+                    <Icon 
+                      size={20} 
+                      className={`flex-shrink-0 transition-transform duration-200 group-hover:scale-110 ${
+                        isActive ? "text-white" : "text-slate-400 group-hover:text-white"
+                      }`}
+                    />
+                    <span>{item.name}</span>
+                  </>
+                )}
+              </NavLink>
+            );
+          })}
+        </nav>
+      </div>
+
+      {/* ==============================
+          LOGOUT BUTTON
+      =============================== */}
+
+      <div className="p-4 border-t border-slate-800">
+        <button
+          onClick={logout}
+          className="
+            w-full
+            flex
+            items-center
+            gap-3
+            px-3
+            py-3
+            rounded-xl
+            text-sm
+            font-medium
+            text-slate-400
+            hover:text-white
+            hover:bg-red-500/10
+            transition
+            group
+          "
+        >
+          <LogOut 
+            size={20} 
+            className="transition-transform duration-200 group-hover:scale-110 group-hover:text-red-400"
+          />
+          <span>Logout</span>
+        </button>
+      </div>
     </aside>
   );
 };
