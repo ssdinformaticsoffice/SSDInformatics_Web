@@ -306,7 +306,7 @@ const ServiceDetails = () => {
           bg-[#020617]
           pt-20
           sm:pt-24
-          lg:pt-32
+          lg:pt-10
         "
         style={{
           backgroundImage:
@@ -582,6 +582,7 @@ const ServiceDetails = () => {
                   z-10
                   h-auto
                   w-full
+                  rounded-2xl
                   max-w-[620px]
                   select-none
                   object-contain

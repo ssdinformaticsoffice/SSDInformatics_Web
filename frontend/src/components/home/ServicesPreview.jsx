@@ -12,40 +12,46 @@ import {
 
 const services = [
   {
-    icon: <Globe size={32} />,
+    icon: <Globe size={36} />,
     title: "Website Development",
     description: "Modern, responsive and SEO-friendly websites.",
+    link: "/services/website-development",
   },
   {
-    icon: <Smartphone size={32} />,
+    icon: <Smartphone size={36} />,
     title: "Mobile App Development",
     description: "Android & iOS applications with modern UI.",
+    link: "/services/mobile-app-development",
   },
   {
-    icon: <Palette size={32} />,
+    icon: <Palette size={36} />,
     title: "UI / UX Design",
     description: "Creative and user-friendly interface designs.",
+    link: "/services/ui-ux-design",
   },
   {
-    icon: <MonitorSmartphone size={32} />,
+    icon: <MonitorSmartphone size={36} />,
     title: "ERP Software",
     description: "Custom ERP solutions for businesses.",
+    link: "/services/google-ads",
   },
   {
-    icon: <Search size={32} />,
+    icon: <Search size={36} />,
     title: "SEO Optimization",
     description: "Increase your website ranking on Google.",
+    link: "/services/seo-optimization",
   },
   {
-    icon: <Megaphone size={32} />,
+    icon: <Megaphone size={36} />,
     title: "Digital Marketing",
     description: "Meta Ads, Google Ads and complete marketing.",
+    link: "/services/digital-marketing",
   },
 ];
 
 const ServicesPreview = () => {
   return (
-   <section className="relative overflow-hidden bg-slate-950 py-10 lg:py-15">
+   <section className="relative overflow-hidden bg-slate-950 py-20 lg:py-28">
 
   {/* Background Glow */}
 
@@ -135,12 +141,9 @@ const ServicesPreview = () => {
       </p>
 
       <Link
-
-        to="/services"
-
-        className="mt-8 inline-flex items-center gap-3 font-medium text-blue-400"
-
-      >
+  to={service.link}
+  className="mt-8 inline-flex items-center gap-3 font-medium text-blue-400"
+>
 
         Learn More
 

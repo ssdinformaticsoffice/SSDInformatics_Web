@@ -35,7 +35,7 @@ const Footer = () => {
         px-4 
         sm:px-6 
         lg:px-8 
-        py-12 
+        py-9 
         sm:py-16
         grid 
         grid-cols-1 

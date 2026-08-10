@@ -80,27 +80,27 @@ const AboutPreview = () => {
 
           {/* Experience Card */}
 
-          <div className="absolute left-3 top-5 z-20 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-xl sm:left-6 sm:top-8 sm:px-6 sm:py-5">
-            <h3 className="text-xl font-bold text-white sm:text-3xl">
-              5+
-            </h3>
+      {/* Experience Card */}
+<div className="absolute left-3 top-5 z-30 rounded-2xl border border-white/20 bg-slate-900/90 px-4 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:left-6 sm:top-8 sm:px-6 sm:py-5">
+  <h3 className="text-xl font-bold text-white sm:text-3xl">
+    5+
+  </h3>
 
-            <p className="text-xs text-slate-300 sm:text-sm">
-              Years Experience
-            </p>
-          </div>
+  <p className="mt-1 text-xs font-medium text-slate-300 sm:text-sm">
+    Years Experience
+  </p>
+</div>
 
-          {/* Projects Card */}
+{/* Projects Card */}
+<div className="absolute bottom-5 right-3 z-30 rounded-2xl border border-white/20 bg-slate-900/90 px-4 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:right-6 sm:bottom-8 sm:px-6 sm:py-5">
+  <h3 className="text-xl font-bold text-white sm:text-3xl">
+    100+
+  </h3>
 
-          <div className="absolute bottom-5 right-3 z-20 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-xl sm:right-6 sm:bottom-8 sm:px-6 sm:py-5">
-            <h3 className="text-xl font-bold text-white sm:text-3xl">
-              100+
-            </h3>
-
-            <p className="text-xs text-slate-300 sm:text-sm">
-              Projects
-            </p>
-          </div>
+  <p className="mt-1 text-xs font-medium text-slate-300 sm:text-sm">
+    Projects
+  </p>
+</div>
                     <motion.div
             whileHover={{
               scale: 1.04,
