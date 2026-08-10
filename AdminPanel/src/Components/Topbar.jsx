@@ -79,7 +79,7 @@ const Topbar = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("admin");
 
-    navigate("/");
+    navigate("/", { replace: true });
   };
 
   return (
