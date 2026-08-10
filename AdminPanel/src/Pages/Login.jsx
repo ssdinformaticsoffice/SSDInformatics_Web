@@ -50,8 +50,8 @@ const Login = () => {
     } catch (error) {
       alert(
         error.response?.data?.message ||
-          error.message ||
-          "Login failed"
+        error.message ||
+        "Login failed"
       );
     } finally {
       setLoading(false);
@@ -388,6 +388,7 @@ const Login = () => {
               <div className="pt-1 text-center">
                 <button
                   type="button"
+                  onClick={() => navigate("/sendotp")}
                   className="text-[9px] font-light text-cyan-400/60 transition-colors hover:text-cyan-400 hover:underline sm:text-xs"
                 >
                   Forgot Password?
