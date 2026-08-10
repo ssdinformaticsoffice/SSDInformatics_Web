@@ -137,7 +137,7 @@ const About = () => {
           1. HERO SECTION
       ═══════════════════════════════════════════════════════ */}
       <section
-        className="relative overflow-hidden flex flex-col pt-20 sm:pt-28 lg:pt-15"
+        className="relative overflow-hidden flex flex-col pt-20 sm:pt-28 lg:pt-10"
         style={{
           backgroundImage:
             "radial-gradient(circle at 72% 30%, rgba(37,99,235,0.22) 0%, transparent 55%)," +
