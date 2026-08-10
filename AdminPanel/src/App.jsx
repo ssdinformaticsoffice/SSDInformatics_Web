@@ -9,9 +9,12 @@ import {
 import AdminLayout from "./Layout/AdminLayout";
 
 // Pages
-import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
+import SendOtp from "./Pages/SendOtp";
+import NewPassword from "./Pages/NewPassword";
+
+import Dashboard from "./Pages/Dashboard";
 import ManageAbout from "./Pages/ManageAbout";
 import ManageServices from "./Pages/ManageServices";
 import ManageContact from "./Pages/ManageContact";
@@ -28,8 +31,9 @@ const App = () => {
         {/* ==================== Admin Authentication ==================== */}
 
         <Route path="/" element={<Login />} />
-
         <Route path="/admin/signup" element={<Signup />} />
+        <Route path="/sendotp" element={<SendOtp />} />
+        <Route path="/newpassword" element={<NewPassword />} />
 
 
         {/* ==================== Admin Panel ==================== */}

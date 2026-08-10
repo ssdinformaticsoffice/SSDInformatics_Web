@@ -61,7 +61,7 @@ const Login = () => {
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-blue-500/5 rounded-full"></div>
-        
+
         <div className="max-w-lg relative z-10">
           {/* Logo */}
           <div className="flex items-center gap-3 mb-8">
@@ -81,7 +81,7 @@ const Login = () => {
                 Admin Dashboard
               </span>
             </h2>
-            
+
             <p className="text-blue-200/80 text-lg leading-relaxed">
               Manage your website content, services, pages, and enquiries from one centralized, powerful platform.
             </p>
@@ -104,16 +104,16 @@ const Login = () => {
             {/* Illustration */}
             <div className="mt-8 flex justify-center">
               <svg className="w-64 h-48 opacity-80" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="20" y="40" width="160" height="90" rx="8" fill="#1a2a44" stroke="#2a4a7a" strokeWidth="1.5"/>
-                <rect x="30" y="50" width="140" height="10" rx="3" fill="#2a4a7a"/>
-                <rect x="30" y="68" width="140" height="8" rx="2" fill="#1f3a5f"/>
-                <rect x="30" y="82" width="140" height="8" rx="2" fill="#1f3a5f"/>
-                <rect x="30" y="96" width="90" height="8" rx="2" fill="#1f3a5f"/>
-                <circle cx="160" cy="55" r="8" fill="#3b82f6" opacity="0.6"/>
-                <circle cx="160" cy="55" r="4" fill="#60a5fa"/>
-                <path d="M100 130 L80 115 L120 115 L100 130Z" fill="#3b82f6" opacity="0.4"/>
-                <path d="M60 115 L80 115" stroke="#3b82f6" strokeWidth="2"/>
-                <path d="M120 115 L140 115" stroke="#3b82f6" strokeWidth="2"/>
+                <rect x="20" y="40" width="160" height="90" rx="8" fill="#1a2a44" stroke="#2a4a7a" strokeWidth="1.5" />
+                <rect x="30" y="50" width="140" height="10" rx="3" fill="#2a4a7a" />
+                <rect x="30" y="68" width="140" height="8" rx="2" fill="#1f3a5f" />
+                <rect x="30" y="82" width="140" height="8" rx="2" fill="#1f3a5f" />
+                <rect x="30" y="96" width="90" height="8" rx="2" fill="#1f3a5f" />
+                <circle cx="160" cy="55" r="8" fill="#3b82f6" opacity="0.6" />
+                <circle cx="160" cy="55" r="4" fill="#60a5fa" />
+                <path d="M100 130 L80 115 L120 115 L100 130Z" fill="#3b82f6" opacity="0.4" />
+                <path d="M60 115 L80 115" stroke="#3b82f6" strokeWidth="2" />
+                <path d="M120 115 L140 115" stroke="#3b82f6" strokeWidth="2" />
               </svg>
             </div>
           </div>
@@ -190,11 +190,14 @@ const Login = () => {
 
               {/* Remember & Forgot */}
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 text-sm">
-                <label className="flex items-center gap-2 text-blue-200/60 cursor-pointer hover:text-blue-200/80 transition-colors">
-                  <input type="checkbox" className="accent-blue-500 w-4 h-4 rounded" />
+                <label className="flex  items-center gap-2 text-blue-200/60 cursor-pointer hover:text-blue-200/80 transition-colors">
+                  <input type="checkbox" required className="accent-blue-500 w-4 h-4 rounded" />
                   <span>Remember Me</span>
                 </label>
-                <button type="button" className="text-blue-400 hover:text-blue-300 transition-colors hover:underline">
+                <button
+                  type="button"
+                  onClick={() => navigate("/sendotp")}
+                  className="text-blue-400 hover:text-blue-300 transition-colors hover:underline">
                   Forgot Password?
                 </button>
               </div>
