@@ -4,14 +4,14 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FloatingCTA from "../components/FloatingCTA";
-import Loader from "../components/Loader";
+// import Loader from "../components/Loader";
 
 const MainLayout = () => {
   const [loading, setLoading] = useState(true);
 
-  if (loading) {
-    return <Loader onComplete={() => setLoading(false)} />;
-  }
+  // if (loading) {
+  //   return <Loader onComplete={() => setLoading(false)} />;
+  // }
 
   return (
     <>
