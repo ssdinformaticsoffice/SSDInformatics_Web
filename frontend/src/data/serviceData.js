@@ -1,4 +1,4 @@
-import {
+﻿import {
   Smartphone,
   Code2,
   Globe,
@@ -1257,3 +1257,42 @@ export const servicesData = {
     },
   },
 };
+export default servicesData;
+export const services = [
+  {
+    slug: "website-development",
+    title: "Website Development",
+  },
+  {
+    slug: "mobile-app-development",
+    title: "Mobile App Development",
+  },
+  {
+    slug: "ui-ux-design",
+    title: "UI/UX Design",
+  },
+  {
+    slug: "erp-software-solutions",
+    title: "ERP Software Solutions",
+  },
+  {
+    slug: "seo-optimization",
+    title: "SEO Optimization",
+  },
+  {
+    slug: "google-ads",
+    title: "Google Ads",
+  },
+  {
+    slug: "meta-ads",
+    title: "Meta Ads",
+  },
+  {
+    slug: "graphic-design",
+    title: "Graphic Design",
+  },
+  {
+    slug: "video-editing",
+    title: "Video Editing",
+  },
+];
