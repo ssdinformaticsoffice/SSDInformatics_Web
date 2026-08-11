@@ -5,12 +5,13 @@ import {
 
 import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
 import React, { useState } from "react";
-import { Link } from "react-router";
+import { useNavigate, Link } from "react-router-dom";
 
 
 function HomePage() {
   const rotation = useMotionValue(0);
   const [isPaused, setIsPaused] = React.useState(false);
+  const navigate = useNavigate();
 
   useAnimationFrame((_, delta) => {
     if (!isPaused) {
@@ -67,18 +68,23 @@ function HomePage() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
 
 
-              <button className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white transition hover:bg-blue-700">
+              <button
+                type="button"
+                onClick={() => navigate("/contact")}
+                className="flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white transition hover:bg-blue-700"
+              >
                 Get Started
                 <ArrowRight size={18} />
               </button>
 
-
-              <button className="flex items-center justify-center gap-2 rounded-xl border border-slate-600 px-7 py-4 font-semibold text-white transition hover:border-blue-500">
+              <button
+                type="button"
+                onClick={() => navigate("/services/website-development")}
+                className="flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-slate-600 px-7 py-4 font-semibold text-white transition hover:border-blue-500"
+              >
                 <PlayCircle size={18} />
                 Explore Services
               </button>
-
-
             </div>
 
 
@@ -311,7 +317,7 @@ function HomePage() {
 
 
               </motion.div>
-                          </div>
+            </div>
           </div>
 
 
