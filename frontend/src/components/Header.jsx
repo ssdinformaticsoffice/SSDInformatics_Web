@@ -137,7 +137,7 @@ const Header = () => {
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
-       {/* Logo */}
+        {/* Logo */}
         <Link
           to="/"
           onClick={() => {
@@ -189,7 +189,10 @@ const Header = () => {
             />
 
             {/* Logo Text */}
-            <div className="min-w-0 leading-none">
+            <div className="min-w-0 leading-none
+                   lg:-ml-5
+                   md:-ml-4
+                  -ml-2 ">
               <h2
                 className="
                   truncate
@@ -200,6 +203,8 @@ const Header = () => {
                   sm:text-2xl
                   md:text-3xl
                   lg:text-3xl
+                  
+                  
                 "
               >
                 SSD
@@ -207,6 +212,7 @@ const Header = () => {
 
               <p
                 className="
+                
                   mt-0.5
                   whitespace-nowrap
                   text-[8px]

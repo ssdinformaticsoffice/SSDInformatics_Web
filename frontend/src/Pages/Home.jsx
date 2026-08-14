@@ -6,11 +6,12 @@ import AboutPreview from "../components/home/AboutPreview";
 import ServicesPreview from "../components/home/ServicesPreview";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import Process from "../components/home/Process";
-import PortfolioPreview from "../components/home/PortfolioPreview";
 import Stats from "../components/home/Stats";
 import Testimonials from "../components/home/Testimonials";
 import CTA from "../components/home/CTA";
 import HomePage from "./HomePage";
+import OurTopClient from "../components/home/OurTopClient";
+import Cirtficates from "../components/home/Cirtficates";
 
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
@@ -41,9 +42,10 @@ const Home = () => {
         <ServicesPreview />
         <WhyChooseUs />
         <Process />
-        <PortfolioPreview />
+        <OurTopClient/>
         <Stats />
         <Testimonials />
+        <Cirtficates/>
         <CTA />
       </>
     );

@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 
 import logo from "../assets/ssd-white-logo.png";
+import social from "/images/social asana.png";
 
 const Footer = () => {
   const services = [
@@ -16,10 +18,6 @@ const Footer = () => {
       path: "/services/mobile-app-development",
     },
     {
-      name: "UI/UX Design",
-      path: "/services/ui-ux-design",
-    },
-    {
       name: "ERP Software Solutions",
       path: "/services/erp-software-solutions",
     },
@@ -28,20 +26,12 @@ const Footer = () => {
       path: "/services/seo-optimization",
     },
     {
-      name: "Google Ads",
-      path: "/services/google-ads",
-    },
-    {
       name: "Meta Ads",
       path: "/services/meta-ads",
     },
     {
       name: "Graphic Design",
       path: "/services/graphic-design",
-    },
-    {
-      name: "Video Editing",
-      path: "/services/video-editing",
     },
   ];
 
@@ -54,13 +44,7 @@ const Footer = () => {
             <img
               src={logo}
               alt="SSD Informatics"
-              className="
-    object-contain
-    transition-transform
-    duration-700
-    ease-in-out
-    hover:rotate-[360deg]
-  "
+              className="object-contain transition-transform duration-700 ease-in-out hover:rotate-[360deg]"
             />
 
             <div className="footer-logo-text">
@@ -69,10 +53,40 @@ const Footer = () => {
             </div>
           </Link>
 
-          <p className="footer-description">
+          <p className="footer-description pb-4">
             We provide innovative digital solutions to help businesses grow,
             connect and succeed in the digital world.
           </p>
+
+          {/*-----------------Collaboration - Social Asana -------------*/}
+          <a
+            href="https://socialasana.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" collaboration-link group flex w-full max-w-[240px] flex-col items-center rounded-xl
+             bg-white p-2 text-center shadow-md transition-all duration-300 hover:-translate-y-1 
+             hover:shadow-lg sm:max-w-[260px] sm:p-2"
+          >
+            {/* Logo */}
+            <div className="flex w-full items-center justify-center">
+              <img
+                src={social}
+                alt="Social Asana"
+                className="  h-auto w-32 object-contain  transition-transform duration-300  sm:w-36  md:w-40"
+              />
+            </div>
+
+            {/* Text */}
+            <h1
+              className=" px-2 text-center text-base font-bold leading-snug text-blue-800 sm:text-lg md:text-xl"
+            >
+              Social Media{" "}
+              <span className="text-orange-400">
+                Partner Company
+              </span>
+            </h1>
+          </a>
+
         </div>
 
         {/* SECTION 2 - SERVICES */}
@@ -136,6 +150,35 @@ const Footer = () => {
           <div className="contact-item">
             <MapPin size={18} />
             <span>Lucknow, Uttar Pradesh, India</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-blue-700"
+            >
+              <FaFacebookF />
+            </Link>
+
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-orange-500"
+            >
+              <FaInstagram />
+            </Link>
+
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-blue-700"
+            >
+              <FaLinkedinIn />
+            </Link>
           </div>
         </div>
       </div>
