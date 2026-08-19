@@ -1371,7 +1371,7 @@ const About = () => {
                             -right-20
                             -top-20
                             h-40
-                            w-40
+                            w-30
                             rounded-full
                             bg-blue-500/10
                             blur-3xl
@@ -1387,14 +1387,14 @@ const About = () => {
                           className="
                             relative
                             mx-auto
-                            h-52
+                            h-60
                             w-full
                             overflow-hidden
                             rounded-2xl
                             border
                             border-slate-800
                             bg-slate-950
-                            sm:h-60
+                            sm:h-80
                           "
                         >
 

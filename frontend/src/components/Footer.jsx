@@ -149,7 +149,7 @@ const Footer = () => {
 
           <div className="contact-item">
             <Phone size={18} />
-            <a href="tel:+919876543210">+91 98765 43210</a>
+            <a href="tel:+919876543210">+91 9235327547</a>
           </div>
 
           <div className="contact-item">
@@ -168,7 +168,7 @@ const Footer = () => {
             </Link>
 
             <Link
-              href="#"
+              href="https://www.instagram.com/ssdinformatics?igsh=MWp0dmpjMDY4bDFwcw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-orange-500"
