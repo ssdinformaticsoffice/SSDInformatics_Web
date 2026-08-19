@@ -19,6 +19,10 @@ import ManageAbout from "./Pages/ManageAbout";
 import ManageServices from "./Pages/ManageServices";
 import ManageContact from "./Pages/ManageContact";
 import Settings from "./Pages/Settings";
+import CareerApplications from "./Pages/CareerApplications";
+import ManageCareers from "./Pages/ManageCareers";
+
+import ManageTeam from "./Pages/ManageTeam";
 
 // Manage Home
 import ManageHome from "./Pages/ManageHome/ManageHome";
@@ -68,6 +72,24 @@ const App = () => {
           <Route
             path="/admin/contact"
             element={<ManageContact />}
+          />
+
+          {/* Career Applications */}
+          <Route
+            path="/admin/career-applications"
+            element={<CareerApplications />}
+          />
+
+          {/* Manage Career */}
+          <Route
+            path="/admin/careers"
+            element={<ManageCareers />}
+          />
+
+             {/* Manage Team */}
+          <Route
+            path="/admin/team"
+            element={<ManageTeam />}
           />
 
           {/* Settings */}

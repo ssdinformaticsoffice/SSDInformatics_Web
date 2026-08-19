@@ -124,7 +124,12 @@ const Footer = () => {
             </li>
 
             <li>
-              <Link to="/team">Our Team</Link>
+              <Link
+                to="/about#our-team"
+                className="..."
+              >
+                Our Team
+              </Link>
             </li>
 
             <li>

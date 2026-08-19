@@ -9,6 +9,7 @@ import {
   Settings,
   LogOut,
   X,
+  UsersRound,
 } from "lucide-react";
 
 const Sidebar = ({
@@ -41,10 +42,26 @@ const Sidebar = ({
       icon: Briefcase,
     },
     {
+    name: "Manage Careers",
+    path: "/admin/careers",
+    icon: Briefcase,
+  },
+
+  {
+  name: "Manage Team",
+  path: "/admin/team",
+  icon: UsersRound,
+},
+    {
       name: "Manage Contact",
       path: "/admin/contact",
       icon: MessageSquare,
     },
+    {
+  name: "Career Applications",
+  path: "/admin/career-applications",
+  icon: Briefcase,
+},
     {
       name: "Settings",
       path: "/admin/settings",

@@ -86,6 +86,11 @@ const navLinks = [
     ],
   },
   {
+    name: "Career",
+    path: "/career",
+  },
+
+  {
     name: "Contact Us",
     path: "/contact",
   },
