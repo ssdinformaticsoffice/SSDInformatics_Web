@@ -16,11 +16,13 @@ import Cirtficates from "../components/home/Cirtficates";
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
 
+  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+
   useEffect(() => {
     const fetchHomeData = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/home"
+          `${API_URL}/home`
         );
 
         setHomeData(res.data.home);

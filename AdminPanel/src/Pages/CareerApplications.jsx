@@ -19,7 +19,8 @@ import {
   Filter,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/career-applications";
+const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+
 
 const STATUS_OPTIONS = [
   "Applied",
@@ -91,7 +92,7 @@ const CareerApplications = () => {
       setError("");
 
       const response = await axios.get(
-        API_URL,
+        `${API_URL}/career-applications`,
         getAuthConfig()
       );
 
@@ -149,7 +150,7 @@ const CareerApplications = () => {
       setViewLoading(true);
 
       const response = await axios.get(
-        `${API_URL}/${id}`,
+        `${API_URL}/career-applications/${id}`,
         getAuthConfig()
       );
 
@@ -182,7 +183,7 @@ const CareerApplications = () => {
       }
 
       const response = await axios.patch(
-        `${API_URL}/${id}/read`,
+        `${API_URL}/career-applications/${id}/read`,
         {},
         getAuthConfig()
       );
@@ -233,7 +234,7 @@ const CareerApplications = () => {
       setStatusLoading(id);
 
       const response = await axios.patch(
-        `${API_URL}/${id}/status`,
+        `${API_URL}/career-applications/${id}/status`,
         {
           status,
         },
@@ -284,7 +285,7 @@ const CareerApplications = () => {
       setDeleteLoading(id);
 
       const response = await axios.delete(
-        `${API_URL}/${id}`,
+        `${API_URL}/career-applications/${id}`,
         getAuthConfig()
       );
 

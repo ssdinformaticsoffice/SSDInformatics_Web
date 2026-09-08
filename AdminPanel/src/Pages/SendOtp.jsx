@@ -15,6 +15,8 @@ function SendOtp() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
+  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+
   const handleSendOtp = async (e) => {
     e.preventDefault();
 
@@ -23,7 +25,7 @@ function SendOtp() {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/admin/send-otp", {
+      const response = await axios.post(`${API_URL}/admin/send-otp`, {
         email,
       });
 
@@ -50,7 +52,7 @@ function SendOtp() {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/admin/verify-otp", {
+      const response = await axios.post(`${API_URL}/admin/verify-otp`, {
         email,
         otp,
       });

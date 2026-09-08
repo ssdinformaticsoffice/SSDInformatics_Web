@@ -23,6 +23,8 @@ const Topbar = ({ setSidebarOpen, isMobile, sidebarOpen, onHamburgerClick }) => 
   const dropdownRef = useRef(null);
   const notificationRef = useRef(null);
 
+  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+
   // ================================
   // Fetch Notifications
   // ================================
@@ -30,7 +32,7 @@ const Topbar = ({ setSidebarOpen, isMobile, sidebarOpen, onHamburgerClick }) => 
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/notifications");
+        const res = await axios.get(`${API_URL}/notifications`);
 
         console.log("Notification API Response:", res.data);
 
@@ -74,7 +76,7 @@ const Topbar = ({ setSidebarOpen, isMobile, sidebarOpen, onHamburgerClick }) => 
 
   const markNotificationsAsRead = async () => {
     try {
-      await axios.put("http://localhost:5000/api/notifications/read");
+      await axios.put(`${API_URL}/notifications/read`);
 
       setNotifications((prev) =>
         prev.map((item) => ({

@@ -83,6 +83,8 @@ const Career = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
+  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+
   // =====================================================
   // Fetch Open Positions
   // =====================================================
@@ -94,7 +96,7 @@ const Career = () => {
         setJobsError("");
 
         const response = await axios.get(
-          "http://localhost:5000/api/careers"
+          `${API_URL}/careers`
         );
 
         if (response.data.success) {
@@ -286,7 +288,7 @@ const Career = () => {
       formData.append("resume", resume);
 
       const response = await axios.post(
-  "http://localhost:5000/api/career-applications",
+  `${API_URL}/career-applications`,
   formData
 );
 

@@ -20,10 +20,13 @@ const ManageContact = () => {
     fetchContacts();
   }, []);
 
+
+  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+  
   const fetchContacts = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/contact"
+        `${API_URL}/contact`
       );
 
       setContacts(res.data.data || []);

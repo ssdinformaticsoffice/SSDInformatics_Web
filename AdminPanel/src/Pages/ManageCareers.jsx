@@ -16,7 +16,7 @@ import {
   XCircle,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/careers";
+const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
 
 const initialForm = {
   title: "",
@@ -69,7 +69,7 @@ const ManageCareers = () => {
       setError("");
 
       const response = await axios.get(
-        `${API_URL}/all`,
+        `${API_URL}/careers/all`,
         getAuthConfig()
       );
 
@@ -230,7 +230,7 @@ const ManageCareers = () => {
       // Edit
       if (editingCareer) {
         response = await axios.patch(
-          `${API_URL}/${editingCareer._id}`,
+          `${API_URL}/careers/${editingCareer._id}`,
           payload,
           getAuthConfig()
         );
@@ -239,7 +239,7 @@ const ManageCareers = () => {
       // Create
       else {
         response = await axios.post(
-          API_URL,
+          `${API_URL}/careers`,
           payload,
           getAuthConfig()
         );
@@ -290,7 +290,7 @@ const ManageCareers = () => {
       setDeleteLoading(id);
 
       const response = await axios.delete(
-        `${API_URL}/${id}`,
+        `${API_URL}/careers/${id}`,
         getAuthConfig()
       );
 

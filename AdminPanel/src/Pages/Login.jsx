@@ -4,7 +4,10 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
+
   const navigate = useNavigate();
+
+  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
 
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -39,7 +42,7 @@ const Login = () => {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/admin/login",
+        `${API_URL}/admin/login`,
         formData
       );
 

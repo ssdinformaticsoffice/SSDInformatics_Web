@@ -25,6 +25,8 @@ import contactImage from "/images/contact-image.jpg";
 const ContactPage = () => {
   const formRef = useRef(null);
 
+  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", subject: "", message: "",
   });
@@ -58,7 +60,7 @@ const ContactPage = () => {
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setIsSubmitting(true); setSubmitStatus(null);
     try {
-      const res = await axios.post("http://localhost:5000/api/contact", formData);
+      const res = await axios.post(`${API_URL}/contact`, formData);
       if (res.data.success) {
         setSubmitStatus("success");
         setFormData({ name: "", email: "", phone: "", subject: "", message: "" });

@@ -6,6 +6,8 @@ import axios from "axios";
 const Signup = () => {
   const navigate = useNavigate();
 
+  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+
   const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -44,7 +46,7 @@ const Signup = () => {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/admin/signup",
+        `${API_URL}/admin/signup`,
         {
           name: formData.name,
           email: formData.email,

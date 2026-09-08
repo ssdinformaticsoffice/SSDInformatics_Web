@@ -14,7 +14,7 @@ import {
   Link as LinkIcon,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/team";
+const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
 
 const initialForm = {
   name: "",
@@ -70,7 +70,7 @@ const ManageTeam = () => {
       setError("");
 
       const response = await axios.get(
-        `${API_URL}/all`,
+        `${API_URL}/team/all`,
         getAuthConfig()
       );
 
@@ -276,7 +276,7 @@ const ManageTeam = () => {
 
       if (editingMember) {
         response = await axios.patch(
-          `${API_URL}/${editingMember._id}`,
+          `${API_URL}/team/${editingMember._id}`,
           formData,
           getAuthConfig()
         );
@@ -288,7 +288,7 @@ const ManageTeam = () => {
 
       else {
         response = await axios.post(
-          API_URL,
+          `${API_URL}/team`,
           formData,
           getAuthConfig()
         );
@@ -341,7 +341,7 @@ const ManageTeam = () => {
       setError("");
 
       const response = await axios.delete(
-        `${API_URL}/${id}`,
+        `${API_URL}/team/${id}`,
         getAuthConfig()
       );
 

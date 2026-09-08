@@ -14,11 +14,13 @@ const Settings = () => {
     footerText: "",
   });
 
+  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+
   // Get Settings
   const fetchSettings = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/settings"
+        `${API_URL}/settings`
       );
 
       if (res.data.data) {
@@ -45,7 +47,7 @@ const Settings = () => {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/settings",
+        `${API_URL}/settings`,
         settings
       );
 

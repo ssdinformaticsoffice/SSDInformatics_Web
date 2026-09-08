@@ -7,6 +7,8 @@ function NewPassword() {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -76,7 +78,7 @@ function NewPassword() {
 
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/admin/new-password",
+                `${API_URL}/admin/new-password`,
                 {
                     newPassword,
                     confirmNewPassword,
