@@ -13,6 +13,8 @@ const ManageHome = () => {
     buttonLink: "",
   });
 
+   const API_URL = import.meta.env.VITE_API_URL ;
+
   const handleChange = (e) => {
     setHomeData({
       ...homeData,
@@ -25,7 +27,7 @@ const ManageHome = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/home",
+        `${API_URL}/home`,
         homeData,
       );
 

@@ -12,9 +12,11 @@ const Stats = () => {
 
   const [stats, setStats] = useState([]);
 
+   const API_URL = import.meta.env.VITE_API_URL ;
+
   const getStats = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/stats");
+      const res = await axios.get(`${API_URL}/stats`);
       setStats(res.data);
     } catch (error) {
       console.log(error);
@@ -37,7 +39,7 @@ const Stats = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/stats",
+        `${API_URL}/stats`,
         statsData
       );
 
