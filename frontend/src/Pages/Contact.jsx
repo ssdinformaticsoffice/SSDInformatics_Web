@@ -25,7 +25,7 @@ import contactImage from "/images/contact-image.jpg";
 const ContactPage = () => {
   const formRef = useRef(null);
 
-  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+  const API_URL = import.meta.env.VITE_API_URL ;
 
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", subject: "", message: "",

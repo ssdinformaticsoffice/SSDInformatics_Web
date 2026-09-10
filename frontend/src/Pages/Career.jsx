@@ -83,7 +83,7 @@ const Career = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const API_URL = import.meta.env.VITE_API_URL  || "http://localhost:5000/api";
+  const API_URL = import.meta.env.VITE_API_URL ;
 
   // =====================================================
   // Fetch Open Positions
