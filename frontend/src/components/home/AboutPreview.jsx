@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import {
+  Search,
+  Palette,
+  Code2,
+  ShieldCheck,
+  Rocket,
+} from "lucide-react";
 const features = [
   "Website Development",
   "Mobile Apps",
@@ -31,7 +37,7 @@ const item = {
 
 const AboutPreview = () => {
   return (
-    <section className="relative overflow-hidden bg-[#050816] py-16 sm:py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#050816] py-10 sm:py-15 lg:py-15">
       {/* Background Glow */}
 
       <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-blue-600/20 blur-[120px]" />
@@ -74,27 +80,27 @@ const AboutPreview = () => {
 
           {/* Experience Card */}
 
-          <div className="absolute left-3 top-5 z-20 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-xl sm:left-6 sm:top-8 sm:px-6 sm:py-5">
-            <h3 className="text-xl font-bold text-white sm:text-3xl">
-              5+
-            </h3>
+      {/* Experience Card */}
+<div className="absolute left-3 top-5 z-30 rounded-2xl border border-white/20 bg-slate-900/90 px-4 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:left-6 sm:top-8 sm:px-6 sm:py-5">
+  <h3 className="text-xl font-bold text-white sm:text-3xl">
+    5+
+  </h3>
 
-            <p className="text-xs text-slate-300 sm:text-sm">
-              Years Experience
-            </p>
-          </div>
+  <p className="mt-1 text-xs font-medium text-slate-300 sm:text-sm">
+    Years Experience
+  </p>
+</div>
 
-          {/* Projects Card */}
+{/* Projects Card */}
+<div className="absolute bottom-5 right-3 z-30 rounded-2xl border border-white/20 bg-slate-900/90 px-4 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:right-6 sm:bottom-8 sm:px-6 sm:py-5">
+  <h3 className="text-xl font-bold text-white sm:text-3xl">
+    100+
+  </h3>
 
-          <div className="absolute bottom-5 right-3 z-20 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-xl sm:right-6 sm:bottom-8 sm:px-6 sm:py-5">
-            <h3 className="text-xl font-bold text-white sm:text-3xl">
-              100+
-            </h3>
-
-            <p className="text-xs text-slate-300 sm:text-sm">
-              Projects
-            </p>
-          </div>
+  <p className="mt-1 text-xs font-medium text-slate-300 sm:text-sm">
+    Projects
+  </p>
+</div>
                     <motion.div
             whileHover={{
               scale: 1.04,
@@ -152,7 +158,7 @@ const AboutPreview = () => {
                 whileHover={{
                   x: 8,
                 }}
-                className="group flex items-center justify-center gap-3 lg:justify-start"
+                className="group flex items-center md:justify-center gap-3 lg:justify-start"
               >
                 <CheckCircle className="text-blue-400 transition group-hover:text-cyan-400" />
 

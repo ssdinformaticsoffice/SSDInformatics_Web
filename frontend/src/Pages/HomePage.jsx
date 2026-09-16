@@ -1,33 +1,41 @@
-import { ArrowRight, PlayCircle } from "lucide-react";
-import { motion } from "framer-motion";
-
 import {
-  FaReact,
-  FaGithub,
-  FaHtml5,
-  FaNodeJs,
-} from "react-icons/fa";
+  ArrowRight,
+  PlayCircle,
+  Globe,
+  Smartphone,
+  Database,
+  Palette,
+  Megaphone,
+  ShoppingCart,
+  Cloud,
+  Settings,
+} from "lucide-react";
 
-import {
-  SiJavascript,
-  SiMongodb,
-  SiExpress,
-} from "react-icons/si";
-
-import { TbTerminal2 } from "react-icons/tb";
+import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
+import React, { useState } from "react";
+import { Link } from "react-router";
 
 function HomePage() {
+  const rotation = useMotionValue(0);
+  const [isPaused, setIsPaused] = React.useState(false);
+
+  useAnimationFrame((_, delta) => {
+    if (!isPaused) {
+      rotation.set(rotation.get() + (delta / 22000) * 360);
+    }
+  });
+
   return (
-    <section className="relative min-h-screen overflow-hidden bg-slate-950">
+    <section className="relative min-h-screen overflow-hidden">
 
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950" />
 
-      <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-blue-600/20 blur-3xl" />
+      <div className="absolute -top-15 -left-20 h-80 w-80 rounded-full bg-blue-600/20 blur-3xl" />
 
       <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 py-20 sm:px-8 lg:px-10">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 py-8 sm:px-8 lg:px-10">
 
         <div className="grid w-full grid-cols-1 items-center gap-16 lg:grid-cols-2">
 
@@ -38,11 +46,13 @@ function HomePage() {
               🚀 Trusted Software Development Company
             </span>
 
-            <h1 className="mt-8 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="mt-8 text-4xl font-bold leading-[1.05] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
               Transform Your
+
               <span className="block text-blue-400">
                 Business
               </span>
+
               With Smart Digital Solutions
             </h1>
 
@@ -67,9 +77,8 @@ function HomePage() {
             </div>
 
           </div>
-
-          {/* RIGHT */}
-          <div className="flex justify-center">
+                    {/* RIGHT */}
+          <div className="flex justify-center -translate-y-9">
 
             <div
               className="
@@ -87,7 +96,7 @@ function HomePage() {
               "
             >
 
-  {/* CENTER IMAGE */}
+            {/* CENTER IMAGE */}
    <div
   className="
     absolute z-20
@@ -109,84 +118,114 @@ function HomePage() {
     className="w-full h-full object-cover"
   />
 </div>
-                              {/* ROTATING ORBIT */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 25,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                className="absolute inset-0"
-              >
-                {/* Ring */}
-                <div className="absolute inset-4 sm:inset-5 md:inset-6 rounded-full border-2 border-dashed border-cyan-300/60" />
 
-                {/* React */}
-                <div className="absolute left-1/2 top-0 -translate-x-1/2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-400 bg-slate-900 shadow-[0_0_20px_#2563eb] sm:h-12 sm:w-12 md:h-14 md:w-14">
-                    <FaReact className="text-2xl text-cyan-400 sm:text-3xl md:text-4xl" />
-                  </div>
-                </div>
+       
 
-                {/* JavaScript */}
-                <div className="absolute right-3 top-[16%] sm:right-5 md:right-6">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-yellow-400 bg-slate-900 sm:h-12 sm:w-12 md:h-14 md:w-14">
-                    <SiJavascript className="text-2xl text-yellow-300 sm:text-3xl md:text-4xl" />
-                  </div>
-                </div>
+{/* ROTATING ORBIT */}
+<motion.div
+  style={{ rotate: rotation }}
+  className="absolute inset-0"
+  onMouseEnter={() => setIsPaused(true)}
+  onMouseLeave={() => setIsPaused(false)}
+>
+  {/* DOTTED ORBIT */}
+  <div className="absolute inset-[7%] rounded-full border-2 border-dashed border-white/20" />
 
-                {/* Express */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-green-400 bg-slate-900 sm:h-12 sm:w-12 md:h-14 md:w-14">
-                    <SiExpress className="text-2xl text-green-400 sm:text-3xl md:text-4xl" />
-                  </div>
-                </div>
 
-                {/* Node */}
-                <div className="absolute bottom-[16%] right-4 sm:right-8 md:right-10">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-lime-400 bg-slate-900 sm:h-12 sm:w-12 md:h-14 md:w-14">
-                    <FaNodeJs className="text-2xl text-lime-400 sm:text-3xl md:text-4xl" />
-                  </div>
-                </div>
+{/* Website Development - 12 o'clock */}
+<Link
+  to="/services/website-development"
+  className="absolute left-1/2 top-[7%] -translate-x-1/2 -translate-y-1/2"
+>
+  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-400 bg-slate-900 shadow-[0_0_20px_#2563eb] sm:h-12 sm:w-12 md:h-14 md:w-14">
+    <Globe className="text-2xl text-cyan-400 sm:text-3xl md:text-4xl" />
+  </div>
+</Link>
 
-                {/* Terminal */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-green-400 bg-slate-900 sm:h-12 sm:w-12 md:h-14 md:w-14">
-                    <TbTerminal2 className="text-2xl text-green-400 sm:text-3xl md:text-4xl" />
-                  </div>
-                </div>
 
-                {/* HTML */}
-                <div className="absolute bottom-[16%] left-4 sm:left-8 md:left-10">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-orange-500 bg-slate-900 sm:h-12 sm:w-12 md:h-14 md:w-14">
-                    <FaHtml5 className="text-2xl text-orange-500 sm:text-3xl md:text-4xl" />
-                  </div>
-                </div>
 
-                {/* MongoDB */}
-                <div className="absolute left-0 top-1/2 -translate-y-1/2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-green-500 bg-slate-900 sm:h-12 sm:w-12 md:h-14 md:w-14">
-                    <SiMongodb className="text-2xl text-green-500 sm:text-3xl md:text-4xl" />
-                  </div>
-                </div>
+  {/* Mobile App Development - 1:30 */}
+  <Link
+    to="/services/mobile-app-development"
+    className="absolute left-[79.3%] top-[20.7%] -translate-x-1/2 -translate-y-1/2"
+  >
+    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-yellow-400 bg-slate-900 shadow-[0_0_20px_rgba(250,204,21,0.35)] sm:h-12 sm:w-12 md:h-14 md:w-14">
+      <Smartphone className="text-2xl text-yellow-300 sm:text-3xl md:text-4xl" />
+    </div>
+  </Link>
 
-                {/* GitHub */}
-                <div className="absolute left-4 top-[16%] sm:left-8 md:left-10">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-900 sm:h-12 sm:w-12 md:h-14 md:w-14">
-                    <FaGithub className="text-2xl text-white sm:text-3xl md:text-4xl" />
-                  </div>
-                </div>
-              </motion.div>
+  {/* ERP Solutions - 3 o'clock */}
+  <Link
+    to="/services/erp-solutions"
+    className="absolute left-[93%] top-1/2 -translate-x-1/2 -translate-y-1/2"
+  >
+    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-green-400 bg-slate-900 shadow-[0_0_20px_rgba(74,222,128,0.35)] sm:h-12 sm:w-12 md:h-14 md:w-14">
+      <Database className="text-2xl text-green-400 sm:text-3xl md:text-4xl" />
+    </div>
+  </Link>
+
+  {/* UI / UX Design - 4:30 */}
+  <Link
+    to="/services/ui-ux-design"
+    className="absolute left-[79.3%] top-[79.3%] -translate-x-1/2 -translate-y-1/2"
+  >
+    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-lime-400 bg-slate-900 shadow-[0_0_20px_rgba(163,230,53,0.35)] sm:h-12 sm:w-12 md:h-14 md:w-14">
+      <Palette className="text-2xl text-lime-400 sm:text-3xl md:text-4xl" />
+    </div>
+  </Link>
+
+  {/* Digital Marketing - 6 o'clock */}
+  <Link
+    to="/services/digital-marketing"
+    className="absolute left-1/2 top-[93%] -translate-x-1/2 -translate-y-1/2"
+  >
+    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-green-400 bg-slate-900 shadow-[0_0_20px_rgba(74,222,128,0.35)] sm:h-12 sm:w-12 md:h-14 md:w-14">
+      <Megaphone className="text-2xl text-green-400 sm:text-3xl md:text-4xl" />
+    </div>
+  </Link>
+
+  {/* E-Commerce Development - 7:30 */}
+  <Link
+    to="/services/google-ads"
+    className="absolute left-[20.7%] top-[79.3%] -translate-x-1/2 -translate-y-1/2"
+  >
+    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-orange-500 bg-slate-900 shadow-[0_0_20px_rgba(249,115,22,0.35)] sm:h-12 sm:w-12 md:h-14 md:w-14">
+      <ShoppingCart className="text-2xl text-orange-500 sm:text-3xl md:text-4xl" />
+    </div>
+  </Link>
+
+  {/* Cloud Solutions - 9 o'clock */}
+  <Link
+    to="/services/cloud-solutions"
+    className="absolute left-[7%] top-1/2 -translate-x-1/2 -translate-y-1/2"
+  >
+    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-green-500 bg-slate-900 shadow-[0_0_20px_rgba(34,197,94,0.35)] sm:h-12 sm:w-12 md:h-14 md:w-14">
+      <Cloud className="text-2xl text-green-500 sm:text-3xl md:text-4xl" />
+    </div>
+  </Link>
+
+  {/* Software Solutions - 10:30 */}
+  <Link
+    to="/services/seo-optimization"
+    className="absolute left-[20.7%] top-[20.7%] -translate-x-1/2 -translate-y-1/2"
+  >
+    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-900 shadow-[0_0_20px_rgba(255,255,255,0.2)] sm:h-12 sm:w-12 md:h-14 md:w-14">
+      <Settings className="text-2xl text-white sm:text-3xl md:text-4xl" />
+    </div>
+  </Link>
+</motion.div>
+
+
+
+
             </div>
-                        </div>
-          
+          </div>
 
         </div>
       </div>
+
     </section>
   );
-
 }
 
 export default HomePage;

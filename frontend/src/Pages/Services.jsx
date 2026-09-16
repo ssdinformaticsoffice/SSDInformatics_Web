@@ -74,7 +74,6 @@ const services = [
     description:
       "Creative graphic designs including logos, banners, social media posts, brochures and complete brand identity solutions.",
   },
-
   {
     title: "Video Editing",
     slug: "video-editing",
@@ -84,7 +83,14 @@ const services = [
   },
 ];
 
-const FloatingCard = ({ x, y, children, delay = 0 }) => {
+const FloatingCard = ({
+  x,
+  y,
+  children,
+  title,
+  subtitle,
+  delay = 0,
+}) => {
   const ref = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -98,8 +104,15 @@ const FloatingCard = ({ x, y, children, delay = 0 }) => {
         width: 200,
       }}
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: y, transition: { delay: delay + 0.5 } }}
-      whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+      animate={{
+        opacity: 1,
+        y: y,
+        transition: { delay: delay + 0.5 },
+      }}
+      whileHover={{
+        scale: 1.05,
+        transition: { duration: 0.2 },
+      }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
@@ -110,8 +123,14 @@ const FloatingCard = ({ x, y, children, delay = 0 }) => {
       >
         {children}
       </motion.div>
-      <h4 className="text-white font-semibold text-sm">AI-Powered</h4>
-      <p className="text-white/50 text-xs mt-1">Real-time insights</p>
+
+      <h4 className="text-white font-semibold text-sm">
+        {title}
+      </h4>
+
+      <p className="text-white/50 text-xs mt-1">
+        {subtitle}
+      </p>
     </motion.div>
   );
 };
@@ -123,6 +142,7 @@ const Services = () => {
 
   const handleMouseMove = (e) => {
     const rect = containerRef.current?.getBoundingClientRect();
+
     if (rect) {
       setMouseX((e.clientX - rect.left) / rect.width - 0.5);
       setMouseY((e.clientY - rect.top) / rect.height - 0.5);
@@ -164,6 +184,7 @@ const Services = () => {
             ease: "linear",
           }}
         />
+
         <motion.div
           className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-3xl"
           animate={{
@@ -176,6 +197,7 @@ const Services = () => {
             ease: "linear",
           }}
         />
+
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900/15 rounded-full blur-3xl"
           animate={{
@@ -188,6 +210,7 @@ const Services = () => {
             ease: "easeInOut",
           }}
         />
+
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-blue-950/5 to-slate-950/30" />
       </div>
 
@@ -208,6 +231,7 @@ const Services = () => {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 mb-6"
             >
               <Sparkles size={16} className="text-blue-400" />
+
               <span className="text-sm font-semibold text-blue-400 tracking-wider">
                 OUR SERVICES
               </span>
@@ -219,8 +243,12 @@ const Services = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight break-words"
             >
-              <span className="text-white">Digital Solutions</span>
+              <span className="text-white">
+                Digital Solutions
+              </span>
+
               <br />
+
               <span className="bg-gradient-to-r from-blue-400 via-blue-300 to-indigo-500 bg-clip-text text-transparent">
                 For Your Growth
               </span>
@@ -232,8 +260,9 @@ const Services = () => {
               transition={{ delay: 0.4 }}
               className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-lg"
             >
-              Transform your business with cutting-edge technology solutions. We
-              deliver innovation that drives results and accelerates your
+              Transform your business with cutting-edge
+              technology solutions. We deliver innovation
+              that drives results and accelerates your
               digital transformation journey.
             </motion.p>
 
@@ -249,6 +278,7 @@ const Services = () => {
                 className="group min-h-12 w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/40 flex items-center justify-center gap-2 transition-all"
               >
                 Explore Services
+
                 <ArrowRight
                   size={20}
                   className="group-hover:translate-x-1 transition-transform"
@@ -261,12 +291,12 @@ const Services = () => {
                 className="min-h-12 w-full sm:w-auto px-8 py-4 bg-slate-900/45 backdrop-blur-sm text-white rounded-full font-semibold border border-blue-500/20 hover:bg-slate-800/60 hover:border-blue-400/50 transition-all flex items-center justify-center gap-2"
               >
                 <Play size={20} />
+
                 Get Quote
               </motion.button>
             </motion.div>
           </motion.div>
-
-          {/* Right Side - Illustration */}
+                    {/* Right Side - Illustration */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -290,8 +320,14 @@ const Services = () => {
                   ease: "linear",
                 }}
                 style={{
-                  x: useTransform(useMotionValue(mouseX * 20), (v) => v),
-                  y: useTransform(useMotionValue(mouseY * 20), (v) => v),
+                  x: useTransform(
+                    useMotionValue(mouseX * 20),
+                    (v) => v
+                  ),
+                  y: useTransform(
+                    useMotionValue(mouseY * 20),
+                    (v) => v
+                  ),
                 }}
               />
 
@@ -310,9 +346,13 @@ const Services = () => {
                 <div className="relative">
                   <div className="w-48 h-48 rounded-full bg-gradient-to-br from-blue-900/40 to-slate-950/60 flex items-center justify-center shadow-2xl shadow-blue-500/10 border border-blue-500/20">
                     <div className="w-40 h-40 rounded-full bg-slate-950/40 backdrop-blur-sm flex items-center justify-center border border-blue-500/10">
-                      <Code2 size={80} className="text-blue-400" />
+                      <Code2
+                        size={80}
+                        className="text-blue-400"
+                      />
                     </div>
                   </div>
+
                   {/* Orbiting rings */}
                   <motion.div
                     className="absolute inset-0 rounded-full border-2 border-blue-500/20"
@@ -322,8 +362,14 @@ const Services = () => {
                       repeat: Infinity,
                       ease: "linear",
                     }}
-                    style={{ width: 300, height: 300, top: -75, left: -75 }}
+                    style={{
+                      width: 300,
+                      height: 300,
+                      top: -75,
+                      left: -75,
+                    }}
                   />
+
                   <motion.div
                     className="absolute inset-0 rounded-full border-2 border-indigo-500/10"
                     animate={{ rotate: -360 }}
@@ -332,21 +378,45 @@ const Services = () => {
                       repeat: Infinity,
                       ease: "linear",
                     }}
-                    style={{ width: 250, height: 250, top: -50, left: -50 }}
+                    style={{
+                      width: 250,
+                      height: 250,
+                      top: -50,
+                      left: -50,
+                    }}
                   />
                 </div>
               </motion.div>
 
               {/* Floating cards */}
-              <FloatingCard x={-100} y={-50} delay={0.1}>
+
+              <FloatingCard
+                x={-100}
+                y={-50}
+                delay={0.1}
+                title="Smart Automation"
+                subtitle="Faster workflows"
+              >
                 <Zap size={20} />
               </FloatingCard>
 
-              <FloatingCard x={150} y={-80} delay={0.3}>
+              <FloatingCard
+                x={150}
+                y={-80}
+                delay={0.3}
+                title="Secure Solutions"
+                subtitle="Advanced protection"
+              >
                 <Shield size={20} />
               </FloatingCard>
 
-              <FloatingCard x={-80} y={150} delay={0.5}>
+              <FloatingCard
+                x={-80}
+                y={150}
+                delay={0.5}
+                title="Data Analytics"
+                subtitle="Real-time insights"
+              >
                 <BarChart3 size={20} />
               </FloatingCard>
             </motion.div>
@@ -361,17 +431,24 @@ const Services = () => {
           className="text-center mt-20 sm:mt-24 lg:mt-32 relative z-10"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 mb-4">
-            <Sparkles size={16} className="text-blue-400" />
+            <Sparkles
+              size={16}
+              className="text-blue-400"
+            />
+
             <span className="text-sm font-semibold text-blue-400 tracking-wider">
               OUR SERVICES
             </span>
           </div>
+
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
             We Provide Best Digital Services
           </h2>
+
           <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg">
-            Comprehensive digital solutions tailored to your business needs,
-            delivered with excellence and innovation.
+            Comprehensive digital solutions tailored to your
+            business needs, delivered with excellence and
+            innovation.
           </p>
         </motion.div>
 
@@ -385,7 +462,10 @@ const Services = () => {
               whileHover={{
                 y: -12,
                 scale: 1.02,
-                transition: { duration: 0.3, ease: "easeOut" },
+                transition: {
+                  duration: 0.3,
+                  ease: "easeOut",
+                },
               }}
               transition={{
                 duration: 0.5,
@@ -400,25 +480,43 @@ const Services = () => {
                   className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-blue-600 to-blue-400"
                   initial={{ width: 0 }}
                   whileHover={{ width: "100%" }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  transition={{
+                    duration: 0.3,
+                    ease: "easeOut",
+                  }}
                 />
+
                 <motion.span
                   className="absolute top-0 right-0 w-[2px] bg-gradient-to-b from-blue-600 to-blue-400"
                   initial={{ height: 0 }}
                   whileHover={{ height: "100%" }}
-                  transition={{ duration: 0.3, delay: 0.3, ease: "easeOut" }}
+                  transition={{
+                    duration: 0.3,
+                    delay: 0.3,
+                    ease: "easeOut",
+                  }}
                 />
+
                 <motion.span
                   className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-blue-600 to-blue-400"
                   initial={{ width: 0 }}
                   whileHover={{ width: "100%" }}
-                  transition={{ duration: 0.3, delay: 0.6, ease: "easeOut" }}
+                  transition={{
+                    duration: 0.3,
+                    delay: 0.6,
+                    ease: "easeOut",
+                  }}
                 />
+
                 <motion.span
                   className="absolute bottom-0 left-0 w-[2px] bg-gradient-to-t from-blue-600 to-blue-400"
                   initial={{ height: 0 }}
                   whileHover={{ height: "100%" }}
-                  transition={{ duration: 0.3, delay: 0.9, ease: "easeOut" }}
+                  transition={{
+                    duration: 0.3,
+                    delay: 0.9,
+                    ease: "easeOut",
+                  }}
                 />
               </div>
 
@@ -431,7 +529,9 @@ const Services = () => {
                 whileHover={{
                   rotate: 6,
                   scale: 1.1,
-                  transition: { duration: 0.3 },
+                  transition: {
+                    duration: 0.3,
+                  },
                 }}
               >
                 {service.icon}
@@ -445,16 +545,17 @@ const Services = () => {
               <p className="mt-3 text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
                 {service.description}
               </p>
-
-              {/* Learn More Button */}
+                            {/* Learn More Button */}
               <Link
                 to={`/services/${service.slug}`}
                 className="inline-flex items-center gap-2 mt-6 text-blue-400 font-semibold group/link relative"
               >
                 <span className="relative">
                   Learn More
+
                   <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-400 group-hover/link:w-full transition-all duration-300" />
                 </span>
+
                 <motion.span
                   className="inline-block"
                   whileHover={{ x: 6 }}
@@ -472,4 +573,3 @@ const Services = () => {
 };
 
 export default Services;
-
