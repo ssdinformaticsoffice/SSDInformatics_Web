@@ -2,21 +2,17 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 
-const CTA=()=>{
+const CTA = () => {
 
 
-return(
+    return (
 
-<section className="
+        <section className="
 py-16 sm:py-20
-bg-gradient-to-r
-from-blue-900
-via-blue-700
-to-blue-500
-">
+bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950">
 
 
-<div className="
+            <div className="
 max-w-5xl
 mx-auto
 px-4 sm:px-6
@@ -25,47 +21,47 @@ text-white
 ">
 
 
-<motion.div
+                <motion.div
 
-initial={{
-opacity:0,
-y:40
-}}
+                    initial={{
+                        opacity: 0,
+                        y: 40
+                    }}
 
-whileInView={{
-opacity:1,
-y:0
-}}
+                    whileInView={{
+                        opacity: 1,
+                        y: 0
+                    }}
 
-transition={{
-duration:0.6
-}}
+                    transition={{
+                        duration: 0.6
+                    }}
 
->
+                >
 
 
-<h2 className="
+                    <h2 className="
 text-3xl sm:text-4xl
 md:text-5xl
 font-bold
 ">
-Ready To Grow Your Business?
-</h2>
+                        Ready To Grow Your Business?
+                    </h2>
 
 
-<p className="
+                    <p className="
 mt-5
 text-blue-100
 text-base sm:text-lg
 ">
-Let's build powerful digital solutions together with SSD Informatics.
-</p>
+                        Let's build powerful digital solutions together with SSD Informatics.
+                    </p>
 
 
 
-<button
+                    <button
 
-className="
+                        className="
 mt-8
 bg-white
 text-blue-700
@@ -81,24 +77,24 @@ hover:bg-blue-50
 transition
 "
 
->
+                    >
 
-Get Started
+                        Get Started
 
-<ArrowRight size={20}/>
+                        <ArrowRight size={20} />
 
-</button>
-
-
-</motion.div>
+                    </button>
 
 
-</div>
+                </motion.div>
 
 
-</section>
+            </div>
 
-)
+
+        </section>
+
+    )
 
 }
 

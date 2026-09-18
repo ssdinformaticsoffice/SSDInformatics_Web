@@ -1,353 +1,201 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-import { MapPin, Phone, Mail, Globe } from "lucide-react";
-import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
-import { motion } from "framer-motion";
-import logo from "../assets/444 logoai.png";
+import React from "react";
 import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
+
+import logo from "../assets/ssd-white-logo.png";
+import social from "/images/social asana.png";
 
 const Footer = () => {
-
-  const [settings, setSettings] = useState({});
-
-
-  useEffect(()=>{
-
-    const fetchSettings = async()=>{
-
-      try{
-
-        const res = await axios.get(
-          "http://localhost:5000/api/settings"
-        );
-
-        setSettings(res.data.data || {});
-
-      }catch(error){
-        console.log(error);
-      }
-
-    };
-
-
-    fetchSettings();
-
-  },[]);
-
-
+  const services = [
+    {
+      name: "Website Development",
+      path: "/services/website-development",
+    },
+    {
+      name: "Mobile App Development",
+      path: "/services/mobile-app-development",
+    },
+    {
+      name: "ERP Software Solutions",
+      path: "/services/erp-software-solutions",
+    },
+    {
+      name: "SEO Optimization",
+      path: "/services/seo-optimization",
+    },
+    {
+      name: "Meta Ads",
+      path: "/services/meta-ads",
+    },
+    {
+      name: "Graphic Design",
+      path: "/services/graphic-design",
+    },
+  ];
 
   return (
-    <footer className="bg-slate-950 border-t border-blue-500/10 mt-12 sm:mt-16 lg:mt-20 relative overflow-hidden">
-
-
-      <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
-
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 relative z-10">
-
-
-
-        {/* Company */}
-
-        <div>
-
-          <motion.div
-            initial={{opacity:0,y:30}}
-            whileInView={{opacity:1,y:0}}
-            transition={{duration:0.5}}
-            className="flex items-center gap-3 sm:gap-4 mb-6 min-w-0"
-          >
-
-            <motion.img
+    <footer className="footer">
+      <div className="footer-container">
+        {/* SECTION 1 - LOGO / ABOUT */}
+        <div className="footer-section footer-brand">
+          <Link to="/" className="footer-logo">
+            <img
               src={logo}
-              alt="SSD Informatics Logo"
-              className="w-12 sm:w-14 cursor-pointer flex-shrink-0"
-              whileHover={{
-                scale:1.08,
-                rotate:360
-              }}
-              transition={{
-                duration:0.7,
-                ease:"easeInOut"
-              }}
+              alt="SSD Informatics"
+              className="object-contain transition-transform duration-700 ease-in-out hover:rotate-[360deg]"
             />
 
+            <div className="footer-logo-text">
+              <span className="footer-logo-title">SSD</span>
+              <span className="footer-logo-subtitle">INFORMATICS</span>
+            </div>
+          </Link>
 
-            <div className="min-w-0">
+          <p className="footer-description pb-4">
+            We provide innovative digital solutions to help businesses grow,
+            connect and succeed in the digital world.
+          </p>
 
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-none break-words">
-                {settings.websiteName || "SSD"}
-              </h2>
-
-
-              <p className="uppercase tracking-[4px] text-xs font-semibold text-blue-400">
-                Informatics
-              </p>
-
+          {/*-----------------Collaboration - Social Asana -------------*/}
+          <a
+            href="https://socialasana.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" collaboration-link group flex w-full max-w-[240px] flex-col items-center rounded-xl
+             bg-white p-2 text-center shadow-md transition-all duration-300 hover:-translate-y-1 
+             hover:shadow-lg sm:max-w-[260px] sm:p-2"
+          >
+            {/* Logo */}
+            <div className="flex w-full items-center justify-center">
+              <img
+                src={social}
+                alt="Social Asana"
+                className="  h-auto w-32 object-contain  transition-transform duration-300  sm:w-36  md:w-40"
+              />
             </div>
 
-          </motion.div>
-
-
-
-          <h3 className="text-[15px] font-extrabold uppercase leading-tight text-blue-400">
-            Smart Solutions
-            <br/>
-            For A
-            <br/>
-            Stronger
-            <br/>
-            Digital
-            <br/>
-            Future
-          </h3>
-
-
-
-          <p className="mt-5 max-w-sm text-slate-400 leading-6">
-            We build modern websites, powerful web applications and
-            result-driven digital solutions that help businesses grow with
-            innovative technology.
-          </p>
+            {/* Text */}
+            <h1
+              className=" px-2 text-center text-base font-bold leading-snug text-blue-800 sm:text-lg md:text-xl"
+            >
+              Social Media{" "}
+              <span className="text-orange-400">
+                Partner Company
+              </span>
+            </h1>
+          </a>
 
         </div>
 
+        {/* SECTION 2 - SERVICES */}
+        <div className="footer-section">
+          <h3>Services</h3>
 
-
-
-
-        {/* Quick Links */}
-
-        <div>
-
-          <h3 className="text-xl font-bold text-white mb-6">
-            Quick Links
-          </h3>
-
-
-          <ul className="space-y-3 text-slate-400">
-
-
-          {[
-            {name:"Home",path:"/"},
-            {name:"About",path:"/about"},
-            {name:"Services",path:"/services"},
-            {name:"Contact",path:"/contact"}
-
-          ].map((link,index)=>(
-
-
-            <motion.li
-            key={index}
-            whileHover={{x:8}}
-            className="hover:text-blue-400 cursor-pointer transition relative group w-fit"
-            >
-
-              <Link to={link.path}>
-                {link.name}
-              </Link>
-
-
-              <span
-              className="
-              absolute
-              left-0
-              -bottom-1
-              h-[2px]
-              w-0
-              bg-blue-500
-              transition-all
-              duration-500
-              group-hover:w-full
-              "
-              ></span>
-
-
-            </motion.li>
-
-
-          ))}
-
-
+          <ul className="footer-services">
+            {services.map((service) => (
+              <li key={service.path}>
+                <Link to={service.path}>{service.name}</Link>
+              </li>
+            ))}
           </ul>
-
-
         </div>
 
+        {/* SECTION 3 - QUICK LINKS */}
+        <div className="footer-section">
+          <h3>Quick Links</h3>
 
+          <ul className="footer-links">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
 
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
 
+            <li>
+              <Link to="/services">Services</Link>
+            </li>
 
-        {/* Contact */}
+            <li>
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
 
-        <div>
+            <li>
+              <Link
+                to="/about#our-team"
+                className="..."
+              >
+                Our Team
+              </Link>
+            </li>
 
-          <h3 className="text-xl font-bold text-white mb-6">
-            Contact Us
-          </h3>
+            <li>
+              <Link to="/contact">Contact Us</Link>
+            </li>
+          </ul>
+        </div>
 
+        {/* SECTION 4 - CONTACT */}
+        <div className="footer-section footer-contact">
+          <h3>Contact Us</h3>
 
-          <div className="space-y-5 text-slate-400">
-
-
-          {[
-            {
-              icon:<Phone size={18}/>,
-              text:settings.phone || "+91 70546 38002"
-            },
-
-            {
-              icon:<Globe size={18}/>,
-              text:settings.websiteName || "www.ssdinformatics.com"
-            },
-
-            {
-              icon:<Mail size={18}/>,
-              text:settings.email || "ssdinformatics.office@gmail.com"
-            },
-
-            {
-              icon:<MapPin size={18}/>,
-              text:settings.address || "Lucknow, Uttar Pradesh"
-            }
-
-          ].map((item,index)=>(
-
-
-            <motion.div
-            key={index}
-            whileHover={{x:8}}
-            className="
-            flex
-            items-start
-            gap-3
-            cursor-pointer
-            relative
-            group
-            w-full
-            max-w-full
-            sm:w-fit
-            min-w-0
-            hover:text-blue-400
-            "
-            >
-
-              <span className="text-blue-400 flex-shrink-0 mt-1">
-                {item.icon}
-              </span>
-
-
-              <span className="min-w-0 break-words leading-6">
-                {item.text}
-              </span>
-
-
-              <span
-              className="
-              absolute
-              left-0
-              -bottom-2
-              h-[2px]
-              w-0
-              bg-blue-500
-              transition-all
-              duration-500
-              group-hover:w-full
-              "
-              ></span>
-
-
-            </motion.div>
-
-
-          ))}
-
-
+          <div className="contact-item">
+            <Mail size={18} />
+            <a href="mailto:info@ssdinformatics.com">info@ssdinformatics.com</a>
           </div>
 
-
-        </div>
-
-
-      </div>
-
-
-
-
-
-      {/* Bottom */}
-
-      <div className="border-t border-blue-500/10 relative z-10">
-
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-
-
-          <p className="text-slate-500 text-sm leading-relaxed">
-            © 2026 {settings.websiteName || "SSD Informatics"}. 
-            All Rights Reserved.
-          </p>
-
-
-
-          <div className="flex items-center justify-center gap-5 text-xl">
-
-
-            <motion.div
-            whileHover={{
-              scale:1.3,
-              y:-5,
-              rotate:10
-            }}
-            className="cursor-pointer text-slate-400 hover:text-blue-400"
-            >
-              <FaFacebook/>
-            </motion.div>
-
-
-
-            <motion.div
-            whileHover={{
-              scale:1.3,
-              y:-5,
-              rotate:10
-            }}
-            className="cursor-pointer text-slate-400 hover:text-blue-400"
-            >
-              <FaLinkedin/>
-            </motion.div>
-
-
-
-            <motion.div
-            whileHover={{
-              scale:1.3,
-              y:-5,
-              rotate:10
-            }}
-            className="cursor-pointer text-slate-400 hover:text-blue-400"
-            >
-              <FaGithub/>
-            </motion.div>
-
-
+          <div className="contact-item">
+            <Phone size={18} />
+            <a href="tel:+919876543210">+91 9235327547</a>
           </div>
 
+          <div className="contact-item">
+            <MapPin size={18} />
+            <span>Lucknow, Uttar Pradesh, India</span>
+          </div>
 
+          <div className="flex items-center gap-3">
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-blue-700"
+            >
+              <FaFacebookF />
+            </Link>
+
+            <Link
+              href="https://www.instagram.com/ssdinformatics?igsh=MWp0dmpjMDY4bDFwcw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-orange-500"
+            >
+              <FaInstagram />
+            </Link>
+
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-blue-700"
+            >
+              <FaLinkedinIn />
+            </Link>
+          </div>
         </div>
-
-
       </div>
 
-
-
+      {/* BOTTOM */}
+      <div className="footer-bottom">
+        <p>
+          © {new Date().getFullYear()} SSD Informatics. All Rights Reserved.
+        </p>
+      </div>
     </footer>
   );
 };
 
-
 export default Footer;
-
-

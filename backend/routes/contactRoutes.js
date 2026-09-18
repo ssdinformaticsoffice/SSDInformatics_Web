@@ -8,6 +8,7 @@ const router = express.Router();
 
 // Public Route (Website Contact Form)
 router.post("/", createContact);
+router.post("/create", createContact);
 
 // Admin Route (Get All Messages)
 router.get("/", getAllContacts);

@@ -3,7 +3,7 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative bg-gradient-to-br from-slate-950 via-blue-900 to-slate-950 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-10 lg:py-15">
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
