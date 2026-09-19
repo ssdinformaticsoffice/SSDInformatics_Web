@@ -31,6 +31,7 @@ const SEO = ({
       if (!element) {
         element = document.createElement("link");
         element.setAttribute("rel", "canonical");
+        
         document.head.appendChild(element);
       }
 
