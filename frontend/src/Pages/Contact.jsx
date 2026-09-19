@@ -21,9 +21,13 @@ import {
 import axios from "axios";
 import contactImage from "/images/contact-image.jpg";
 
+import SEO from "../components/SEO";
+
 
 const ContactPage = () => {
   const formRef = useRef(null);
+
+  const API_URL = import.meta.env.VITE_API_URL ;
 
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", subject: "", message: "",
@@ -58,7 +62,7 @@ const ContactPage = () => {
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setIsSubmitting(true); setSubmitStatus(null);
     try {
-      const res = await axios.post("http://localhost:5000/api/contact", formData);
+      const res = await axios.post(`${API_URL}/contact`, formData);
       if (res.data.success) {
         setSubmitStatus("success");
         setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
@@ -78,7 +82,14 @@ const ContactPage = () => {
     { Icon: Globe, label: "Globe", pos: "top-[50%] right-[4%]", delay: 1.6, dir: -1 },
   ];
 
-  return (
+ return (
+  <>
+    <SEO
+      title="Contact SSD Informatics | Web & IT Solutions"
+      description="Contact SSD Informatics for professional web development, software development, mobile app development, ERP, digital marketing, SEO and IT solutions."
+      canonical="https://www.ssdinformatics.com/contact"
+    />
+
     <div className="bg-[#020c1f] text-white font-sans min-h-screen overflow-x-hidden">
 
       {/* ══════════════════════════════════════════════════════════════
@@ -1593,7 +1604,8 @@ const ContactPage = () => {
       </section>
 
     </div>
-  );
+  </>
+);
 };
 
 export default ContactPage;

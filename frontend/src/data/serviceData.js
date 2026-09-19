@@ -36,6 +36,15 @@
   Award,
   TrendingUp,
 } from "lucide-react";
+import {
+  FaPhp,
+  FaPython,
+
+  FaWordpress,
+  FaReact,
+} from "react-icons/fa";
+
+import { SiDjango, SiNextdotjs } from "react-icons/si";
 
 export const servicesData = {
   "mobile-app-development": {
@@ -52,10 +61,25 @@ export const servicesData = {
       highlight: "Mobile Apps",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 150, suffix: "+", label: "Apps Delivered" },
+      {
+        icon: Briefcase,
+        numericValue: 150,
+        suffix: "+",
+        label: "Apps Delivered",
+      },
       { icon: Users, numericValue: 200, suffix: "+", label: "Happy Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 99,
+        suffix: "%",
+        label: "Client Satisfaction",
+      },
     ],
     featuresTitle: "Powerful Mobile App Features",
     processTitle: "Our App Development Journey",
@@ -79,37 +103,117 @@ export const servicesData = {
       { value: "Android & iOS", label: "Platforms" },
     ],
     offers: [
-      { icon: Smartphone, title: "Android Development", desc: "Professional Android apps built for performance." },
-      { icon: Smartphone, title: "iOS Development", desc: "Native iPhone applications with polished UX." },
+      {
+        icon: Smartphone,
+        title: "Android Development",
+        desc: "Professional Android apps built for performance.",
+      },
+      {
+        icon: Smartphone,
+        title: "iOS Development",
+        desc: "Native iPhone applications with polished UX.",
+      },
     ],
     features: [
-      { icon: Smartphone, title: "Native Performance", color: "from-blue-400 to-blue-600" },
-      { icon: Globe, title: "Offline Support", color: "from-purple-400 to-purple-600" },
-      { icon: Zap, title: "Fast Performance", color: "from-yellow-400 to-yellow-600" },
+      {
+        icon: Smartphone,
+        title: "Native Performance",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Globe,
+        title: "Offline Support",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Zap,
+        title: "Fast Performance",
+        color: "from-yellow-400 to-yellow-600",
+      },
       { icon: Lock, title: "Secure Apps", color: "from-red-400 to-red-600" },
-      { icon: RefreshCw, title: "Easy Updates", color: "from-green-400 to-green-600" },
-      { icon: Users, title: "User Friendly", color: "from-cyan-400 to-cyan-600" },
+      {
+        icon: RefreshCw,
+        title: "Easy Updates",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Users,
+        title: "User Friendly",
+        color: "from-cyan-400 to-cyan-600",
+      },
     ],
     process: [
-      { step: "01", title: "Requirement Analysis", desc: "Understanding your business and user goals." },
-      { step: "02", title: "UI/UX Design", desc: "Wireframes and polished interface design." },
-      { step: "03", title: "Development", desc: "Coding cross-platform mobile applications." },
-      { step: "04", title: "Testing", desc: "Rigorous QA for quality and stability." },
-      { step: "05", title: "Deployment", desc: "App Store and Play Store release support." },
-      { step: "06", title: "Maintenance", desc: "Ongoing updates and feature enhancements." },
+      {
+        step: "01",
+        title: "Requirement Analysis",
+        desc: "Understanding your business and user goals.",
+      },
+      {
+        step: "02",
+        title: "UI/UX Design",
+        desc: "Wireframes and polished interface design.",
+      },
+      {
+        step: "03",
+        title: "Development",
+        desc: "Coding cross-platform mobile applications.",
+      },
+      {
+        step: "04",
+        title: "Testing",
+        desc: "Rigorous QA for quality and stability.",
+      },
+      {
+        step: "05",
+        title: "Deployment",
+        desc: "App Store and Play Store release support.",
+      },
+      {
+        step: "06",
+        title: "Maintenance",
+        desc: "Ongoing updates and feature enhancements.",
+      },
     ],
     technologies: [
-      { icon: Smartphone, name: "React Native", color: "from-blue-400 to-blue-600" },
-      { icon: Code2, name: "JavaScript", color: "from-yellow-400 to-yellow-600" },
+      {
+        icon: Smartphone,
+        name: "React Native",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Code2,
+        name: "JavaScript",
+        color: "from-yellow-400 to-yellow-600",
+      },
       { icon: Server, name: "Node.js", color: "from-green-400 to-green-600" },
-      { icon: Database, name: "MongoDB", color: "from-emerald-400 to-emerald-600" },
+      {
+        icon: Database,
+        name: "MongoDB",
+        color: "from-emerald-400 to-emerald-600",
+      },
       { icon: Cloud, name: "Firebase", color: "from-orange-400 to-orange-600" },
     ],
     whyChoose: [
-      { icon: Users, title: "Expert Team", desc: "Experienced mobile developers who deliver results." },
-      { icon: Shield, title: "Secure", desc: "Security-first mobile development practices." },
-      { icon: Zap, title: "Fast Delivery", desc: "Timely releases without sacrificing quality." },
-      { icon: RefreshCw, title: "Support", desc: "Reliable maintenance and update services." },
+      {
+        icon: Users,
+        title: "Expert Team",
+        desc: "Experienced mobile developers who deliver results.",
+      },
+      {
+        icon: Shield,
+        title: "Secure",
+        desc: "Security-first mobile development practices.",
+      },
+      {
+        icon: Zap,
+        title: "Fast Delivery",
+        desc: "Timely releases without sacrificing quality.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Support",
+        desc: "Reliable maintenance and update services.",
+      },
     ],
     industries: [
       { icon: Building, title: "Corporate" },
@@ -126,15 +230,41 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "How long does app development take?", answer: "Typically between 2–6 months depending on scope and features." },
-      { question: "Do you provide post-launch support?", answer: "Yes, we offer support, maintenance, and updates after launch." },
-      { question: "Can you build apps for both Android and iOS?", answer: "Absolutely — we deliver apps for both Android and iOS platforms." },
+      {
+        question: "How long does app development take?",
+        answer: "Typically between 2–6 months depending on scope and features.",
+      },
+      {
+        question: "Do you provide post-launch support?",
+        answer: "Yes, we offer support, maintenance, and updates after launch.",
+      },
+      {
+        question: "Can you build apps for both Android and iOS?",
+        answer:
+          "Absolutely — we deliver apps for both Android and iOS platforms.",
+      },
     ],
     relatedServices: [
-      { icon: Code2, label: "Web Development", color: "from-blue-400 to-blue-600" },
-      { icon: Globe, label: "Digital Marketing", color: "from-purple-400 to-purple-600" },
-      { icon: Database, label: "ERP Solutions", color: "from-green-400 to-green-600" },
-      { icon: Cloud, label: "Cloud Solutions", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Code2,
+        label: "Web Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Globe,
+        label: "Digital Marketing",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Database,
+        label: "ERP Solutions",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Cloud,
+        label: "Cloud Solutions",
+        color: "from-orange-400 to-orange-600",
+      },
     ],
     cta: {
       badge: "Let's Build Your App",
@@ -159,10 +289,25 @@ export const servicesData = {
       highlight: "Digital Solutions",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 50, suffix: "+", label: "Projects Delivered" },
+      {
+        icon: Briefcase,
+        numericValue: 50,
+        suffix: "+",
+        label: "Projects Delivered",
+      },
       { icon: Users, numericValue: 30, suffix: "+", label: "Happy Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 99,
+        suffix: "%",
+        label: "Client Satisfaction",
+      },
     ],
     featuresTitle: "Web Development Features",
     processTitle: "Our Website Development Process",
@@ -186,38 +331,140 @@ export const servicesData = {
       { value: "24/7", label: "Support" },
     ],
     offers: [
-      { icon: Code2, title: "Custom Web Apps", desc: "Tailor-made websites and web apps for any business." },
-      { icon: Server, title: "Backend Systems", desc: "Secure APIs and robust server-side logic." },
-      { icon: Database, title: "Data Integration", desc: "Smart database solutions for scalable growth." },
+      {
+        icon: Code2,
+        title: "Custom Web Apps",
+        desc: "Tailor-made websites and web apps for any business.",
+      },
+      {
+        icon: Server,
+        title: "Backend Systems",
+        desc: "Secure APIs and robust server-side logic.",
+      },
+      {
+        icon: Database,
+        title: "Data Integration",
+        desc: "Smart database solutions for scalable growth.",
+      },
     ],
     features: [
-      { icon: Zap, title: "Fast Performance", color: "from-yellow-400 to-yellow-600" },
-      { icon: Shield, title: "Secure Websites", color: "from-red-400 to-red-600" },
-      { icon: Smartphone, title: "Responsive Design", color: "from-blue-400 to-blue-600" },
-      { icon: Globe, title: "SEO Friendly", color: "from-green-400 to-green-600" },
-      { icon: RefreshCw, title: "Easy Maintenance", color: "from-purple-400 to-purple-600" },
-      { icon: Users, title: "User Friendly", color: "from-cyan-400 to-cyan-600" },
+      {
+        icon: Zap,
+        title: "Fast Performance",
+        color: "from-yellow-400 to-yellow-600",
+      },
+      {
+        icon: Shield,
+        title: "Secure Websites",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: Smartphone,
+        title: "Responsive Design",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Globe,
+        title: "SEO Friendly",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: RefreshCw,
+        title: "Easy Maintenance",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Users,
+        title: "User Friendly",
+        color: "from-cyan-400 to-cyan-600",
+      },
     ],
     process: [
-      { step: "01", title: "Discovery", desc: "Clarifying business goals and site objectives." },
-      { step: "02", title: "Design", desc: "Creating intuitive user experiences and layouts." },
-      { step: "03", title: "Development", desc: "Building fast and accessible websites." },
-      { step: "04", title: "Testing", desc: "Ensuring quality across devices and browsers." },
-      { step: "05", title: "Launch", desc: "Deploying your site and monitoring performance." },
-      { step: "06", title: "Growth", desc: "Providing updates and ongoing optimization." },
+      {
+        step: "01",
+        title: "Discovery",
+        desc: "Clarifying business goals and site objectives.",
+      },
+      {
+        step: "02",
+        title: "Design",
+        desc: "Creating intuitive user experiences and layouts.",
+      },
+      {
+        step: "03",
+        title: "Development",
+        desc: "Building fast and accessible websites.",
+      },
+      {
+        step: "04",
+        title: "Testing",
+        desc: "Ensuring quality across devices and browsers.",
+      },
+      {
+        step: "05",
+        title: "Launch",
+        desc: "Deploying your site and monitoring performance.",
+      },
+      {
+        step: "06",
+        title: "Growth",
+        desc: "Providing updates and ongoing optimization.",
+      },
     ],
     technologies: [
-      { icon: Code2, name: "React.js", color: "from-blue-400 to-blue-600" },
-      { icon: Globe, name: "Next.js", color: "from-gray-400 to-gray-600" },
-      { icon: Server, name: "Node.js", color: "from-green-400 to-green-600" },
-      { icon: Database, name: "MongoDB", color: "from-emerald-400 to-emerald-600" },
-      { icon: Cloud, name: "Cloud Hosting", color: "from-orange-400 to-orange-600" },
+      {
+        icon: FaPhp,
+        name: "PHP",
+        color: "from-indigo-400 to-indigo-600",
+      },
+      {
+        icon: FaPython,
+        name: "Python",
+        color: "from-yellow-400 to-yellow-600",
+      },
+      {
+        icon: SiDjango,
+        name: "Django",
+        color: "from-green-400 to-green-600",
+      },
+    
+      {
+        icon: FaWordpress,
+        name: "WordPress",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: FaReact,
+        name: "React.js",
+        color: "from-cyan-400 to-cyan-600",
+      },
+      {
+        icon: SiNextdotjs,
+        name: "Next.js",
+        color: "from-gray-400 to-gray-600",
+      },
     ],
     whyChoose: [
-      { icon: Users, title: "Design Excellence", desc: "Beautiful websites designed for conversion." },
-      { icon: Shield, title: "Reliable", desc: "Secure and stable development practices." },
-      { icon: Zap, title: "Performance", desc: "Speed-first development for fast user experiences." },
-      { icon: RefreshCw, title: "Support", desc: "Ongoing maintenance and improvements." },
+      {
+        icon: Users,
+        title: "Design Excellence",
+        desc: "Beautiful websites designed for conversion.",
+      },
+      {
+        icon: Shield,
+        title: "Reliable",
+        desc: "Secure and stable development practices.",
+      },
+      {
+        icon: Zap,
+        title: "Performance",
+        desc: "Speed-first development for fast user experiences.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Support",
+        desc: "Ongoing maintenance and improvements.",
+      },
     ],
     industries: [
       { icon: Building, title: "Corporate" },
@@ -228,20 +475,49 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "Can you build a website for my business?", answer: "Yes — we create websites for businesses of all sizes and industries." },
-      { question: "Will my website be mobile friendly?", answer: "Absolutely. Every site is responsive and optimized for mobile devices." },
-      { question: "Do you support website updates after launch?", answer: "Yes, we provide ongoing support, hosting, and optimization services." },
+      {
+        question: "Can you build a website for my business?",
+        answer:
+          "Yes — we create websites for businesses of all sizes and industries.",
+      },
+      {
+        question: "Will my website be mobile friendly?",
+        answer:
+          "Absolutely. Every site is responsive and optimized for mobile devices.",
+      },
+      {
+        question: "Do you support website updates after launch?",
+        answer:
+          "Yes, we provide ongoing support, hosting, and optimization services.",
+      },
     ],
     relatedServices: [
-      { icon: Smartphone, label: "Mobile App Development", color: "from-blue-400 to-blue-600" },
-      { icon: Globe, label: "Digital Marketing", color: "from-purple-400 to-purple-600" },
-      { icon: Database, label: "ERP Solutions", color: "from-green-400 to-green-600" },
-      { icon: Cloud, label: "Cloud Solutions", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Smartphone,
+        label: "Mobile App Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Globe,
+        label: "Digital Marketing",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Database,
+        label: "ERP Solutions",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Cloud,
+        label: "Cloud Solutions",
+        color: "from-orange-400 to-orange-600",
+      },
     ],
     cta: {
       badge: "Grow Your Web Presence",
       title: "Ready To Launch A High-Impact Website?",
-      description: "Let’s design and develop a web experience that converts visitors into customers.",
+      description:
+        "Let’s design and develop a web experience that converts visitors into customers.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Call Now",
     },
@@ -260,10 +536,25 @@ export const servicesData = {
       highlight: "User Experiences",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 80, suffix: "+", label: "Projects Completed" },
+      {
+        icon: Briefcase,
+        numericValue: 80,
+        suffix: "+",
+        label: "Projects Completed",
+      },
       { icon: Users, numericValue: 100, suffix: "+", label: "Happy Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 99,
+        suffix: "%",
+        label: "Client Satisfaction",
+      },
     ],
     featuresTitle: "Interactive UX & Visual Design Features",
     processTitle: "Design Process That Drives Engagement",
@@ -287,38 +578,126 @@ export const servicesData = {
       { value: "500+", label: "Interfaces Created" },
     ],
     offers: [
-      { icon: Palette, title: "User Research", desc: "Insights-driven design with stakeholder and user feedback." },
-      { icon: Smartphone, title: "UI Design", desc: "Visually compelling interfaces that reflect your brand." },
-      { icon: Globe, title: "UX Strategy", desc: "Experience roadmaps that simplify complex journeys." },
+      {
+        icon: Palette,
+        title: "User Research",
+        desc: "Insights-driven design with stakeholder and user feedback.",
+      },
+      {
+        icon: Smartphone,
+        title: "UI Design",
+        desc: "Visually compelling interfaces that reflect your brand.",
+      },
+      {
+        icon: Globe,
+        title: "UX Strategy",
+        desc: "Experience roadmaps that simplify complex journeys.",
+      },
     ],
     features: [
-      { icon: Users, title: "User Research", color: "from-cyan-400 to-cyan-600" },
-      { icon: Shield, title: "Accessibility", color: "from-red-400 to-red-600" },
-      { icon: PenTool, title: "Visual Clarity", color: "from-blue-400 to-blue-600" },
-      { icon: Globe, title: "Consistent UI", color: "from-green-400 to-green-600" },
-      { icon: RefreshCw, title: "Iterative Testing", color: "from-purple-400 to-purple-600" },
-      { icon: Zap, title: "Engaging Experience", color: "from-yellow-400 to-yellow-600" },
+      {
+        icon: Users,
+        title: "User Research",
+        color: "from-cyan-400 to-cyan-600",
+      },
+      {
+        icon: Shield,
+        title: "Accessibility",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: PenTool,
+        title: "Visual Clarity",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Globe,
+        title: "Consistent UI",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: RefreshCw,
+        title: "Iterative Testing",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Zap,
+        title: "Engaging Experience",
+        color: "from-yellow-400 to-yellow-600",
+      },
     ],
     process: [
-      { step: "01", title: "Research", desc: "Understanding users, competitors, and goals." },
-      { step: "02", title: "Wireframing", desc: "Mapping the user journey and structure." },
-      { step: "03", title: "Visual Design", desc: "Designing polished screens and interactions." },
-      { step: "04", title: "Prototype", desc: "Creating clickable prototypes for validation." },
-      { step: "05", title: "Testing", desc: "Usability testing to refine the experience." },
-      { step: "06", title: "Handoff", desc: "Design handoff with specs for development." },
+      {
+        step: "01",
+        title: "Research",
+        desc: "Understanding users, competitors, and goals.",
+      },
+      {
+        step: "02",
+        title: "Wireframing",
+        desc: "Mapping the user journey and structure.",
+      },
+      {
+        step: "03",
+        title: "Visual Design",
+        desc: "Designing polished screens and interactions.",
+      },
+      {
+        step: "04",
+        title: "Prototype",
+        desc: "Creating clickable prototypes for validation.",
+      },
+      {
+        step: "05",
+        title: "Testing",
+        desc: "Usability testing to refine the experience.",
+      },
+      {
+        step: "06",
+        title: "Handoff",
+        desc: "Design handoff with specs for development.",
+      },
     ],
     technologies: [
       { icon: Laptop, name: "Figma", color: "from-blue-400 to-blue-600" },
-      { icon: MonitorSmartphone, name: "Sketch", color: "from-pink-400 to-pink-600" },
-      { icon: Tablet, name: "Adobe XD", color: "from-violet-400 to-violet-600" },
-      { icon: PenTool, name: "Illustrator", color: "from-orange-400 to-orange-600" },
+      {
+        icon: MonitorSmartphone,
+        name: "Sketch",
+        color: "from-pink-400 to-pink-600",
+      },
+      {
+        icon: Tablet,
+        name: "Adobe XD",
+        color: "from-violet-400 to-violet-600",
+      },
+      {
+        icon: PenTool,
+        name: "Illustrator",
+        color: "from-orange-400 to-orange-600",
+      },
       { icon: Globe, name: "InVision", color: "from-green-400 to-green-600" },
     ],
     whyChoose: [
-      { icon: Users, title: "User-Centered", desc: "Designs built around user goals and behavior." },
-      { icon: Shield, title: "Brand Focused", desc: "Visual direction aligned with your identity." },
-      { icon: Zap, title: "Conversion Driven", desc: "Interfaces designed to improve engagement." },
-      { icon: RefreshCw, title: "Tested", desc: "Iterative validation for reliable design outcomes." },
+      {
+        icon: Users,
+        title: "User-Centered",
+        desc: "Designs built around user goals and behavior.",
+      },
+      {
+        icon: Shield,
+        title: "Brand Focused",
+        desc: "Visual direction aligned with your identity.",
+      },
+      {
+        icon: Zap,
+        title: "Conversion Driven",
+        desc: "Interfaces designed to improve engagement.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Tested",
+        desc: "Iterative validation for reliable design outcomes.",
+      },
     ],
     industries: [
       { icon: Building, title: "Corporate" },
@@ -329,20 +708,47 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "What is included in UI/UX design?", answer: "We provide research, wireframes, visual design, prototypes, and usability testing." },
-      { question: "Do you design mobile and web experiences?", answer: "Yes, we design for both mobile and desktop platforms." },
-      { question: "How do you validate design decisions?", answer: "Through user testing and stakeholder feedback sessions." },
+      {
+        question: "What is included in UI/UX design?",
+        answer:
+          "We provide research, wireframes, visual design, prototypes, and usability testing.",
+      },
+      {
+        question: "Do you design mobile and web experiences?",
+        answer: "Yes, we design for both mobile and desktop platforms.",
+      },
+      {
+        question: "How do you validate design decisions?",
+        answer: "Through user testing and stakeholder feedback sessions.",
+      },
     ],
     relatedServices: [
-      { icon: Code2, label: "Web Development", color: "from-blue-400 to-blue-600" },
-      { icon: Smartphone, label: "Mobile App Development", color: "from-purple-400 to-purple-600" },
-      { icon: Database, label: "ERP Solutions", color: "from-green-400 to-green-600" },
-      { icon: Cloud, label: "Cloud Solutions", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Code2,
+        label: "Web Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Smartphone,
+        label: "Mobile App Development",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Database,
+        label: "ERP Solutions",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Cloud,
+        label: "Cloud Solutions",
+        color: "from-orange-400 to-orange-600",
+      },
     ],
     cta: {
       badge: "Design with Confidence",
       title: "Ready To Elevate Your User Experience?",
-      description: "Let’s design digital experiences that feel modern, intuitive, and memorable.",
+      description:
+        "Let’s design digital experiences that feel modern, intuitive, and memorable.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Contact Us",
     },
@@ -361,10 +767,25 @@ export const servicesData = {
       highlight: "Business Operations",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 50, suffix: "+", label: "ERP Deployments" },
+      {
+        icon: Briefcase,
+        numericValue: 50,
+        suffix: "+",
+        label: "ERP Deployments",
+      },
       { icon: Users, numericValue: 40, suffix: "+", label: "Happy Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 99,
+        suffix: "%",
+        label: "Client Satisfaction",
+      },
     ],
     featuresTitle: "ERP System Capabilities",
     processTitle: "Our ERP Implementation Process",
@@ -388,38 +809,122 @@ export const servicesData = {
       { value: "10+", label: "Integrated Modules" },
     ],
     offers: [
-      { icon: Database, title: "Inventory Management", desc: "Real-time stock tracking and reorder automation." },
-      { icon: Building, title: "Finance Automation", desc: "Streamlined accounting and budgeting workflows." },
-      { icon: Users, title: "HR & Payroll", desc: "Employee management, attendance, and payroll solutions." },
+      {
+        icon: Database,
+        title: "Inventory Management",
+        desc: "Real-time stock tracking and reorder automation.",
+      },
+      {
+        icon: Building,
+        title: "Finance Automation",
+        desc: "Streamlined accounting and budgeting workflows.",
+      },
+      {
+        icon: Users,
+        title: "HR & Payroll",
+        desc: "Employee management, attendance, and payroll solutions.",
+      },
     ],
     features: [
       { icon: Lock, title: "Secure Data", color: "from-red-400 to-red-600" },
-      { icon: Globe, title: "Integrated Systems", color: "from-green-400 to-green-600" },
-      { icon: Zap, title: "Process Automation", color: "from-yellow-400 to-yellow-600" },
+      {
+        icon: Globe,
+        title: "Integrated Systems",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Zap,
+        title: "Process Automation",
+        color: "from-yellow-400 to-yellow-600",
+      },
       { icon: Shield, title: "Governance", color: "from-blue-400 to-blue-600" },
-      { icon: RefreshCw, title: "Reporting", color: "from-purple-400 to-purple-600" },
+      {
+        icon: RefreshCw,
+        title: "Reporting",
+        color: "from-purple-400 to-purple-600",
+      },
       { icon: Users, title: "Scalable", color: "from-cyan-400 to-cyan-600" },
     ],
     process: [
-      { step: "01", title: "Discovery", desc: "Mapping current operations and goals." },
-      { step: "02", title: "Planning", desc: "Defining modules, integrations, and timelines." },
-      { step: "03", title: "Implementation", desc: "Configuring the ERP solution for your business." },
-      { step: "04", title: "Testing", desc: "Validating workflows and data accuracy." },
-      { step: "05", title: "Training", desc: "Empowering teams to use the system effectively." },
-      { step: "06", title: "Support", desc: "Ongoing support, optimization, and enhancements." },
+      {
+        step: "01",
+        title: "Discovery",
+        desc: "Mapping current operations and goals.",
+      },
+      {
+        step: "02",
+        title: "Planning",
+        desc: "Defining modules, integrations, and timelines.",
+      },
+      {
+        step: "03",
+        title: "Implementation",
+        desc: "Configuring the ERP solution for your business.",
+      },
+      {
+        step: "04",
+        title: "Testing",
+        desc: "Validating workflows and data accuracy.",
+      },
+      {
+        step: "05",
+        title: "Training",
+        desc: "Empowering teams to use the system effectively.",
+      },
+      {
+        step: "06",
+        title: "Support",
+        desc: "Ongoing support, optimization, and enhancements.",
+      },
     ],
     technologies: [
-      { icon: Cloud, name: "Cloud ERP", color: "from-orange-400 to-orange-600" },
-      { icon: Database, name: "SQL Databases", color: "from-emerald-400 to-emerald-600" },
-      { icon: Server, name: "API Integrations", color: "from-green-400 to-green-600" },
-      { icon: Shield, name: "Role-Based Access", color: "from-red-400 to-red-600" },
-      { icon: RefreshCw, name: "Analytics", color: "from-purple-400 to-purple-600" },
+      {
+        icon: Cloud,
+        name: "Cloud ERP",
+        color: "from-orange-400 to-orange-600",
+      },
+      {
+        icon: Database,
+        name: "SQL Databases",
+        color: "from-emerald-400 to-emerald-600",
+      },
+      {
+        icon: Server,
+        name: "API Integrations",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Shield,
+        name: "Role-Based Access",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: RefreshCw,
+        name: "Analytics",
+        color: "from-purple-400 to-purple-600",
+      },
     ],
     whyChoose: [
-      { icon: Shield, title: "Reliable", desc: "ERP systems built for accuracy and uptime." },
-      { icon: Users, title: "Process Experts", desc: "Experienced consultants for complex operations." },
-      { icon: Zap, title: "Efficiency", desc: "Automation that saves time and reduces error." },
-      { icon: Building, title: "Business Growth", desc: "ERP designed to scale with your organization." },
+      {
+        icon: Shield,
+        title: "Reliable",
+        desc: "ERP systems built for accuracy and uptime.",
+      },
+      {
+        icon: Users,
+        title: "Process Experts",
+        desc: "Experienced consultants for complex operations.",
+      },
+      {
+        icon: Zap,
+        title: "Efficiency",
+        desc: "Automation that saves time and reduces error.",
+      },
+      {
+        icon: Building,
+        title: "Business Growth",
+        desc: "ERP designed to scale with your organization.",
+      },
     ],
     industries: [
       { icon: Building, title: "Manufacturing" },
@@ -430,20 +935,48 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "What does ERP software include?", answer: "ERP combines finance, HR, inventory, sales, and reporting into one platform." },
-      { question: "Can ERP integrate with existing tools?", answer: "Yes, we integrate ERP with your current systems and third-party apps." },
-      { question: "Do you provide ERP training?", answer: "Yes, we train teams to use your ERP system effectively." },
+      {
+        question: "What does ERP software include?",
+        answer:
+          "ERP combines finance, HR, inventory, sales, and reporting into one platform.",
+      },
+      {
+        question: "Can ERP integrate with existing tools?",
+        answer:
+          "Yes, we integrate ERP with your current systems and third-party apps.",
+      },
+      {
+        question: "Do you provide ERP training?",
+        answer: "Yes, we train teams to use your ERP system effectively.",
+      },
     ],
     relatedServices: [
-      { icon: Database, label: "Software Development", color: "from-green-400 to-green-600" },
-      { icon: Cloud, label: "Cloud Solutions", color: "from-orange-400 to-orange-600" },
-      { icon: Code2, label: "Web Development", color: "from-blue-400 to-blue-600" },
-      { icon: Globe, label: "Digital Marketing", color: "from-purple-400 to-purple-600" },
+      {
+        icon: Database,
+        label: "Software Development",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Cloud,
+        label: "Cloud Solutions",
+        color: "from-orange-400 to-orange-600",
+      },
+      {
+        icon: Code2,
+        label: "Web Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Globe,
+        label: "Digital Marketing",
+        color: "from-purple-400 to-purple-600",
+      },
     ],
     cta: {
       badge: "Streamline Your Operations",
       title: "Ready To Modernize Your Business With ERP?",
-      description: "Let’s build a tailored ERP solution that improves efficiency and decision-making.",
+      description:
+        "Let’s build a tailored ERP solution that improves efficiency and decision-making.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Call Now",
     },
@@ -462,10 +995,25 @@ export const servicesData = {
       highlight: "Search Rankings",
     },
     heroStats: [
-      { icon: Search, numericValue: 300, suffix: "+", label: "Keywords Ranked" },
+      {
+        icon: Search,
+        numericValue: 300,
+        suffix: "+",
+        label: "Keywords Ranked",
+      },
       { icon: Users, numericValue: 180, suffix: "+", label: "Clients Helped" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 60, suffix: "%", label: "Avg Traffic Growth" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 60,
+        suffix: "%",
+        label: "Avg Traffic Growth",
+      },
     ],
     featuresTitle: "SEO Growth Features",
     processTitle: "SEO Strategy Process",
@@ -476,7 +1024,7 @@ export const servicesData = {
     subtitle: "SSD Informatics",
     description:
       "We improve your search visibility and organic traffic with proven SEO strategies.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
+    image: "/images/seo.jpeg",
     overview: {
       title: "Boosting Search Rankings and Traffic",
       description:
@@ -489,38 +1037,122 @@ export const servicesData = {
       { value: "60%", label: "Traffic Growth" },
     ],
     offers: [
-      { icon: Search, title: "Keyword Research", desc: "Finding high-value keywords for your niche." },
-      { icon: Globe, title: "On-Page SEO", desc: "Optimizing content, meta tags, and structure." },
-      { icon: Shield, title: "Technical SEO", desc: "Improving performance, crawlability, and indexation." },
+      {
+        icon: Search,
+        title: "Keyword Research",
+        desc: "Finding high-value keywords for your niche.",
+      },
+      {
+        icon: Globe,
+        title: "On-Page SEO",
+        desc: "Optimizing content, meta tags, and structure.",
+      },
+      {
+        icon: Shield,
+        title: "Technical SEO",
+        desc: "Improving performance, crawlability, and indexation.",
+      },
     ],
     features: [
-      { icon: BarChart, title: "Rank Tracking", color: "from-blue-400 to-blue-600" },
+      {
+        icon: BarChart,
+        title: "Rank Tracking",
+        color: "from-blue-400 to-blue-600",
+      },
       { icon: Globe, title: "Local SEO", color: "from-green-400 to-green-600" },
-      { icon: Zap, title: "Content Strategy", color: "from-yellow-400 to-yellow-600" },
-      { icon: Shield, title: "Audit Reports", color: "from-red-400 to-red-600" },
-      { icon: RefreshCw, title: "Ongoing Optimization", color: "from-purple-400 to-purple-600" },
-      { icon: Users, title: "Conversion Focus", color: "from-cyan-400 to-cyan-600" },
+      {
+        icon: Zap,
+        title: "Content Strategy",
+        color: "from-yellow-400 to-yellow-600",
+      },
+      {
+        icon: Shield,
+        title: "Audit Reports",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: RefreshCw,
+        title: "Ongoing Optimization",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Users,
+        title: "Conversion Focus",
+        color: "from-cyan-400 to-cyan-600",
+      },
     ],
     process: [
-      { step: "01", title: "Audit", desc: "Analyzing site performance, structure, and content." },
-      { step: "02", title: "Strategy", desc: "Building a keyword and content roadmap." },
-      { step: "03", title: "Optimization", desc: "Implementing on-page and technical improvements." },
-      { step: "04", title: "Content", desc: "Publishing SEO-optimized content that attracts users." },
-      { step: "05", title: "Link Building", desc: "Growing authority with relevant backlinks." },
-      { step: "06", title: "Reporting", desc: "Monitoring performance and refining the plan." },
+      {
+        step: "01",
+        title: "Audit",
+        desc: "Analyzing site performance, structure, and content.",
+      },
+      {
+        step: "02",
+        title: "Strategy",
+        desc: "Building a keyword and content roadmap.",
+      },
+      {
+        step: "03",
+        title: "Optimization",
+        desc: "Implementing on-page and technical improvements.",
+      },
+      {
+        step: "04",
+        title: "Content",
+        desc: "Publishing SEO-optimized content that attracts users.",
+      },
+      {
+        step: "05",
+        title: "Link Building",
+        desc: "Growing authority with relevant backlinks.",
+      },
+      {
+        step: "06",
+        title: "Reporting",
+        desc: "Monitoring performance and refining the plan.",
+      },
     ],
     technologies: [
-      { icon: Search, name: "Google Search Console", color: "from-green-400 to-green-600" },
-      { icon: BarChart, name: "Google Analytics", color: "from-blue-400 to-blue-600" },
+      {
+        icon: Search,
+        name: "Google Search Console",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: BarChart,
+        name: "Google Analytics",
+        color: "from-blue-400 to-blue-600",
+      },
       { icon: Globe, name: "Ahrefs", color: "from-purple-400 to-purple-600" },
       { icon: Zap, name: "SEMrush", color: "from-red-400 to-red-600" },
-      { icon: RefreshCw, name: "Screaming Frog", color: "from-cyan-400 to-cyan-600" },
+      {
+        icon: RefreshCw,
+        name: "Screaming Frog",
+        color: "from-cyan-400 to-cyan-600",
+      },
     ],
     whyChoose: [
-      { icon: Users, title: "Data Driven", desc: "SEO strategies backed by analytics and research." },
-      { icon: Shield, title: "White-Hat", desc: "Ethical tactics that support long-term growth." },
-      { icon: Globe, title: "Local & Global", desc: "SEO that reaches the right audience anywhere." },
-      { icon: RefreshCw, title: "Continuous Improvement", desc: "SEO evolves as search engines and markets change." },
+      {
+        icon: Users,
+        title: "Data Driven",
+        desc: "SEO strategies backed by analytics and research.",
+      },
+      {
+        icon: Shield,
+        title: "White-Hat",
+        desc: "Ethical tactics that support long-term growth.",
+      },
+      {
+        icon: Globe,
+        title: "Local & Global",
+        desc: "SEO that reaches the right audience anywhere.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Continuous Improvement",
+        desc: "SEO evolves as search engines and markets change.",
+      },
     ],
     industries: [
       { icon: ShoppingBag, title: "E-Commerce" },
@@ -531,20 +1163,49 @@ export const servicesData = {
       { icon: Gift, title: "Retail" },
     ],
     faqs: [
-      { question: "How long until SEO results appear?", answer: "SEO growth usually becomes visible in 3–6 months, depending on competition and website history." },
-      { question: "Can you improve local search rankings?", answer: "Yes, we optimize local listings and on-page signals for better visibility." },
-      { question: "Do you offer monthly SEO reports?", answer: "Yes, we provide transparent reporting and performance reviews every month." },
+      {
+        question: "How long until SEO results appear?",
+        answer:
+          "SEO growth usually becomes visible in 3–6 months, depending on competition and website history.",
+      },
+      {
+        question: "Can you improve local search rankings?",
+        answer:
+          "Yes, we optimize local listings and on-page signals for better visibility.",
+      },
+      {
+        question: "Do you offer monthly SEO reports?",
+        answer:
+          "Yes, we provide transparent reporting and performance reviews every month.",
+      },
     ],
     relatedServices: [
-      { icon: Globe, label: "Digital Marketing", color: "from-purple-400 to-purple-600" },
-      { icon: Code2, label: "Web Development", color: "from-blue-400 to-blue-600" },
-      { icon: Database, label: "ERP Solutions", color: "from-green-400 to-green-600" },
-      { icon: Cloud, label: "Cloud Solutions", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Globe,
+        label: "Digital Marketing",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Code2,
+        label: "Web Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Database,
+        label: "ERP Solutions",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Cloud,
+        label: "Cloud Solutions",
+        color: "from-orange-400 to-orange-600",
+      },
     ],
     cta: {
       badge: "Rank Higher in Search",
       title: "Ready To Improve Your Organic Visibility?",
-      description: "Let’s implement SEO strategies that bring more qualified traffic to your site.",
+      description:
+        "Let’s implement SEO strategies that bring more qualified traffic to your site.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Call Now",
     },
@@ -563,10 +1224,25 @@ export const servicesData = {
       highlight: "Google Ads",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 120, suffix: "+", label: "Campaigns Managed" },
+      {
+        icon: Briefcase,
+        numericValue: 120,
+        suffix: "+",
+        label: "Campaigns Managed",
+      },
       { icon: Users, numericValue: 60, suffix: "+", label: "Happy Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 95, suffix: "%", label: "Client Satisfaction" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 95,
+        suffix: "%",
+        label: "Client Satisfaction",
+      },
     ],
     featuresTitle: "Google Ads Features",
     processTitle: "Paid Search Campaign Process",
@@ -577,7 +1253,7 @@ export const servicesData = {
     subtitle: "SSD Informatics",
     description:
       "We run data-driven Google Ads campaigns that increase traffic, leads, and ROI.",
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&q=80",
+    image: "/images/google add.jpeg",
     overview: {
       title: "Driving Conversions with Google Ads",
       description:
@@ -590,38 +1266,130 @@ export const servicesData = {
       { value: "5x", label: "Average ROI" },
     ],
     offers: [
-      { icon: BarChart, title: "Search Ads", desc: "Targeted search campaigns with high intent traffic." },
-      { icon: Globe, title: "Display Ads", desc: "Visually engaging ads across Google’s network." },
-      { icon: Users, title: "Remarketing", desc: "Re-engage visitors with tailored ad experiences." },
+      {
+        icon: BarChart,
+        title: "Search Ads",
+        desc: "Targeted search campaigns with high intent traffic.",
+      },
+      {
+        icon: Globe,
+        title: "Display Ads",
+        desc: "Visually engaging ads across Google’s network.",
+      },
+      {
+        icon: Users,
+        title: "Remarketing",
+        desc: "Re-engage visitors with tailored ad experiences.",
+      },
     ],
     features: [
-      { icon: Zap, title: "High Intent Traffic", color: "from-yellow-400 to-yellow-600" },
-      { icon: Shield, title: "Quality Leads", color: "from-red-400 to-red-600" },
-      { icon: Globe, title: "Targeted Reach", color: "from-green-400 to-green-600" },
-      { icon: RefreshCw, title: "Budget Control", color: "from-purple-400 to-purple-600" },
-      { icon: BarChart, title: "Performance Tracking", color: "from-blue-400 to-blue-600" },
-      { icon: Users, title: "Campaign Optimizations", color: "from-cyan-400 to-cyan-600" },
+      {
+        icon: Zap,
+        title: "High Intent Traffic",
+        color: "from-yellow-400 to-yellow-600",
+      },
+      {
+        icon: Shield,
+        title: "Quality Leads",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: Globe,
+        title: "Targeted Reach",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: RefreshCw,
+        title: "Budget Control",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: BarChart,
+        title: "Performance Tracking",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Users,
+        title: "Campaign Optimizations",
+        color: "from-cyan-400 to-cyan-600",
+      },
     ],
     process: [
-      { step: "01", title: "Strategy", desc: "Defining campaign goals and audience segments." },
-      { step: "02", title: "Setup", desc: "Configuring accounts, tracking, and targeting." },
-      { step: "03", title: "Creative", desc: "Writing compelling ad copy and visuals." },
-      { step: "04", title: "Launch", desc: "Activating your campaigns with precision." },
-      { step: "05", title: "Optimize", desc: "Improving bids, keywords, and audience signals." },
-      { step: "06", title: "Report", desc: "Reviewing performance and refining campaigns." },
+      {
+        step: "01",
+        title: "Strategy",
+        desc: "Defining campaign goals and audience segments.",
+      },
+      {
+        step: "02",
+        title: "Setup",
+        desc: "Configuring accounts, tracking, and targeting.",
+      },
+      {
+        step: "03",
+        title: "Creative",
+        desc: "Writing compelling ad copy and visuals.",
+      },
+      {
+        step: "04",
+        title: "Launch",
+        desc: "Activating your campaigns with precision.",
+      },
+      {
+        step: "05",
+        title: "Optimize",
+        desc: "Improving bids, keywords, and audience signals.",
+      },
+      {
+        step: "06",
+        title: "Report",
+        desc: "Reviewing performance and refining campaigns.",
+      },
     ],
     technologies: [
-      { icon: BarChart, name: "Google Ads", color: "from-blue-400 to-blue-600" },
-      { icon: Search, name: "Keyword Planner", color: "from-green-400 to-green-600" },
-      { icon: Globe, name: "Google Analytics", color: "from-purple-400 to-purple-600" },
-      { icon: RefreshCw, name: "Conversion Tracking", color: "from-orange-400 to-orange-600" },
+      {
+        icon: BarChart,
+        name: "Google Ads",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Search,
+        name: "Keyword Planner",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Globe,
+        name: "Google Analytics",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: RefreshCw,
+        name: "Conversion Tracking",
+        color: "from-orange-400 to-orange-600",
+      },
       { icon: Shield, name: "Smart Bidding", color: "from-red-400 to-red-600" },
     ],
     whyChoose: [
-      { icon: Users, title: "Experienced PPC Team", desc: "Campaigns managed by certified paid search specialists." },
-      { icon: Shield, title: "Transparent Reporting", desc: "Clear ROI reports with campaign insights." },
-      { icon: Globe, title: "Audience Targeting", desc: "Reach the right customers at the right time." },
-      { icon: RefreshCw, title: "Continuous Optimization", desc: "Improving performance every week." },
+      {
+        icon: Users,
+        title: "Experienced PPC Team",
+        desc: "Campaigns managed by certified paid search specialists.",
+      },
+      {
+        icon: Shield,
+        title: "Transparent Reporting",
+        desc: "Clear ROI reports with campaign insights.",
+      },
+      {
+        icon: Globe,
+        title: "Audience Targeting",
+        desc: "Reach the right customers at the right time.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Continuous Optimization",
+        desc: "Improving performance every week.",
+      },
     ],
     industries: [
       { icon: ShoppingBag, title: "E-Commerce" },
@@ -632,20 +1400,49 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "How quickly can Google Ads start performing?", answer: "Campaigns can begin driving traffic immediately, with optimization improving results over time." },
-      { question: "Can you manage my existing Google Ads account?", answer: "Yes, we can audit and optimize existing accounts for better performance." },
-      { question: "Do you handle ad creative too?", answer: "Yes, we develop ad copy, landing pages, and creatives for strong campaign performance." },
+      {
+        question: "How quickly can Google Ads start performing?",
+        answer:
+          "Campaigns can begin driving traffic immediately, with optimization improving results over time.",
+      },
+      {
+        question: "Can you manage my existing Google Ads account?",
+        answer:
+          "Yes, we can audit and optimize existing accounts for better performance.",
+      },
+      {
+        question: "Do you handle ad creative too?",
+        answer:
+          "Yes, we develop ad copy, landing pages, and creatives for strong campaign performance.",
+      },
     ],
     relatedServices: [
-      { icon: Globe, label: "Digital Marketing", color: "from-purple-400 to-purple-600" },
-      { icon: Code2, label: "Web Development", color: "from-blue-400 to-blue-600" },
-      { icon: Search, label: "SEO Optimization", color: "from-green-400 to-green-600" },
-      { icon: Cloud, label: "Cloud Solutions", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Globe,
+        label: "Digital Marketing",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Code2,
+        label: "Web Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Search,
+        label: "SEO Optimization",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Cloud,
+        label: "Cloud Solutions",
+        color: "from-orange-400 to-orange-600",
+      },
     ],
     cta: {
       badge: "Launch Paid Campaigns",
       title: "Ready To Reach High-Value Customers Fast?",
-      description: "Let’s build Google Ads campaigns that drive qualified traffic and sales.",
+      description:
+        "Let’s build Google Ads campaigns that drive qualified traffic and sales.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Call Now",
     },
@@ -664,10 +1461,25 @@ export const servicesData = {
       highlight: "Meta Ads",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 150, suffix: "+", label: "Social Campaigns" },
+      {
+        icon: Briefcase,
+        numericValue: 150,
+        suffix: "+",
+        label: "Social Campaigns",
+      },
       { icon: Users, numericValue: 70, suffix: "+", label: "Happy Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 96, suffix: "%", label: "Client Satisfaction" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 96,
+        suffix: "%",
+        label: "Client Satisfaction",
+      },
     ],
     featuresTitle: "Meta Ads Features",
     processTitle: "Social Ad Campaign Process",
@@ -678,7 +1490,7 @@ export const servicesData = {
     subtitle: "SSD Informatics",
     description:
       "We create Facebook and Instagram ad campaigns that build awareness, leads, and conversions.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&q=80",
+    image: "/images/meta add.jpeg",
     overview: {
       title: "Growing Brands Through Social Advertising",
       description:
@@ -691,38 +1503,134 @@ export const servicesData = {
       { value: "250K+", label: "Social Impressions" },
     ],
     offers: [
-      { icon: Megaphone, title: "Audience Targeting", desc: "Precise targeting for your ideal customer segments." },
-      { icon: Users, title: "Creative Ads", desc: "Engaging visuals and copy designed to convert." },
-      { icon: Shield, title: "Performance Tracking", desc: "Insights-driven optimization and measurement." },
+      {
+        icon: Megaphone,
+        title: "Audience Targeting",
+        desc: "Precise targeting for your ideal customer segments.",
+      },
+      {
+        icon: Users,
+        title: "Creative Ads",
+        desc: "Engaging visuals and copy designed to convert.",
+      },
+      {
+        icon: Shield,
+        title: "Performance Tracking",
+        desc: "Insights-driven optimization and measurement.",
+      },
     ],
     features: [
-      { icon: Globe, title: "Social Reach", color: "from-blue-400 to-blue-600" },
-      { icon: Zap, title: "Engaging Creatives", color: "from-yellow-400 to-yellow-600" },
-      { icon: Shield, title: "Audience Insights", color: "from-red-400 to-red-600" },
-      { icon: RefreshCw, title: "Campaign Optimization", color: "from-purple-400 to-purple-600" },
-      { icon: Users, title: "Lead Generation", color: "from-cyan-400 to-cyan-600" },
-      { icon: Globe, title: "Brand Awareness", color: "from-green-400 to-green-600" },
+      {
+        icon: Globe,
+        title: "Social Reach",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Zap,
+        title: "Engaging Creatives",
+        color: "from-yellow-400 to-yellow-600",
+      },
+      {
+        icon: Shield,
+        title: "Audience Insights",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: RefreshCw,
+        title: "Campaign Optimization",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Users,
+        title: "Lead Generation",
+        color: "from-cyan-400 to-cyan-600",
+      },
+      {
+        icon: Globe,
+        title: "Brand Awareness",
+        color: "from-green-400 to-green-600",
+      },
     ],
     process: [
-      { step: "01", title: "Strategy", desc: "Defining audiences, goals, and campaign formats." },
-      { step: "02", title: "Creative", desc: "Designing eye-catching ad content for social feeds." },
-      { step: "03", title: "Setup", desc: "Configuring Meta Ads account and tracking." },
-      { step: "04", title: "Launch", desc: "Releasing campaigns to targeted audiences." },
-      { step: "05", title: "Monitor", desc: "Tracking ad performance and engagement." },
-      { step: "06", title: "Optimize", desc: "Adjusting bids, creatives, and targeting for results." },
+      {
+        step: "01",
+        title: "Strategy",
+        desc: "Defining audiences, goals, and campaign formats.",
+      },
+      {
+        step: "02",
+        title: "Creative",
+        desc: "Designing eye-catching ad content for social feeds.",
+      },
+      {
+        step: "03",
+        title: "Setup",
+        desc: "Configuring Meta Ads account and tracking.",
+      },
+      {
+        step: "04",
+        title: "Launch",
+        desc: "Releasing campaigns to targeted audiences.",
+      },
+      {
+        step: "05",
+        title: "Monitor",
+        desc: "Tracking ad performance and engagement.",
+      },
+      {
+        step: "06",
+        title: "Optimize",
+        desc: "Adjusting bids, creatives, and targeting for results.",
+      },
     ],
     technologies: [
-      { icon: Globe, name: "Meta Ads Manager", color: "from-blue-400 to-blue-600" },
-      { icon: BarChart, name: "Facebook Analytics", color: "from-green-400 to-green-600" },
-      { icon: Sparkles, name: "A/B Testing", color: "from-purple-400 to-purple-600" },
-      { icon: RefreshCw, name: "Audience Insights", color: "from-orange-400 to-orange-600" },
-      { icon: Shield, name: "Conversion Tracking", color: "from-red-400 to-red-600" },
+      {
+        icon: Globe,
+        name: "Meta Ads Manager",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: BarChart,
+        name: "Facebook Analytics",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Sparkles,
+        name: "A/B Testing",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: RefreshCw,
+        name: "Audience Insights",
+        color: "from-orange-400 to-orange-600",
+      },
+      {
+        icon: Shield,
+        name: "Conversion Tracking",
+        color: "from-red-400 to-red-600",
+      },
     ],
     whyChoose: [
-      { icon: Users, title: "Platform Experts", desc: "Specialists in Facebook and Instagram advertising." },
-      { icon: Shield, title: "Creative Strategy", desc: "Ads designed to capture attention and action." },
-      { icon: Zap, title: "Agile Optimization", desc: "Campaigns that improve through continuous testing." },
-      { icon: Globe, title: "Audience Precision", desc: "Targeting based on behavior, interests, and intent." },
+      {
+        icon: Users,
+        title: "Platform Experts",
+        desc: "Specialists in Facebook and Instagram advertising.",
+      },
+      {
+        icon: Shield,
+        title: "Creative Strategy",
+        desc: "Ads designed to capture attention and action.",
+      },
+      {
+        icon: Zap,
+        title: "Agile Optimization",
+        desc: "Campaigns that improve through continuous testing.",
+      },
+      {
+        icon: Globe,
+        title: "Audience Precision",
+        desc: "Targeting based on behavior, interests, and intent.",
+      },
     ],
     industries: [
       { icon: ShoppingBag, title: "E-Commerce" },
@@ -733,20 +1641,48 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "Can Meta Ads increase brand awareness?", answer: "Yes, our social campaigns are designed for both awareness and conversions." },
-      { question: "Do you manage both Facebook and Instagram?", answer: "Yes, we create and optimize ads across both Meta platforms." },
-      { question: "How do you measure ad success?", answer: "We track conversions, engagement, and ROI with transparent reporting." },
+      {
+        question: "Can Meta Ads increase brand awareness?",
+        answer:
+          "Yes, our social campaigns are designed for both awareness and conversions.",
+      },
+      {
+        question: "Do you manage both Facebook and Instagram?",
+        answer: "Yes, we create and optimize ads across both Meta platforms.",
+      },
+      {
+        question: "How do you measure ad success?",
+        answer:
+          "We track conversions, engagement, and ROI with transparent reporting.",
+      },
     ],
     relatedServices: [
-      { icon: Globe, label: "Digital Marketing", color: "from-purple-400 to-purple-600" },
-      { icon: Code2, label: "Web Development", color: "from-blue-400 to-blue-600" },
-      { icon: BarChart, label: "SEO Optimization", color: "from-green-400 to-green-600" },
-      { icon: Cloud, label: "Cloud Solutions", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Globe,
+        label: "Digital Marketing",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Code2,
+        label: "Web Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: BarChart,
+        label: "SEO Optimization",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Cloud,
+        label: "Cloud Solutions",
+        color: "from-orange-400 to-orange-600",
+      },
     ],
     cta: {
       badge: "Grow Socially",
       title: "Ready To Scale With Meta Ads?",
-      description: "Let’s launch social campaigns that deliver awareness, leads, and revenue.",
+      description:
+        "Let’s launch social campaigns that deliver awareness, leads, and revenue.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Call Now",
     },
@@ -765,10 +1701,30 @@ export const servicesData = {
       highlight: "Brand Identities",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 300, suffix: "+", label: "Designs Delivered" },
-      { icon: Users, numericValue: 250, suffix: "+", label: "Satisfied Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+      {
+        icon: Briefcase,
+        numericValue: 300,
+        suffix: "+",
+        label: "Designs Delivered",
+      },
+      {
+        icon: Users,
+        numericValue: 250,
+        suffix: "+",
+        label: "Satisfied Clients",
+      },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 99,
+        suffix: "%",
+        label: "Client Satisfaction",
+      },
     ],
     featuresTitle: "Graphic Design Features",
     processTitle: "Design Creation Process",
@@ -779,7 +1735,8 @@ export const servicesData = {
     subtitle: "SSD Informatics",
     description:
       "We create brand identity, marketing assets, and visuals that captivate your audience.",
-    image: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=900&q=80",
     overview: {
       title: "Designs That Capture Attention",
       description:
@@ -792,38 +1749,126 @@ export const servicesData = {
       { value: "12+", label: "Years of Experience" },
     ],
     offers: [
-      { icon: Palette, title: "Brand Identity", desc: "Logos, brand systems, and style guides." },
-      { icon: ShoppingBag, title: "Marketing Collateral", desc: "Brochures, flyers, and digital assets." },
-      { icon: Gift, title: "Social Graphics", desc: "Shareable visuals for social media and ads." },
+      {
+        icon: Palette,
+        title: "Brand Identity",
+        desc: "Logos, brand systems, and style guides.",
+      },
+      {
+        icon: ShoppingBag,
+        title: "Marketing Collateral",
+        desc: "Brochures, flyers, and digital assets.",
+      },
+      {
+        icon: Gift,
+        title: "Social Graphics",
+        desc: "Shareable visuals for social media and ads.",
+      },
     ],
     features: [
-      { icon: Camera, title: "Visual Storytelling", color: "from-blue-400 to-blue-600" },
-      { icon: Shield, title: "Brand Consistency", color: "from-red-400 to-red-600" },
-      { icon: PenTool, title: "Custom Illustrations", color: "from-purple-400 to-purple-600" },
-      { icon: Globe, title: "Layout Design", color: "from-green-400 to-green-600" },
-      { icon: RefreshCw, title: "Print Ready", color: "from-yellow-400 to-yellow-600" },
-      { icon: Heart, title: "Creative Impact", color: "from-cyan-400 to-cyan-600" },
+      {
+        icon: Camera,
+        title: "Visual Storytelling",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Shield,
+        title: "Brand Consistency",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: PenTool,
+        title: "Custom Illustrations",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Globe,
+        title: "Layout Design",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: RefreshCw,
+        title: "Print Ready",
+        color: "from-yellow-400 to-yellow-600",
+      },
+      {
+        icon: Heart,
+        title: "Creative Impact",
+        color: "from-cyan-400 to-cyan-600",
+      },
     ],
     process: [
-      { step: "01", title: "Briefing", desc: "Collecting the details and creative direction." },
-      { step: "02", title: "Concept", desc: "Developing strong visual themes and ideas." },
-      { step: "03", title: "Design", desc: "Creating polished graphics and layouts." },
-      { step: "04", title: "Review", desc: "Refining designs with client feedback." },
-      { step: "05", title: "Delivery", desc: "Preparing final files for print and digital use." },
-      { step: "06", title: "Support", desc: "Providing revisions and ongoing creative support." },
+      {
+        step: "01",
+        title: "Briefing",
+        desc: "Collecting the details and creative direction.",
+      },
+      {
+        step: "02",
+        title: "Concept",
+        desc: "Developing strong visual themes and ideas.",
+      },
+      {
+        step: "03",
+        title: "Design",
+        desc: "Creating polished graphics and layouts.",
+      },
+      {
+        step: "04",
+        title: "Review",
+        desc: "Refining designs with client feedback.",
+      },
+      {
+        step: "05",
+        title: "Delivery",
+        desc: "Preparing final files for print and digital use.",
+      },
+      {
+        step: "06",
+        title: "Support",
+        desc: "Providing revisions and ongoing creative support.",
+      },
     ],
     technologies: [
-      { icon: PenTool, name: "Adobe Illustrator", color: "from-orange-400 to-orange-600" },
-      { icon: Camera, name: "Adobe Photoshop", color: "from-blue-400 to-blue-600" },
-      { icon: MonitorSmartphone, name: "Adobe InDesign", color: "from-purple-400 to-purple-600" },
+      {
+        icon: PenTool,
+        name: "Adobe Illustrator",
+        color: "from-orange-400 to-orange-600",
+      },
+      {
+        icon: Camera,
+        name: "Adobe Photoshop",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: MonitorSmartphone,
+        name: "Adobe InDesign",
+        color: "from-purple-400 to-purple-600",
+      },
       { icon: Globe, name: "Figma", color: "from-green-400 to-green-600" },
       { icon: RefreshCw, name: "Canva", color: "from-pink-400 to-pink-600" },
     ],
     whyChoose: [
-      { icon: Users, title: "Creative Expertise", desc: "Designs created by a skilled creative team." },
-      { icon: Shield, title: "Brand Impact", desc: "Designs built to strengthen your brand presence." },
-      { icon: Zap, title: "Fast Turnaround", desc: "Creative deliverables that meet your timeline." },
-      { icon: Heart, title: "Memorable", desc: "Visuals that resonate with your audience." },
+      {
+        icon: Users,
+        title: "Creative Expertise",
+        desc: "Designs created by a skilled creative team.",
+      },
+      {
+        icon: Shield,
+        title: "Brand Impact",
+        desc: "Designs built to strengthen your brand presence.",
+      },
+      {
+        icon: Zap,
+        title: "Fast Turnaround",
+        desc: "Creative deliverables that meet your timeline.",
+      },
+      {
+        icon: Heart,
+        title: "Memorable",
+        desc: "Visuals that resonate with your audience.",
+      },
     ],
     industries: [
       { icon: ShoppingBag, title: "Retail" },
@@ -834,20 +1879,48 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "Do you create brand logos?", answer: "Yes, we design logos, brand systems, and visual identities." },
-      { question: "Can you prepare files for print?", answer: "Absolutely — we deliver print-ready files and digital asset packs." },
-      { question: "How many revisions do you offer?", answer: "We include revisions to ensure the final design matches your vision." },
+      {
+        question: "Do you create brand logos?",
+        answer: "Yes, we design logos, brand systems, and visual identities.",
+      },
+      {
+        question: "Can you prepare files for print?",
+        answer:
+          "Absolutely — we deliver print-ready files and digital asset packs.",
+      },
+      {
+        question: "How many revisions do you offer?",
+        answer:
+          "We include revisions to ensure the final design matches your vision.",
+      },
     ],
     relatedServices: [
-      { icon: Globe, label: "Digital Marketing", color: "from-purple-400 to-purple-600" },
-      { icon: Code2, label: "Web Development", color: "from-blue-400 to-blue-600" },
-      { icon: Smartphone, label: "Mobile App Development", color: "from-green-400 to-green-600" },
-      { icon: Camera, label: "Video Editing", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Globe,
+        label: "Digital Marketing",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Code2,
+        label: "Web Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Smartphone,
+        label: "Mobile App Development",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Camera,
+        label: "Video Editing",
+        color: "from-orange-400 to-orange-600",
+      },
     ],
     cta: {
       badge: "Design That Delights",
       title: "Ready To Refresh Your Brand Visuals?",
-      description: "Let’s create graphic design assets that elevate your brand story.",
+      description:
+        "Let’s create graphic design assets that elevate your brand story.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Call Now",
     },
@@ -866,10 +1939,25 @@ export const servicesData = {
       highlight: "Video Stories",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 220, suffix: "+", label: "Videos Edited" },
+      {
+        icon: Briefcase,
+        numericValue: 220,
+        suffix: "+",
+        label: "Videos Edited",
+      },
       { icon: Users, numericValue: 80, suffix: "+", label: "Happy Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 99,
+        suffix: "%",
+        label: "Client Satisfaction",
+      },
     ],
     featuresTitle: "Video Editing Features",
     processTitle: "Video Production Process",
@@ -880,7 +1968,8 @@ export const servicesData = {
     subtitle: "SSD Informatics",
     description:
       "We produce polished videos for social, marketing, and brand storytelling with professional editing expertise.",
-    image: "https://images.unsplash.com/photo-1517519014922-8fcfabd6c612?w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1517519014922-8fcfabd6c612?w=900&q=80",
     overview: {
       title: "Storytelling Through Video",
       description:
@@ -893,38 +1982,126 @@ export const servicesData = {
       { value: "30+", label: "Video Formats" },
     ],
     offers: [
-      { icon: Play, title: "Promotional Videos", desc: "Brand films that connect with your audience." },
-      { icon: Film, title: "Social Content", desc: "Short-form videos for Instagram, TikTok, and reels." },
-      { icon: Camera, title: "Corporate Video", desc: "Professional video for business and training." },
+      {
+        icon: Play,
+        title: "Promotional Videos",
+        desc: "Brand films that connect with your audience.",
+      },
+      {
+        icon: Film,
+        title: "Social Content",
+        desc: "Short-form videos for Instagram, TikTok, and reels.",
+      },
+      {
+        icon: Camera,
+        title: "Corporate Video",
+        desc: "Professional video for business and training.",
+      },
     ],
     features: [
-      { icon: Play, title: "Cinematic Editing", color: "from-blue-400 to-blue-600" },
-      { icon: Zap, title: "Fast Turnaround", color: "from-yellow-400 to-yellow-600" },
-      { icon: Shield, title: "Color Grading", color: "from-red-400 to-red-600" },
-      { icon: Music, title: "Sound Design", color: "from-green-400 to-green-600" },
-      { icon: RefreshCw, title: "Motion Graphics", color: "from-purple-400 to-purple-600" },
-      { icon: Users, title: "Story Driven", color: "from-cyan-400 to-cyan-600" },
+      {
+        icon: Play,
+        title: "Cinematic Editing",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Zap,
+        title: "Fast Turnaround",
+        color: "from-yellow-400 to-yellow-600",
+      },
+      {
+        icon: Shield,
+        title: "Color Grading",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: Music,
+        title: "Sound Design",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: RefreshCw,
+        title: "Motion Graphics",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Users,
+        title: "Story Driven",
+        color: "from-cyan-400 to-cyan-600",
+      },
     ],
     process: [
-      { step: "01", title: "Planning", desc: "Understanding your story and goals." },
-      { step: "02", title: "Rough Cut", desc: "Assembling the initial edit for review." },
-      { step: "03", title: "Fine Cut", desc: "Refining pacing, transitions, and structure." },
-      { step: "04", title: "Color & Audio", desc: "Applying grading and sound mixing." },
+      {
+        step: "01",
+        title: "Planning",
+        desc: "Understanding your story and goals.",
+      },
+      {
+        step: "02",
+        title: "Rough Cut",
+        desc: "Assembling the initial edit for review.",
+      },
+      {
+        step: "03",
+        title: "Fine Cut",
+        desc: "Refining pacing, transitions, and structure.",
+      },
+      {
+        step: "04",
+        title: "Color & Audio",
+        desc: "Applying grading and sound mixing.",
+      },
       { step: "05", title: "Approval", desc: "Feedback review and revisions." },
-      { step: "06", title: "Delivery", desc: "Exporting final videos in the right formats." },
+      {
+        step: "06",
+        title: "Delivery",
+        desc: "Exporting final videos in the right formats.",
+      },
     ],
     technologies: [
-      { icon: Film, name: "Adobe Premiere Pro", color: "from-blue-400 to-blue-600" },
-      { icon: Music, name: "Adobe Audition", color: "from-purple-400 to-purple-600" },
-      { icon: Camera, name: "DaVinci Resolve", color: "from-green-400 to-green-600" },
-      { icon: RefreshCw, name: "After Effects", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Film,
+        name: "Adobe Premiere Pro",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Music,
+        name: "Adobe Audition",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Camera,
+        name: "DaVinci Resolve",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: RefreshCw,
+        name: "After Effects",
+        color: "from-orange-400 to-orange-600",
+      },
       { icon: Zap, name: "Final Cut Pro", color: "from-red-400 to-red-600" },
     ],
     whyChoose: [
-      { icon: Film, title: "Cinematic Quality", desc: "Professional edits with polished visual storytelling." },
-      { icon: Music, title: "Audio Excellence", desc: "High-quality sound design and mixing." },
-      { icon: RefreshCw, title: "Creative Direction", desc: "Guidance throughout the editing process." },
-      { icon: Users, title: "Audience Focused", desc: "Videos crafted for your target audience." },
+      {
+        icon: Film,
+        title: "Cinematic Quality",
+        desc: "Professional edits with polished visual storytelling.",
+      },
+      {
+        icon: Music,
+        title: "Audio Excellence",
+        desc: "High-quality sound design and mixing.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Creative Direction",
+        desc: "Guidance throughout the editing process.",
+      },
+      {
+        icon: Users,
+        title: "Audience Focused",
+        desc: "Videos crafted for your target audience.",
+      },
     ],
     industries: [
       { icon: Film, title: "Media" },
@@ -935,20 +2112,48 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "What types of video do you edit?", answer: "We edit promotional, social, corporate, and product videos." },
-      { question: "Can you add music and motion graphics?", answer: "Yes, we include sound design, motion graphics, and color grading." },
-      { question: "What file formats do you deliver?", answer: "We deliver video in MP4, MOV, and custom formats for your platforms." },
+      {
+        question: "What types of video do you edit?",
+        answer: "We edit promotional, social, corporate, and product videos.",
+      },
+      {
+        question: "Can you add music and motion graphics?",
+        answer:
+          "Yes, we include sound design, motion graphics, and color grading.",
+      },
+      {
+        question: "What file formats do you deliver?",
+        answer:
+          "We deliver video in MP4, MOV, and custom formats for your platforms.",
+      },
     ],
     relatedServices: [
-      { icon: Code2, label: "Web Development", color: "from-blue-400 to-blue-600" },
-      { icon: Palette, label: "Graphic Design", color: "from-purple-400 to-purple-600" },
-      { icon: Globe, label: "Digital Marketing", color: "from-green-400 to-green-600" },
-      { icon: Cloud, label: "Cloud Solutions", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Code2,
+        label: "Web Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Palette,
+        label: "Graphic Design",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Globe,
+        label: "Digital Marketing",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Cloud,
+        label: "Cloud Solutions",
+        color: "from-orange-400 to-orange-600",
+      },
     ],
     cta: {
       badge: "Tell Your Story",
       title: "Ready To Create Impactful Video Content?",
-      description: "Let’s edit your footage into videos that inspire action and build your brand.",
+      description:
+        "Let’s edit your footage into videos that inspire action and build your brand.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Call Now",
     },
@@ -967,10 +2172,25 @@ export const servicesData = {
       highlight: "Digitally",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 220, suffix: "+", label: "Campaigns Launched" },
+      {
+        icon: Briefcase,
+        numericValue: 220,
+        suffix: "+",
+        label: "Campaigns Launched",
+      },
       { icon: Users, numericValue: 150, suffix: "+", label: "Happy Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 95, suffix: "%", label: "Client Retention" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 95,
+        suffix: "%",
+        label: "Client Retention",
+      },
     ],
     featuresTitle: "Digital Marketing Features",
     processTitle: "Our Digital Marketing Process",
@@ -981,7 +2201,7 @@ export const servicesData = {
     subtitle: "SSD Informatics",
     description:
       "Grow your online visibility, conversions, and revenue with data-driven digital marketing strategies.",
-    image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=900&q=80",
+    image: "/images/socailmedia.jpeg",
     overview: {
       title: "Driving Measurable Growth with Digital Marketing",
       description:
@@ -994,38 +2214,130 @@ export const servicesData = {
       { value: "4.9★", label: "Client Satisfaction" },
     ],
     offers: [
-      { icon: Globe, title: "Social Media Marketing", desc: "Engaging campaigns that grow followers and brand loyalty." },
-      { icon: BarChart, title: "Performance Advertising", desc: "Data-driven paid campaigns that drive qualified leads." },
-      { icon: Search, title: "Content Strategy", desc: "SEO and content plans that improve rankings and conversions." },
+      {
+        icon: Globe,
+        title: "Social Media Marketing",
+        desc: "Engaging campaigns that grow followers and brand loyalty.",
+      },
+      {
+        icon: BarChart,
+        title: "Performance Advertising",
+        desc: "Data-driven paid campaigns that drive qualified leads.",
+      },
+      {
+        icon: Search,
+        title: "Content Strategy",
+        desc: "SEO and content plans that improve rankings and conversions.",
+      },
     ],
     features: [
-      { icon: Globe, title: "Search Visibility", color: "from-blue-400 to-blue-600" },
-      { icon: BarChart, title: "Performance Tracking", color: "from-green-400 to-green-600" },
-      { icon: Sparkles, title: "Creative Campaigns", color: "from-purple-400 to-purple-600" },
-      { icon: Users, title: "Audience Growth", color: "from-cyan-400 to-cyan-600" },
-      { icon: Shield, title: "Brand Protection", color: "from-red-400 to-red-600" },
-      { icon: RefreshCw, title: "Ongoing Optimization", color: "from-yellow-400 to-yellow-600" },
+      {
+        icon: Globe,
+        title: "Search Visibility",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: BarChart,
+        title: "Performance Tracking",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Sparkles,
+        title: "Creative Campaigns",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Users,
+        title: "Audience Growth",
+        color: "from-cyan-400 to-cyan-600",
+      },
+      {
+        icon: Shield,
+        title: "Brand Protection",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: RefreshCw,
+        title: "Ongoing Optimization",
+        color: "from-yellow-400 to-yellow-600",
+      },
     ],
     process: [
-      { step: "01", title: "Discovery", desc: "Understanding your audience, products, and campaign goals." },
-      { step: "02", title: "Strategy", desc: "Building a channel mix, messaging, and measurement plan." },
-      { step: "03", title: "Content", desc: "Creating creative assets and copy that resonate with your customers." },
-      { step: "04", title: "Launch", desc: "Deploying campaigns across search, social, and display." },
-      { step: "05", title: "Optimize", desc: "Analyzing results and refining campaign performance." },
-      { step: "06", title: "Report", desc: "Sharing transparent analytics and next-step recommendations." },
+      {
+        step: "01",
+        title: "Discovery",
+        desc: "Understanding your audience, products, and campaign goals.",
+      },
+      {
+        step: "02",
+        title: "Strategy",
+        desc: "Building a channel mix, messaging, and measurement plan.",
+      },
+      {
+        step: "03",
+        title: "Content",
+        desc: "Creating creative assets and copy that resonate with your customers.",
+      },
+      {
+        step: "04",
+        title: "Launch",
+        desc: "Deploying campaigns across search, social, and display.",
+      },
+      {
+        step: "05",
+        title: "Optimize",
+        desc: "Analyzing results and refining campaign performance.",
+      },
+      {
+        step: "06",
+        title: "Report",
+        desc: "Sharing transparent analytics and next-step recommendations.",
+      },
     ],
     technologies: [
-      { icon: Search, name: "Google Analytics", color: "from-blue-400 to-blue-600" },
+      {
+        icon: Search,
+        name: "Google Analytics",
+        color: "from-blue-400 to-blue-600",
+      },
       { icon: Globe, name: "Facebook Ads", color: "from-blue-400 to-blue-600" },
-      { icon: BarChart, name: "Google Ads", color: "from-green-400 to-green-600" },
-      { icon: Sparkles, name: "LinkedIn Ads", color: "from-purple-400 to-purple-600" },
-      { icon: RefreshCw, name: "SEO Tools", color: "from-orange-400 to-orange-600" },
+      {
+        icon: BarChart,
+        name: "Google Ads",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Sparkles,
+        name: "LinkedIn Ads",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: RefreshCw,
+        name: "SEO Tools",
+        color: "from-orange-400 to-orange-600",
+      },
     ],
     whyChoose: [
-      { icon: Users, title: "Audience First", desc: "Campaigns designed around your customers and their journey." },
-      { icon: Shield, title: "Transparent Reporting", desc: "Clear performance insights and ROI tracking." },
-      { icon: Zap, title: "Rapid Growth", desc: "Focused strategies that improve traffic and conversions." },
-      { icon: RefreshCw, title: "Continuous Improvement", desc: "Ongoing refinements to keep results improving." },
+      {
+        icon: Users,
+        title: "Audience First",
+        desc: "Campaigns designed around your customers and their journey.",
+      },
+      {
+        icon: Shield,
+        title: "Transparent Reporting",
+        desc: "Clear performance insights and ROI tracking.",
+      },
+      {
+        icon: Zap,
+        title: "Rapid Growth",
+        desc: "Focused strategies that improve traffic and conversions.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Continuous Improvement",
+        desc: "Ongoing refinements to keep results improving.",
+      },
     ],
     industries: [
       { icon: ShoppingBag, title: "E-Commerce" },
@@ -1036,20 +2348,49 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "Can you manage all my digital marketing channels?", answer: "Yes, we build and manage integrated campaigns across paid search, social, email, and content." },
-      { question: "How do you measure campaign success?", answer: "We use data-backed KPIs like traffic, conversions, and ROI to optimize performance." },
-      { question: "Will you provide marketing reports?", answer: "Yes, we provide regular reports with transparent insights and next steps." },
+      {
+        question: "Can you manage all my digital marketing channels?",
+        answer:
+          "Yes, we build and manage integrated campaigns across paid search, social, email, and content.",
+      },
+      {
+        question: "How do you measure campaign success?",
+        answer:
+          "We use data-backed KPIs like traffic, conversions, and ROI to optimize performance.",
+      },
+      {
+        question: "Will you provide marketing reports?",
+        answer:
+          "Yes, we provide regular reports with transparent insights and next steps.",
+      },
     ],
     relatedServices: [
-      { icon: Code2, label: "Web Development", color: "from-blue-400 to-blue-600" },
-      { icon: Search, label: "SEO Optimization", color: "from-green-400 to-green-600" },
-      { icon: Globe, label: "Meta Ads", color: "from-purple-400 to-purple-600" },
-      { icon: BarChart, label: "Google Ads", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Code2,
+        label: "Web Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Search,
+        label: "SEO Optimization",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Globe,
+        label: "Meta Ads",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: BarChart,
+        label: "Google Ads",
+        color: "from-orange-400 to-orange-600",
+      },
     ],
     cta: {
       badge: "Boost Your Digital Presence",
       title: "Ready To Reach More Customers Online?",
-      description: "Let’s build digital marketing campaigns that increase visibility, traffic, and sales.",
+      description:
+        "Let’s build digital marketing campaigns that increase visibility, traffic, and sales.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Contact Us",
     },
@@ -1068,10 +2409,25 @@ export const servicesData = {
       highlight: "Software Solutions",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 140, suffix: "+", label: "Software Projects" },
+      {
+        icon: Briefcase,
+        numericValue: 140,
+        suffix: "+",
+        label: "Software Projects",
+      },
       { icon: Users, numericValue: 60, suffix: "+", label: "Happy Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Client Satisfaction" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 99,
+        suffix: "%",
+        label: "Client Satisfaction",
+      },
     ],
     featuresTitle: "Software Development Features",
     processTitle: "Our Software Delivery Process",
@@ -1095,38 +2451,118 @@ export const servicesData = {
       { value: "50+", label: "APIs Built" },
     ],
     offers: [
-      { icon: Code2, title: "Custom Applications", desc: "Tailored software systems built for your unique workflows." },
-      { icon: Server, title: "Backend Development", desc: "Secure, scalable server-side architecture and APIs." },
-      { icon: Database, title: "Data Solutions", desc: "Intelligent databases that power performance and insights." },
+      {
+        icon: Code2,
+        title: "Custom Applications",
+        desc: "Tailored software systems built for your unique workflows.",
+      },
+      {
+        icon: Server,
+        title: "Backend Development",
+        desc: "Secure, scalable server-side architecture and APIs.",
+      },
+      {
+        icon: Database,
+        title: "Data Solutions",
+        desc: "Intelligent databases that power performance and insights.",
+      },
     ],
     features: [
-      { icon: Shield, title: "Secure Architecture", color: "from-red-400 to-red-600" },
-      { icon: Zap, title: "High Performance", color: "from-yellow-400 to-yellow-600" },
-      { icon: Cloud, title: "Scalable Systems", color: "from-orange-400 to-orange-600" },
+      {
+        icon: Shield,
+        title: "Secure Architecture",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: Zap,
+        title: "High Performance",
+        color: "from-yellow-400 to-yellow-600",
+      },
+      {
+        icon: Cloud,
+        title: "Scalable Systems",
+        color: "from-orange-400 to-orange-600",
+      },
       { icon: Code2, title: "Clean Code", color: "from-blue-400 to-blue-600" },
-      { icon: RefreshCw, title: "Maintainable", color: "from-purple-400 to-purple-600" },
-      { icon: Users, title: "User Focused", color: "from-cyan-400 to-cyan-600" },
+      {
+        icon: RefreshCw,
+        title: "Maintainable",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Users,
+        title: "User Focused",
+        color: "from-cyan-400 to-cyan-600",
+      },
     ],
     process: [
-      { step: "01", title: "Planning", desc: "Defining requirements, architecture, and technical strategy." },
-      { step: "02", title: "Design", desc: "Creating clear UI/UX and data models for the platform." },
-      { step: "03", title: "Development", desc: "Building features with modern frameworks and test-driven practices." },
-      { step: "04", title: "Testing", desc: "Running QA, integration, and performance testing." },
-      { step: "05", title: "Deployment", desc: "Releasing your software with secure build and delivery pipelines." },
-      { step: "06", title: "Support", desc: "Providing long-term maintenance and continuous improvement." },
+      {
+        step: "01",
+        title: "Planning",
+        desc: "Defining requirements, architecture, and technical strategy.",
+      },
+      {
+        step: "02",
+        title: "Design",
+        desc: "Creating clear UI/UX and data models for the platform.",
+      },
+      {
+        step: "03",
+        title: "Development",
+        desc: "Building features with modern frameworks and test-driven practices.",
+      },
+      {
+        step: "04",
+        title: "Testing",
+        desc: "Running QA, integration, and performance testing.",
+      },
+      {
+        step: "05",
+        title: "Deployment",
+        desc: "Releasing your software with secure build and delivery pipelines.",
+      },
+      {
+        step: "06",
+        title: "Support",
+        desc: "Providing long-term maintenance and continuous improvement.",
+      },
     ],
     technologies: [
-      { icon: Code2, name: "JavaScript", color: "from-yellow-400 to-yellow-600" },
+      {
+        icon: Code2,
+        name: "JavaScript",
+        color: "from-yellow-400 to-yellow-600",
+      },
       { icon: Server, name: "Node.js", color: "from-green-400 to-green-600" },
-      { icon: Database, name: "MongoDB", color: "from-emerald-400 to-emerald-600" },
+      {
+        icon: Database,
+        name: "MongoDB",
+        color: "from-emerald-400 to-emerald-600",
+      },
       { icon: Cloud, name: "AWS", color: "from-orange-400 to-orange-600" },
       { icon: Shield, name: "Docker", color: "from-blue-400 to-blue-600" },
     ],
     whyChoose: [
-      { icon: Shield, title: "Trusted Delivery", desc: "Reliable development practices and secure systems." },
-      { icon: Users, title: "Collaborative", desc: "We partner with your team to ensure the right outcomes." },
-      { icon: Zap, title: "Fast Iteration", desc: "Agile delivery with regular feedback loops." },
-      { icon: RefreshCw, title: "Future-Ready", desc: "Software designed to scale and adapt over time." },
+      {
+        icon: Shield,
+        title: "Trusted Delivery",
+        desc: "Reliable development practices and secure systems.",
+      },
+      {
+        icon: Users,
+        title: "Collaborative",
+        desc: "We partner with your team to ensure the right outcomes.",
+      },
+      {
+        icon: Zap,
+        title: "Fast Iteration",
+        desc: "Agile delivery with regular feedback loops.",
+      },
+      {
+        icon: RefreshCw,
+        title: "Future-Ready",
+        desc: "Software designed to scale and adapt over time.",
+      },
     ],
     industries: [
       { icon: Building, title: "Corporate" },
@@ -1137,20 +2573,49 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "Can you build custom business software?", answer: "Yes, we build custom platforms for operations, CRM, ERP, and customer-facing applications." },
-      { question: "Do you support integrations with other systems?", answer: "Yes, we build API-first solutions that connect to your existing systems and services." },
-      { question: "How do you ensure software quality?", answer: "We use testing, code reviews, and continuous monitoring to maintain high quality." },
+      {
+        question: "Can you build custom business software?",
+        answer:
+          "Yes, we build custom platforms for operations, CRM, ERP, and customer-facing applications.",
+      },
+      {
+        question: "Do you support integrations with other systems?",
+        answer:
+          "Yes, we build API-first solutions that connect to your existing systems and services.",
+      },
+      {
+        question: "How do you ensure software quality?",
+        answer:
+          "We use testing, code reviews, and continuous monitoring to maintain high quality.",
+      },
     ],
     relatedServices: [
-      { icon: Cloud, label: "Cloud Solutions", color: "from-orange-400 to-orange-600" },
-      { icon: Code2, label: "Web Development", color: "from-blue-400 to-blue-600" },
-      { icon: Database, label: "ERP Solutions", color: "from-green-400 to-green-600" },
-      { icon: Globe, label: "Digital Marketing", color: "from-purple-400 to-purple-600" },
+      {
+        icon: Cloud,
+        label: "Cloud Solutions",
+        color: "from-orange-400 to-orange-600",
+      },
+      {
+        icon: Code2,
+        label: "Web Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Database,
+        label: "ERP Solutions",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Globe,
+        label: "Digital Marketing",
+        color: "from-purple-400 to-purple-600",
+      },
     ],
     cta: {
       badge: "Build Smarter Software",
       title: "Ready To Develop Enterprise-Grade Software?",
-      description: "Let’s create custom software that streamlines processes and accelerates growth.",
+      description:
+        "Let’s create custom software that streamlines processes and accelerates growth.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Call Now",
     },
@@ -1169,10 +2634,25 @@ export const servicesData = {
       highlight: "On The Cloud",
     },
     heroStats: [
-      { icon: Briefcase, numericValue: 50, suffix: "+", label: "Cloud Deployments" },
+      {
+        icon: Briefcase,
+        numericValue: 50,
+        suffix: "+",
+        label: "Cloud Deployments",
+      },
       { icon: Users, numericValue: 40, suffix: "+", label: "Happy Clients" },
-      { icon: Award, numericValue: 5, suffix: "+", label: "Years of Excellence" },
-      { icon: TrendingUp, numericValue: 99, suffix: "%", label: "Uptime Guaranteed" },
+      {
+        icon: Award,
+        numericValue: 5,
+        suffix: "+",
+        label: "Years of Excellence",
+      },
+      {
+        icon: TrendingUp,
+        numericValue: 99,
+        suffix: "%",
+        label: "Uptime Guaranteed",
+      },
     ],
     featuresTitle: "Cloud Solution Features",
     processTitle: "Cloud Service Delivery Process",
@@ -1196,38 +2676,122 @@ export const servicesData = {
       { value: "24/7", label: "Managed Support" },
     ],
     offers: [
-      { icon: Cloud, title: "Cloud Migration", desc: "Move your systems to the cloud with minimal disruption." },
-      { icon: Server, title: "Managed Infrastructure", desc: "Proactive monitoring, maintenance, and security." },
-      { icon: Database, title: "Cloud Data Services", desc: "Secure data storage, backups, and analytics platforms." },
+      {
+        icon: Cloud,
+        title: "Cloud Migration",
+        desc: "Move your systems to the cloud with minimal disruption.",
+      },
+      {
+        icon: Server,
+        title: "Managed Infrastructure",
+        desc: "Proactive monitoring, maintenance, and security.",
+      },
+      {
+        icon: Database,
+        title: "Cloud Data Services",
+        desc: "Secure data storage, backups, and analytics platforms.",
+      },
     ],
     features: [
       { icon: Shield, title: "Secure Cloud", color: "from-red-400 to-red-600" },
-      { icon: Globe, title: "Global Reach", color: "from-green-400 to-green-600" },
-      { icon: Zap, title: "Performance Scaling", color: "from-yellow-400 to-yellow-600" },
-      { icon: RefreshCw, title: "Reliable Operations", color: "from-purple-400 to-purple-600" },
-      { icon: Cloud, title: "Modern Architecture", color: "from-orange-400 to-orange-600" },
-      { icon: Users, title: "Managed Support", color: "from-cyan-400 to-cyan-600" },
+      {
+        icon: Globe,
+        title: "Global Reach",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Zap,
+        title: "Performance Scaling",
+        color: "from-yellow-400 to-yellow-600",
+      },
+      {
+        icon: RefreshCw,
+        title: "Reliable Operations",
+        color: "from-purple-400 to-purple-600",
+      },
+      {
+        icon: Cloud,
+        title: "Modern Architecture",
+        color: "from-orange-400 to-orange-600",
+      },
+      {
+        icon: Users,
+        title: "Managed Support",
+        color: "from-cyan-400 to-cyan-600",
+      },
     ],
     process: [
-      { step: "01", title: "Assessment", desc: "Reviewing your infrastructure, applications, and cloud readiness." },
-      { step: "02", title: "Design", desc: "Crafting a secure, scalable cloud architecture." },
-      { step: "03", title: "Migration", desc: "Moving workloads to cloud platforms with careful coordination." },
-      { step: "04", title: "Optimization", desc: "Tuning resources for cost, performance, and reliability." },
-      { step: "05", title: "Security", desc: "Applying cloud security best practices and compliance controls." },
-      { step: "06", title: "Support", desc: "Providing managed services and proactive incident response." },
+      {
+        step: "01",
+        title: "Assessment",
+        desc: "Reviewing your infrastructure, applications, and cloud readiness.",
+      },
+      {
+        step: "02",
+        title: "Design",
+        desc: "Crafting a secure, scalable cloud architecture.",
+      },
+      {
+        step: "03",
+        title: "Migration",
+        desc: "Moving workloads to cloud platforms with careful coordination.",
+      },
+      {
+        step: "04",
+        title: "Optimization",
+        desc: "Tuning resources for cost, performance, and reliability.",
+      },
+      {
+        step: "05",
+        title: "Security",
+        desc: "Applying cloud security best practices and compliance controls.",
+      },
+      {
+        step: "06",
+        title: "Support",
+        desc: "Providing managed services and proactive incident response.",
+      },
     ],
     technologies: [
       { icon: Cloud, name: "AWS", color: "from-orange-400 to-orange-600" },
       { icon: Server, name: "Azure", color: "from-blue-400 to-blue-600" },
-      { icon: Database, name: "Cloud Databases", color: "from-emerald-400 to-emerald-600" },
-      { icon: Shield, name: "Cloud Security", color: "from-red-400 to-red-600" },
-      { icon: RefreshCw, name: "DevOps", color: "from-purple-400 to-purple-600" },
+      {
+        icon: Database,
+        name: "Cloud Databases",
+        color: "from-emerald-400 to-emerald-600",
+      },
+      {
+        icon: Shield,
+        name: "Cloud Security",
+        color: "from-red-400 to-red-600",
+      },
+      {
+        icon: RefreshCw,
+        name: "DevOps",
+        color: "from-purple-400 to-purple-600",
+      },
     ],
     whyChoose: [
-      { icon: Shield, title: "Secure Cloud", desc: "Enterprise-grade security and compliance for every cloud deployment." },
-      { icon: Cloud, title: "Scalable Infrastructure", desc: "Cloud solutions designed to grow with your business." },
-      { icon: Zap, title: "Fast Performance", desc: "Optimized cloud architecture for speed and reliability." },
-      { icon: RefreshCw, title: "24/7 Management", desc: "Ongoing monitoring, updates, and support." },
+      {
+        icon: Shield,
+        title: "Secure Cloud",
+        desc: "Enterprise-grade security and compliance for every cloud deployment.",
+      },
+      {
+        icon: Cloud,
+        title: "Scalable Infrastructure",
+        desc: "Cloud solutions designed to grow with your business.",
+      },
+      {
+        icon: Zap,
+        title: "Fast Performance",
+        desc: "Optimized cloud architecture for speed and reliability.",
+      },
+      {
+        icon: RefreshCw,
+        title: "24/7 Management",
+        desc: "Ongoing monitoring, updates, and support.",
+      },
     ],
     industries: [
       { icon: Building, title: "Corporate" },
@@ -1238,20 +2802,49 @@ export const servicesData = {
       { icon: Rocket, title: "Startup" },
     ],
     faqs: [
-      { question: "Can you migrate our applications to the cloud?", answer: "Yes, we migrate applications to cloud platforms with minimal downtime and clear planning." },
-      { question: "Do you offer managed cloud services?", answer: "Yes, we provide ongoing cloud management, monitoring, and optimization." },
-      { question: "How do you secure cloud deployments?", answer: "We implement best-practice security controls, monitoring, and access management." },
+      {
+        question: "Can you migrate our applications to the cloud?",
+        answer:
+          "Yes, we migrate applications to cloud platforms with minimal downtime and clear planning.",
+      },
+      {
+        question: "Do you offer managed cloud services?",
+        answer:
+          "Yes, we provide ongoing cloud management, monitoring, and optimization.",
+      },
+      {
+        question: "How do you secure cloud deployments?",
+        answer:
+          "We implement best-practice security controls, monitoring, and access management.",
+      },
     ],
     relatedServices: [
-      { icon: Server, label: "Software Development", color: "from-blue-400 to-blue-600" },
-      { icon: Database, label: "ERP Solutions", color: "from-green-400 to-green-600" },
-      { icon: Cloud, label: "Cloud Solutions", color: "from-orange-400 to-orange-600" },
-      { icon: Globe, label: "Digital Marketing", color: "from-purple-400 to-purple-600" },
+      {
+        icon: Server,
+        label: "Software Development",
+        color: "from-blue-400 to-blue-600",
+      },
+      {
+        icon: Database,
+        label: "ERP Solutions",
+        color: "from-green-400 to-green-600",
+      },
+      {
+        icon: Cloud,
+        label: "Cloud Solutions",
+        color: "from-orange-400 to-orange-600",
+      },
+      {
+        icon: Globe,
+        label: "Digital Marketing",
+        color: "from-purple-400 to-purple-600",
+      },
     ],
     cta: {
       badge: "Optimize Your Cloud",
       title: "Ready To Move Your Business to the Cloud?",
-      description: "Let’s deploy secure cloud infrastructure that supports agility, performance, and growth.",
+      description:
+        "Let’s deploy secure cloud infrastructure that supports agility, performance, and growth.",
       primaryBtn: "Get Free Quote",
       secondaryBtn: "Call Now",
     },

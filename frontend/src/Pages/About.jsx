@@ -16,8 +16,9 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import aboutImage from "/images/about-image.jpg";
+import SEO from "../components/SEO";
 
-const API_URL = "http://localhost:5000/api/team";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const About = () => {
   // =====================================================
@@ -97,7 +98,7 @@ const About = () => {
       try {
         setTeamLoading(true);
 
-        const response = await fetch(API_URL);
+        const response = await fetch(`${API_URL}/team`);
 
         const data = await response.json();
 
@@ -201,6 +202,13 @@ const About = () => {
   };
 
   return (
+  <>
+    <SEO
+      title="About SSD Informatics | Technology & Digital Solutions"
+      description="Learn about SSD Informatics, a technology and digital solutions company specializing in software development, web development, social media management and modern IT solutions."
+      canonical="https://www.ssdinformatics.com/about"
+    />
+
     <div className="overflow-x-hidden bg-[#020617] text-white">
 
       {/* =====================================================
@@ -1649,8 +1657,9 @@ const About = () => {
 
       </section>
 
-    </div>
-  );
+       </div>
+  </>
+);
 };
 
 export default About;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-
+import SEO from "../components/SEO";
 import AboutPreview from "../components/home/AboutPreview";
 import ServicesPreview from "../components/home/ServicesPreview";
 import WhyChooseUs from "../components/home/WhyChooseUs";
@@ -16,11 +16,13 @@ import Cirtficates from "../components/home/Cirtficates";
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
 
+  const API_URL = import.meta.env.VITE_API_URL  ;
+
   useEffect(() => {
     const fetchHomeData = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/home"
+          `${API_URL}/home`
         );
 
         setHomeData(res.data.home);
@@ -36,6 +38,14 @@ const Home = () => {
     return (
 
       <>
+
+      <SEO
+  title="SSD Informatics | Web Development & IT Solutions"
+  description="SSD Informatics helps businesses grow with professional website development, mobile applications, ERP software, UI/UX design and digital marketing solutions."
+  canonical="https://www.ssdinformatics.com/"
+/>
+
+
         <HomePage />
 
         <AboutPreview />

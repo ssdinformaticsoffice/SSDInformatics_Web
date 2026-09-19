@@ -27,23 +27,19 @@ const navLinks = [
 
     sections: [
       {
-        title: "Social Media",
+        title: "Development",
         items: [
           {
-            name: "Social Media Marketing",
-            path: "/services/digital-marketing",
+            name: "Web Development",
+            path: "/services/website-development",
           },
           {
-            name: "Google Ads",
-            path: "/services/google-ads",
+            name: "App Development",
+            path: "/services/mobile-app-development",
           },
           {
-            name: "Meta Ads",
-            path: "/services/meta-ads",
-          },
-          {
-            name: "SEO Optimization",
-            path: "/services/seo-optimization",
+            name: "Cloud Solutions",
+            path: "/services/cloud-solutions",
           },
         ],
       },
@@ -67,19 +63,31 @@ const navLinks = [
       },
 
       {
-        title: "Development",
+        title: "Social Media",
+
         items: [
           {
-            name: "Web Development",
-            path: "/services/website-development",
+            name: "Social Media Marketing",
+
+            path: "/services/digital-marketing",
           },
+
           {
-            name: "App Development",
-            path: "/services/mobile-app-development",
+            name: "Google Ads",
+
+            path: "/services/google-ads",
           },
+
           {
-            name: "Cloud Solutions",
-            path: "/services/cloud-solutions",
+            name: "Meta Ads",
+
+            path: "/services/meta-ads",
+          },
+
+          {
+            name: "SEO Optimization",
+
+            path: "/services/seo-optimization",
           },
         ],
       },
@@ -141,7 +149,6 @@ const Header = () => {
       "
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-
         {/* Logo */}
         <Link
           to="/"
@@ -194,10 +201,12 @@ const Header = () => {
             />
 
             {/* Logo Text */}
-            <div className="min-w-0 leading-none
+            <div
+              className="min-w-0 leading-none
                    lg:-ml-5
                    md:-ml-4
-                  -ml-2 ">
+                  -ml-2 "
+            >
               <h2
                 className="
                   truncate
@@ -238,12 +247,9 @@ const Header = () => {
           </motion.div>
         </Link>
 
-
-
         {/* Desktop Menu */}
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8 lg:gap-10 text-[16px] font-medium text-slate-300">
-
             {navLinks.map((link) => (
               <motion.li
                 key={link.name}
@@ -251,7 +257,6 @@ const Header = () => {
                 transition={{ duration: 0.2 }}
                 className="relative group"
               >
-
                 {link.dropdown ? (
                   <>
                     {/* Services Button */}
@@ -277,10 +282,7 @@ const Header = () => {
                         className={`
                   transition-transform
                   duration-300
-                  ${serviceOpen
-                            ? "rotate-180 text-blue-400"
-                            : "text-slate-400"
-                          }
+                  ${serviceOpen ? "rotate-180 text-blue-400" : "text-slate-400"}
                 `}
                       />
                     </button>
@@ -322,7 +324,6 @@ const Header = () => {
                     backdrop-blur-2xl
                   "
                         >
-
                           {/* Top Glow */}
                           <div
                             className="
@@ -340,30 +341,21 @@ const Header = () => {
 
                           {/* 3 Sections */}
                           <div className="space-y-1">
-
                             {link.sections.map((section, index) => {
-                              const icons = [
-                                Share2,
-                                Palette,
-                                Code2,
-                              ];
+                              const icons = [Share2, Palette, Code2];
 
                               const SectionIcon = icons[index];
 
-                              const isActive =
-                                activeSection === section.title;
+                              const isActive = activeSection === section.title;
 
                               return (
                                 <div key={section.title}>
-
                                   {/* Section Button */}
                                   <button
                                     type="button"
                                     onClick={() => {
                                       setActiveSection(
-                                        isActive
-                                          ? null
-                                          : section.title
+                                        isActive ? null : section.title,
                                       );
                                     }}
                                     className={`
@@ -379,14 +371,14 @@ const Header = () => {
                               transition-all
                               duration-200
 
-                              ${isActive
-                                        ? "bg-blue-500/10 text-white"
-                                        : "text-slate-300 hover:bg-white/[0.04] hover:text-white"
-                                      }
+                              ${
+                                isActive
+                                  ? "bg-blue-500/10 text-white"
+                                  : "text-slate-300 hover:bg-white/[0.04] hover:text-white"
+                              }
                             `}
                                   >
                                     <span className="flex items-center gap-3">
-
                                       <span
                                         className={`
                                   flex
@@ -397,10 +389,11 @@ const Header = () => {
                                   justify-center
                                   rounded-lg
 
-                                  ${isActive
-                                            ? "bg-blue-600 text-white"
-                                            : "bg-blue-500/10 text-blue-400"
-                                          }
+                                  ${
+                                    isActive
+                                      ? "bg-blue-600 text-white"
+                                      : "bg-blue-500/10 text-blue-400"
+                                  }
                                 `}
                                       >
                                         <SectionIcon size={17} />
@@ -409,7 +402,6 @@ const Header = () => {
                                       <span className="text-sm font-semibold">
                                         {section.title}
                                       </span>
-
                                     </span>
 
                                     <ChevronDown
@@ -417,10 +409,11 @@ const Header = () => {
                                       className={`
                                 transition-transform
                                 duration-300
-                                ${isActive
-                                          ? "rotate-180 text-blue-400"
-                                          : "text-slate-500"
-                                        }
+                                ${
+                                  isActive
+                                    ? "rotate-180 text-blue-400"
+                                    : "text-slate-500"
+                                }
                               `}
                                     />
                                   </button>
@@ -447,18 +440,16 @@ const Header = () => {
                                         className="overflow-hidden"
                                       >
                                         <div className="ml-12 border-l border-blue-500/20 py-1 pl-2">
-
-                                          {section.items.map(
-                                            (item) => (
-                                              <Link
-                                                key={item.path}
-                                                to={item.path}
-                                                onClick={() => {
-                                                  setServiceOpen(false);
-                                                  setActiveSection(null);
-                                                  setIsOpen(false);
-                                                }}
-                                                className="
+                                          {section.items.map((item) => (
+                                            <Link
+                                              key={item.path}
+                                              to={item.path}
+                                              onClick={() => {
+                                                setServiceOpen(false);
+                                                setActiveSection(null);
+                                                setIsOpen(false);
+                                              }}
+                                              className="
                                           group/item
                                           flex
                                           items-center
@@ -473,35 +464,28 @@ const Header = () => {
                                           hover:bg-blue-500/10
                                           hover:text-cyan-300
                                         "
-                                              >
-                                                <span>
-                                                  {item.name}
-                                                </span>
+                                            >
+                                              <span>{item.name}</span>
 
-                                                <ArrowUpRight
-                                                  size={14}
-                                                  className="
+                                              <ArrowUpRight
+                                                size={14}
+                                                className="
                                             text-slate-600
                                             transition-all
                                             duration-200
                                             group-hover/item:text-blue-400
                                           "
-                                                />
-                                              </Link>
-                                            )
-                                          )}
-
+                                              />
+                                            </Link>
+                                          ))}
                                         </div>
                                       </motion.div>
                                     )}
                                   </AnimatePresence>
-
                                 </div>
                               );
                             })}
-
                           </div>
-
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -524,10 +508,8 @@ const Header = () => {
                     {link.name}
                   </Link>
                 )}
-
               </motion.li>
             ))}
-
           </ul>
         </nav>
 
@@ -561,7 +543,6 @@ const Header = () => {
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
-
       </div>
 
       {/* Mobile Menu */}
@@ -586,7 +567,6 @@ const Header = () => {
           >
             <div className="mx-auto max-w-7xl px-4 py-4 pb-8">
               <ul className="flex flex-col gap-2 text-base font-medium">
-
                 {navLinks.map((link) => (
                   <motion.li
                     key={link.name}
@@ -594,7 +574,6 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.25 }}
                   >
-
                     {link.dropdown ? (
                       <>
                         {/* Services */}
@@ -626,10 +605,7 @@ const Header = () => {
                             className={`
       transition-transform
       duration-300
-      ${serviceOpen
-                                ? "rotate-180 text-blue-400"
-                                : "text-slate-400"
-                              }
+      ${serviceOpen ? "rotate-180 text-blue-400" : "text-slate-400"}
     `}
                           />
                         </button>
@@ -656,7 +632,6 @@ const Header = () => {
                               className="overflow-hidden"
                             >
                               <div className="ml-2 mt-2 space-y-1 border-l border-blue-500/20 pl-3">
-
                                 {link.sections.map((section, index) => {
                                   const icons = [Share2, Palette, Code2];
                                   const SectionIcon = icons[index];
@@ -666,13 +641,12 @@ const Header = () => {
 
                                   return (
                                     <div key={section.title}>
-
                                       {/* Section */}
                                       <button
                                         type="button"
                                         onClick={() => {
                                           setActiveSection(
-                                            isActive ? null : section.title
+                                            isActive ? null : section.title,
                                           );
                                         }}
                                         className={`
@@ -687,14 +661,14 @@ const Header = () => {
                   transition-all
                   duration-200
 
-                  ${isActive
-                                            ? "bg-blue-500/10 text-white"
-                                            : "text-slate-300 hover:bg-blue-500/10 hover:text-white"
-                                          }
+                  ${
+                    isActive
+                      ? "bg-blue-500/10 text-white"
+                      : "text-slate-300 hover:bg-blue-500/10 hover:text-white"
+                  }
                 `}
                                       >
                                         <span className="flex items-center gap-3">
-
                                           {/* Icon */}
                                           <span
                                             className={`
@@ -706,10 +680,11 @@ const Header = () => {
                       justify-center
                       rounded-lg
 
-                      ${isActive
-                                                ? "bg-blue-600 text-white"
-                                                : "bg-blue-500/10 text-blue-400"
-                                              }
+                      ${
+                        isActive
+                          ? "bg-blue-600 text-white"
+                          : "bg-blue-500/10 text-blue-400"
+                      }
                     `}
                                           >
                                             <SectionIcon size={17} />
@@ -718,7 +693,6 @@ const Header = () => {
                                           <span className="text-sm font-semibold">
                                             {section.title}
                                           </span>
-
                                         </span>
 
                                         <ChevronDown
@@ -727,10 +701,7 @@ const Header = () => {
                     shrink-0
                     transition-transform
                     duration-300
-                    ${isActive
-                                              ? "rotate-180 text-blue-400"
-                                              : "text-slate-500"
-                                            }
+                    ${isActive ? "rotate-180 text-blue-400" : "text-slate-500"}
                   `}
                                         />
                                       </button>
@@ -757,7 +728,6 @@ const Header = () => {
                                             className="overflow-hidden"
                                           >
                                             <div className="ml-8 border-l border-blue-500/20 py-1 pl-2">
-
                                               {section.items.map((item) => (
                                                 <Link
                                                   key={item.path}
@@ -796,16 +766,13 @@ const Header = () => {
                                                   />
                                                 </Link>
                                               ))}
-
                                             </div>
                                           </motion.div>
                                         )}
                                       </AnimatePresence>
-
                                     </div>
                                   );
                                 })}
-
                               </div>
                             </motion.div>
                           )}
@@ -834,16 +801,13 @@ const Header = () => {
                         {link.name}
                       </Link>
                     )}
-
                   </motion.li>
                 ))}
-
               </ul>
             </div>
           </motion.nav>
         )}
       </AnimatePresence>
-
     </motion.header>
   );
 };

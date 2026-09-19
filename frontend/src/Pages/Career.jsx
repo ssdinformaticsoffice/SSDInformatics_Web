@@ -20,6 +20,8 @@ import {
   X,
 } from "lucide-react";
 
+import SEO from "../components/SEO";
+
 const initialForm = {
   name: "",
   email: "",
@@ -83,6 +85,8 @@ const Career = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   // =====================================================
   // Fetch Open Positions
   // =====================================================
@@ -93,9 +97,7 @@ const Career = () => {
         setJobsLoading(true);
         setJobsError("");
 
-        const response = await axios.get(
-          "http://localhost:5000/api/careers"
-        );
+        const response = await axios.get(`${API_URL}/careers`);
 
         if (response.data.success) {
           setJobs(response.data.data || []);
@@ -286,9 +288,9 @@ const Career = () => {
       formData.append("resume", resume);
 
       const response = await axios.post(
-  "http://localhost:5000/api/career-applications",
-  formData
-);
+        `${API_URL}/career-applications`,
+        formData
+      );
 
       if (!response.data.success) {
         throw new Error(
@@ -324,6 +326,16 @@ const Career = () => {
 
   return (
     <>
+      {/* =====================================================
+          SEO
+      ====================================================== */}
+
+      <SEO
+        title="Careers at SSD Informatics | Jobs & Opportunities"
+        description="Explore career opportunities at SSD Informatics. Join our team and work on web development, software solutions, digital products and modern technology projects."
+        canonical="https://www.ssdinformatics.com/career"
+      />
+
       {/* =====================================================
           MAIN
       ====================================================== */}
