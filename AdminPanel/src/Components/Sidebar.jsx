@@ -9,6 +9,7 @@ import {
   Settings,
   LogOut,
   X,
+  GitBranch,
   UsersRound,
 } from "lucide-react";
 
@@ -51,6 +52,11 @@ const Sidebar = ({
   name: "Manage Team",
   path: "/admin/team",
   icon: UsersRound,
+},
+{
+  name: "Manage Branches",
+  path: "/admin/branches",
+  icon: GitBranch,
 },
     {
       name: "Manage Contact",

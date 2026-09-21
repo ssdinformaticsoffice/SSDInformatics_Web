@@ -40,7 +40,7 @@ import {
   FaPhp,
   FaPython,
 
-  FaWordpress,
+
   FaReact,
 } from "react-icons/fa";
 
@@ -112,6 +112,11 @@ export const servicesData = {
         icon: Smartphone,
         title: "iOS Development",
         desc: "Native iPhone applications with polished UX.",
+      },
+      {
+        icon: Code2,
+        title: "Cross-Platform Development",
+        desc: "High-performance apps for Android and iOS from a single codebase.",
       },
     ],
     features: [
@@ -427,12 +432,8 @@ export const servicesData = {
         name: "Django",
         color: "from-green-400 to-green-600",
       },
-    
-      {
-        icon: FaWordpress,
-        name: "WordPress",
-        color: "from-blue-400 to-blue-600",
-      },
+
+
       {
         icon: FaReact,
         name: "React.js",
@@ -532,8 +533,8 @@ export const servicesData = {
     },
     heroTagline: "DESIGN EXCELLENCE",
     heroTitle: {
-      before: "We Craft Beautiful",
-      highlight: "User Experiences",
+      before: "We Create Stunning",
+      highlight: "UI/UX Experiences",
     },
     heroStats: [
       {

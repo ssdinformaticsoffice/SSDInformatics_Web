@@ -23,6 +23,7 @@ import CareerApplications from "./Pages/CareerApplications";
 import ManageCareers from "./Pages/ManageCareers";
 
 import ManageTeam from "./Pages/ManageTeam";
+import ManageBranches from "./Pages/ManageBranches";
 
 // Manage Home
 import ManageHome from "./Pages/ManageHome/ManageHome";
@@ -86,10 +87,16 @@ const App = () => {
             element={<ManageCareers />}
           />
 
-             {/* Manage Team */}
+          {/* Manage Team */}
           <Route
             path="/admin/team"
             element={<ManageTeam />}
+          />
+
+          {/* Manage Branches */}
+          <Route
+            path="/admin/branches"
+            element={<ManageBranches />}
           />
 
           {/* Settings */}

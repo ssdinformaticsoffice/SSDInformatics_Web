@@ -25,7 +25,7 @@ function OurTopClient() {
     const infiniteClients = [...clients, ...clients];
 
     return (
-        <section className="overflow-hidden bg-slate-950 py-10 sm:py-12 lg:py-15">
+        <section className="overflow-hidden bg-slate-950 py-10 sm:py-12 lg:py-10">
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
 
                 {/* Heading */}

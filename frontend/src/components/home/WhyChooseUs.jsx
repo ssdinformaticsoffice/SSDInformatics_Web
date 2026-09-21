@@ -36,7 +36,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-   <section className="relative overflow-hidden bg-slate-950 py-10 lg:py-15">
+   <section className="relative overflow-hidden bg-slate-950 py-10 lg:py-12">
 
   {/* Glow */}
 

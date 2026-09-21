@@ -43,7 +43,7 @@ const item = {
 
 const AboutPreview = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-[#050816] py-14 sm:py-20 lg:py-24">
+    <section className="relative w-full overflow-hidden bg-[#050816] py-14 sm:py-20 lg:py-10">
       {/* =====================================================
           BACKGROUND
       ====================================================== */}

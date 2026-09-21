@@ -11,7 +11,7 @@ import settingRoutes from "./routes/settingRoutes.js"
 import notificationRoutes from "./routes/notificationRoutes.js";
 import applicationRoutes from "./routes/applicationRoutes.js";
 import careerApplicationRoutes from "./routes/careerApplicationRoutes.js";
-
+import branchRoutes from "./routes/branchRoutes.js";
 import teamRoutes from "./routes/teamRoutes.js";
 
 
@@ -36,7 +36,10 @@ app.use("/api/stats", statsRoutes);
 // Career Routes
 app.use("/api/careers", careerRoutes);
 
-// team Routes
+// Branch Routes
+app.use("/api/branches", branchRoutes);
+
+// Team Routes
 app.use("/api/team", teamRoutes);
 
 // Career Application Routes

@@ -51,7 +51,7 @@ const services = [
 
 const ServicesPreview = () => {
   return (
-   <section className="relative overflow-hidden bg-slate-950 py-20 lg:py-28">
+   <section className="relative overflow-hidden bg-slate-950 py-20 lg:py-18">
 
   {/* Background Glow */}
 
@@ -92,7 +92,7 @@ const ServicesPreview = () => {
 
     </motion.div>
 
-    <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+   <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
   {services.map((service, index) => (
 
@@ -112,8 +112,7 @@ const ServicesPreview = () => {
         y: -12,
       }}
 
-      className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8"
-
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6"
     >
 
       {/* Glow */}
@@ -122,19 +121,18 @@ const ServicesPreview = () => {
 
       {/* Icon */}
 
-      <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/20 text-blue-400 transition group-hover:scale-110 group-hover:rotate-6">
-
+      <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/20 text-blue-400 transition group-hover:scale-110 group-hover:rotate-6">
         {service.icon}
 
       </div>
 
-      <h3 className="text-2xl font-semibold text-white">
+      <h3 className="text-xl font-semibold text-white">
 
         {service.title}
 
       </h3>
 
-      <p className="mt-5 leading-8 text-slate-400">
+      <p className="mt-3 leading-7 text-sm text-slate-400">
 
         {service.description}
 
@@ -142,7 +140,7 @@ const ServicesPreview = () => {
 
       <Link
   to={service.link}
-  className="mt-8 inline-flex items-center gap-3 font-medium text-blue-400"
+  className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-blue-400"
 >
 
         Learn More

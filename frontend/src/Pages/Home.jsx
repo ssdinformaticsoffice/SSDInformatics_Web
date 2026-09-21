@@ -11,6 +11,7 @@ import Testimonials from "../components/home/Testimonials";
 import CTA from "../components/home/CTA";
 import HomePage from "./HomePage";
 import OurTopClient from "../components/home/OurTopClient";
+import OurBranches from "../components/home/OurBranches";
 import Cirtficates from "../components/home/Cirtficates";
 
 const Home = () => {
@@ -52,6 +53,7 @@ const Home = () => {
         <ServicesPreview />
         <WhyChooseUs />
         <Process />
+        <OurBranches />
         <OurTopClient/>
         <Stats />
         <Testimonials />
