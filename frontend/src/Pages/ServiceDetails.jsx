@@ -527,8 +527,14 @@ const ServiceHeroVisual = ({ title }) => {
   ];
 
   return (
-    <div className="relative mx-auto h-[430px] w-full max-w-[680px] sm:h-[500px] lg:h-[540px]">
-      <div className={`pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full ${config.glow} blur-[110px]`} />
+    <div className="relative mx-auto h-[340px] w-full max-w-[680px] overflow-visible sm:h-[500px] lg:h-[540px]">
+      {/* 
+        Keep the original 680px visual canvas on larger screens, but scale the
+        complete visual down on small screens so fixed-size dashboard cards,
+        orbit elements, and supporting cards never get cut off horizontally.
+      */}
+      <div className="absolute left-1/2 top-0 h-[540px] w-[680px] -translate-x-1/2 origin-top scale-[0.48] sm:scale-[0.72] lg:scale-100">
+        <div className={`pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full ${config.glow} blur-[110px]`} />
 
       {/* GOOGLE ADS: paid search campaign dashboard */}
       {config.type === "google-ads" && (
@@ -934,6 +940,8 @@ const ServiceHeroVisual = ({ title }) => {
           </motion.div>
         );
       })}
+
+        </div>
     </div>
   );
 };
@@ -1163,6 +1171,10 @@ const ServiceDetails = () => {
 
                 <div className="mt-8 flex flex-wrap items-center gap-4 sm:mt-10">
                   <motion.button
+                    type="button"
+                    onClick={() => {
+                      window.location.href = "/services";
+                    }}
                     whileHover={{
                       scale: 1.03,
                     }}
@@ -1196,6 +1208,10 @@ const ServiceDetails = () => {
                   </motion.button>
 
                   <motion.button
+                    type="button"
+                    onClick={() => {
+                      window.location.href = "/contact";
+                    }}
                     whileHover={{
                       scale: 1.03,
                     }}

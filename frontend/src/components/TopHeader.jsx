@@ -184,26 +184,7 @@ const TopHeader = () => {
               <FaLinkedinIn size={15} />
             </a>
 
-            {/* GitHub */}
-            <a
-              href="#"
-              aria-label="GitHub"
-              className="
-                flex h-9 w-9 items-center justify-center
-                rounded-full
-                border border-cyan-400/20
-                bg-cyan-400/5
-                text-cyan-300
-                transition-all duration-300
-                hover:-translate-y-0.5
-                hover:border-cyan-400/60
-                hover:bg-cyan-400/15
-                hover:text-[#20d4ff]
-                hover:shadow-[0_0_18px_rgba(32,212,255,0.22)]
-              "
-            >
-              <FaGithub size={16} />
-            </a>
+      
           </div>
         </div>
       </div>
