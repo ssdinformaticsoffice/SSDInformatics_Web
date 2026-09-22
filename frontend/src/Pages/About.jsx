@@ -1005,7 +1005,7 @@ const About = () => {
                 <div className="grid items-center md:grid-cols-2">
 
                   {/* IMAGE */}
-                  <div className="relative h-[260px] overflow-hidden sm:h-[300px] md:h-[320px]">
+                  <div className="relative h-[260px] overflow-hidden sm:h-[300px] md:h-[320px] rounded-tl-2xl md:rounded-tr-none md:rounded-bl-2xl">
                     <img
                       src="/images/founder.jpg"
                       alt="Founder and Director of SSD Informatics"
