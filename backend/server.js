@@ -59,7 +59,7 @@ app.use("/api/settings", settingRoutes);
 
 // Test Route
 app.get("/", (req, res) => {
-  res.send("Admin Backend Server Running");
+  res.send("SSD Informatics Backend Server Running");
 });
 
 // Fallback 404 handler for unmatched routes
