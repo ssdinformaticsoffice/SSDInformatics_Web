@@ -19,7 +19,7 @@ const Footer = () => {
     },
     {
       name: "ERP Software Solutions",
-      path: "/services/erp-software-solutions",
+      path: "/services/erp-solutions",
     },
     {
       name: "SEO Optimization",

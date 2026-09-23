@@ -340,7 +340,7 @@ const Career = () => {
           MAIN
       ====================================================== */}
 
-      <main className="min-h-screen overflow-hidden bg-[#020617] text-white">
+      <main className="min-h-screen w-full overflow-x-hidden bg-[#020617] text-white">
         {/* =====================================================
             HERO
         ====================================================== */}
@@ -361,8 +361,8 @@ const Career = () => {
             "
           />
 
-          <div className="relative mx-auto max-w-7xl px-4 pb-24 pt-20 sm:px-6 sm:pt-24 lg:px-8 lg:pb-32 lg:pt-28">
-            <div className="grid items-center gap-16 lg:grid-cols-[1fr_0.8fr]">
+          <div className="relative mx-auto w-full max-w-7xl px-4 pb-16 pt-14 sm:px-6 sm:pb-24 sm:pt-20 lg:px-8 lg:pb-32 lg:pt-28">
+            <div className="grid w-full min-w-0 items-center gap-10 sm:gap-14 lg:grid-cols-[1fr_0.8fr] lg:gap-16">
               {/* Hero Content */}
 
               <motion.div
@@ -370,12 +370,12 @@ const Career = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7 }}
               >
-                <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-400/15 bg-cyan-400/[0.06] px-4 py-2 text-xs font-bold uppercase tracking-[2px] text-cyan-300">
+                <div className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-cyan-400/15 bg-cyan-400/[0.06] px-4 py-2 text-xs font-bold uppercase tracking-[2px] text-cyan-300">
                   <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
                   Careers at SSD Informatics
                 </div>
 
-                <h1 className="max-w-4xl text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
+                <h1 className="max-w-4xl text-[2.65rem] font-black leading-[1.04] tracking-tight sm:text-6xl lg:text-7xl">
                   Your next
                   <br />
                   <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
@@ -385,16 +385,16 @@ const Career = () => {
                   starts here.
                 </h1>
 
-                <p className="mt-7 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+                <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:mt-7 sm:text-lg sm:leading-8">
                   Join SSD Informatics and work with a team that builds
                   digital experiences, solves real problems and believes
                   in continuous growth.
                 </p>
 
-                <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-7 flex w-full flex-col gap-3 sm:mt-9 sm:flex-row">
                   <a
                     href="#open-positions"
-                    className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3.5 text-sm font-bold shadow-[0_15px_40px_rgba(6,182,212,0.15)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_rgba(6,182,212,0.25)]"
+                    className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3.5 text-sm font-bold shadow-[0_15px_40px_rgba(6,182,212,0.15)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_rgba(6,182,212,0.25)]"
                   >
                     View Open Positions
 
@@ -406,29 +406,29 @@ const Career = () => {
 
                   <a
                     href="#life-at-ssd"
-                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-800 bg-slate-900/60 px-6 py-3.5 text-sm font-semibold text-slate-300 backdrop-blur-xl transition-all duration-300 hover:border-blue-500/20 hover:bg-blue-500/5 hover:text-cyan-300"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-800 bg-slate-900/60 px-6 py-3.5 text-sm font-semibold text-slate-300 backdrop-blur-xl transition-all duration-300 hover:border-blue-500/20 hover:bg-blue-500/5 hover:text-cyan-300"
                   >
                     Life at SSD
                   </a>
                 </div>
 
-                <div className="mt-12 flex flex-wrap gap-8 border-t border-slate-800/70 pt-7">
+                <div className="mt-9 flex w-full flex-wrap gap-x-7 gap-y-5 border-t border-slate-800/70 pt-6 sm:mt-12 sm:gap-8 sm:pt-7">
                   <div>
-                    <p className="text-2xl font-black">01</p>
+                    <p className="text-xl font-black sm:text-2xl">01</p>
                     <p className="mt-1 text-xs text-slate-500">
                       Apply directly
                     </p>
                   </div>
 
                   <div>
-                    <p className="text-2xl font-black">100%</p>
+                    <p className="text-xl font-black sm:text-2xl">100%</p>
                     <p className="mt-1 text-xs text-slate-500">
                       Growth mindset
                     </p>
                   </div>
 
                   <div>
-                    <p className="text-2xl font-black">∞</p>
+                    <p className="text-xl font-black sm:text-2xl">∞</p>
                     <p className="mt-1 text-xs text-slate-500">
                       Room to grow
                     </p>
@@ -442,18 +442,18 @@ const Career = () => {
                 initial={{ opacity: 0, scale: 0.92 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.15 }}
-                className="relative"
+                className="relative min-w-0 w-full"
               >
                 <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/10 blur-[100px]" />
 
-                <div className="relative rounded-[2rem] border border-slate-800 bg-slate-900/60 p-5 shadow-[0_30px_100px_rgba(0,0,0,0.4)] backdrop-blur-2xl sm:p-6">
-                  <div className="flex items-center justify-between border-b border-slate-800 pb-5">
+                <div className="relative w-full min-w-0 max-w-full rounded-[1.5rem] border border-slate-800 bg-slate-900/60 p-4 shadow-[0_30px_100px_rgba(0,0,0,0.4)] backdrop-blur-2xl sm:rounded-[2rem] sm:p-6">
+                  <div className="flex min-w-0 items-start justify-between gap-3 border-b border-slate-800 pb-5">
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-[3px] text-slate-500">
                         We're looking for
                       </p>
 
-                      <h3 className="mt-2 text-xl font-bold">
+                      <h3 className="mt-2 break-words text-lg font-bold sm:text-xl">
                         People who build.
                       </h3>
                     </div>
@@ -489,7 +489,7 @@ const Career = () => {
                               repeat: Infinity,
                               ease: "easeInOut",
                             }}
-                            className="flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-950/60 p-4"
+                            className="flex w-full min-w-0 items-center gap-3 rounded-2xl border border-slate-800 bg-slate-950/60 p-3 sm:gap-4 sm:p-4"
                           >
                             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
                               <Icon size={20} />
@@ -517,7 +517,7 @@ const Career = () => {
                     )}
                   </div>
 
-                  <div className="mt-5 rounded-2xl bg-gradient-to-r from-blue-600/10 to-cyan-500/10 p-5">
+                  <div className="mt-4 rounded-2xl bg-gradient-to-r from-blue-600/10 to-cyan-500/10 p-4 sm:mt-5 sm:p-5">
                     <div className="flex items-start gap-3">
                       <Sparkles
                         size={20}
@@ -548,10 +548,10 @@ const Career = () => {
 
         <section
           id="life-at-ssd"
-          className="border-y border-slate-800/60 bg-slate-900/20 px-4 py-24 sm:px-6 lg:px-8"
+          className="border-y border-slate-800/60 bg-slate-900/20 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
         >
           <div className="mx-auto max-w-7xl">
-            <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div className="grid min-w-0 gap-8 sm:gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
               <div>
                 <span className="text-xs font-bold uppercase tracking-[3px] text-cyan-400">
                   Life at SSD
@@ -573,7 +573,7 @@ const Career = () => {
               </p>
             </div>
 
-            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-10 grid gap-3 sm:mt-14 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
               {[
                 {
                   icon: Rocket,
@@ -609,7 +609,7 @@ const Career = () => {
                       delay: index * 0.08,
                     }}
                     whileHover={{ y: -5 }}
-                    className="rounded-2xl border border-slate-800 bg-slate-950/50 p-6 transition-all duration-300 hover:border-blue-500/20"
+                    className="rounded-2xl border border-slate-800 bg-slate-950/50 p-5 transition-all duration-300 hover:border-blue-500/20 sm:p-6"
                   >
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
                       <Icon size={20} />
@@ -635,12 +635,12 @@ const Career = () => {
 
         <section
           id="open-positions"
-          className="relative px-4 py-24 sm:px-6 lg:px-8"
+          className="relative px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
         >
           <div className="pointer-events-none absolute left-1/2 top-40 h-96 w-[600px] -translate-x-1/2 rounded-full bg-blue-600/5 blur-[130px]" />
 
-          <div className="relative mx-auto max-w-7xl">
-            <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div className="relative mx-auto w-full max-w-7xl min-w-0">
+            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div>
                 <span className="text-xs font-bold uppercase tracking-[3px] text-blue-400">
                   Join the team
@@ -713,7 +713,7 @@ const Career = () => {
             {!jobsLoading &&
               !jobsError &&
               jobs.length > 0 && (
-                <div className="mt-12 space-y-4">
+                <div className="mt-8 space-y-3 sm:mt-12 sm:space-y-4">
                   {jobs.map((job, index) => {
                     const Icon = getJobIcon(job);
 
@@ -727,20 +727,20 @@ const Career = () => {
                           duration: 0.55,
                           delay: index * 0.1,
                         }}
-                        className="group relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/50 p-5 backdrop-blur-xl transition-all duration-300 hover:border-blue-500/25 hover:bg-slate-900/80 sm:p-7"
+                        className="group relative w-full min-w-0 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-4 backdrop-blur-xl transition-all duration-300 hover:border-blue-500/25 hover:bg-slate-900/80 sm:rounded-3xl sm:p-7"
                       >
-                        <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center">
+                        <div className="relative flex w-full min-w-0 flex-col gap-5 lg:flex-row lg:items-center lg:gap-6">
                           {/* Icon */}
 
-                          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-blue-500/15 bg-blue-500/10 text-blue-400 transition-all duration-300 group-hover:border-cyan-400/20 group-hover:bg-cyan-500/10 group-hover:text-cyan-300">
+                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl sm:h-14 sm:w-14 border border-blue-500/15 bg-blue-500/10 text-blue-400 transition-all duration-300 group-hover:border-cyan-400/20 group-hover:bg-cyan-500/10 group-hover:text-cyan-300">
                             <Icon size={24} />
                           </div>
 
                           {/* Job Info */}
 
-                          <div className="min-w-0 flex-1">
-                            <div className="flex flex-wrap items-center gap-3">
-                              <h3 className="text-xl font-bold sm:text-2xl">
+                          <div className="min-w-0 flex-1 overflow-hidden">
+                            <div className="flex min-w-0 flex-wrap items-center gap-2 sm:gap-3">
+                              <h3 className="min-w-0 break-words text-lg font-bold leading-tight sm:text-2xl">
                                 {job.title}
                               </h3>
 
@@ -767,7 +767,7 @@ const Career = () => {
 
                           {/* Job Details */}
 
-                          <div className="flex flex-wrap gap-x-5 gap-y-2 border-t border-slate-800 pt-5 lg:w-[230px] lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0">
+                          <div className="flex w-full flex-wrap gap-x-4 gap-y-2 border-t border-slate-800 pt-4 lg:w-[230px] lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0">
                             <div className="flex items-center gap-2 text-xs text-slate-500">
                               <MapPin
                                 size={14}
@@ -801,7 +801,7 @@ const Career = () => {
                           <button
                             type="button"
                             onClick={() => openApplication(job)}
-                            className="group/apply inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-3.5 text-sm font-bold text-white shadow-[0_10px_30px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(6,182,212,0.22)]"
+                            className="group/apply inline-flex w-full shrink-0 sm:w-auto items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-3.5 text-sm font-bold text-white shadow-[0_10px_30px_rgba(6,182,212,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(6,182,212,0.22)]"
                           >
                             Apply Now
 
@@ -858,11 +858,11 @@ const Career = () => {
               transition={{
                 duration: 0.25,
               }}
-              className="fixed inset-0 z-[10001] flex items-center justify-center overflow-y-auto p-4 sm:p-6"
+              className="fixed inset-0 z-[10001] flex items-start justify-center overflow-x-hidden overflow-y-auto p-2 sm:items-center sm:p-4 md:p-6"
             >
               <div
                 onClick={(event) => event.stopPropagation()}
-                className="relative my-auto w-full max-w-2xl overflow-hidden rounded-3xl border border-slate-700/80 bg-[#07101f] shadow-[0_35px_100px_rgba(0,0,0,0.6)]"
+                className="relative my-2 w-full max-w-[calc(100vw-1rem)] overflow-hidden rounded-2xl sm:max-w-2xl border border-slate-700/80 bg-[#07101f] shadow-[0_35px_100px_rgba(0,0,0,0.6)] sm:my-auto sm:rounded-3xl"
               >
                 {/* Modal Glow */}
 
@@ -870,18 +870,18 @@ const Career = () => {
 
                 {/* Header */}
 
-                <div className="relative flex items-start justify-between border-b border-slate-800 px-5 py-5 sm:px-7">
+                <div className="relative flex items-start justify-between gap-3 border-b border-slate-800 px-4 py-4 sm:px-7 sm:py-5">
                   <div>
                     <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[2px] text-cyan-400">
                       <BriefcaseBusiness size={14} />
                       Job Application
                     </div>
 
-                    <h2 className="text-2xl font-black sm:text-3xl">
+                    <h2 className="max-w-[calc(100vw-80px)] break-words text-xl font-black leading-tight sm:max-w-none sm:text-3xl">
                       {selectedJob.title}
                     </h2>
 
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 max-w-[calc(100vw-90px)] break-words text-xs leading-5 text-slate-500 sm:text-sm">
                       {selectedJob.department} ·{" "}
                       {selectedJob.location}
                     </p>
@@ -899,12 +899,12 @@ const Career = () => {
 
                 {/* Content */}
 
-                <div className="relative max-h-[calc(100vh-150px)] overflow-y-auto px-5 py-6 sm:px-7 sm:py-7">
+                <div className="relative max-h-[calc(100dvh-115px)] w-full max-w-full overflow-x-hidden overflow-y-auto px-4 py-5 sm:max-h-[calc(100dvh-150px)] sm:px-7 sm:py-7">
                   {submitStatus?.type === "success" ? (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      className="flex min-h-[400px] flex-col items-center justify-center text-center"
+                      className="flex min-h-[330px] flex-col items-center justify-center px-2 text-center sm:min-h-[400px]"
                     >
                       <div className="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-400">
                         <CheckCircle2 size={42} />
@@ -929,11 +929,11 @@ const Career = () => {
                   ) : (
                     <form
                       onSubmit={handleSubmit}
-                      className="space-y-5"
+                      className="w-full min-w-0 space-y-5"
                     >
                       {/* Name + Email */}
 
-                      <div className="grid gap-5 sm:grid-cols-2">
+                      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
                         <div>
                           <label className="mb-2 block text-xs font-semibold text-slate-400">
                             Full Name
@@ -951,7 +951,7 @@ const Career = () => {
                               value={form.name}
                               onChange={handleChange}
                               placeholder="Enter your full name"
-                              className={`w-full rounded-xl border bg-slate-950/70 py-3.5 pl-11 pr-4 text-sm text-white outline-none transition-all placeholder:text-slate-700 focus:border-blue-500/50 ${
+                              className={`block w-full max-w-full rounded-xl border bg-slate-950/70 py-3.5 pl-11 pr-4 text-sm text-white outline-none transition-all placeholder:text-slate-700 focus:border-blue-500/50 ${
                                 errors.name
                                   ? "border-red-500/40"
                                   : "border-slate-800"
@@ -983,7 +983,7 @@ const Career = () => {
                               value={form.email}
                               onChange={handleChange}
                               placeholder="you@example.com"
-                              className={`w-full rounded-xl border bg-slate-950/70 py-3.5 pl-11 pr-4 text-sm text-white outline-none transition-all placeholder:text-slate-700 focus:border-blue-500/50 ${
+                              className={`block w-full max-w-full rounded-xl border bg-slate-950/70 py-3.5 pl-11 pr-4 text-sm text-white outline-none transition-all placeholder:text-slate-700 focus:border-blue-500/50 ${
                                 errors.email
                                   ? "border-red-500/40"
                                   : "border-slate-800"
@@ -1001,7 +1001,7 @@ const Career = () => {
 
                       {/* Phone + Experience */}
 
-                      <div className="grid gap-5 sm:grid-cols-2">
+                      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
                         <div>
                           <label className="mb-2 block text-xs font-semibold text-slate-400">
                             Phone Number
@@ -1019,7 +1019,7 @@ const Career = () => {
                               value={form.phone}
                               onChange={handleChange}
                               placeholder="+91 98765 43210"
-                              className={`w-full rounded-xl border bg-slate-950/70 py-3.5 pl-11 pr-4 text-sm text-white outline-none transition-all placeholder:text-slate-700 focus:border-blue-500/50 ${
+                              className={`block w-full max-w-full rounded-xl border bg-slate-950/70 py-3.5 pl-11 pr-4 text-sm text-white outline-none transition-all placeholder:text-slate-700 focus:border-blue-500/50 ${
                                 errors.phone
                                   ? "border-red-500/40"
                                   : "border-slate-800"
@@ -1044,7 +1044,7 @@ const Career = () => {
                               name="experience"
                               value={form.experience}
                               onChange={handleChange}
-                              className={`w-full appearance-none rounded-xl border bg-slate-950/70 px-4 py-3.5 pr-10 text-sm text-white outline-none transition-all focus:border-blue-500/50 ${
+                              className={`block w-full max-w-full appearance-none rounded-xl border bg-slate-950/70 px-4 py-3.5 pr-10 text-sm text-white outline-none transition-all focus:border-blue-500/50 ${
                                 errors.experience
                                   ? "border-red-500/40"
                                   : "border-slate-800"
@@ -1119,7 +1119,7 @@ const Career = () => {
                           </div>
 
                           <div className="min-w-0">
-                            <p className="truncate text-sm font-semibold text-slate-300">
+                            <p className="min-w-0 truncate text-sm font-semibold text-slate-300">
                               {resume
                                 ? resume.name
                                 : "Upload your resume"}
@@ -1151,7 +1151,7 @@ const Career = () => {
                           onChange={handleChange}
                           rows={5}
                           placeholder="Why are you interested in this role?"
-                          className={`w-full resize-none rounded-xl border bg-slate-950/70 px-4 py-3.5 text-sm leading-6 text-white outline-none transition-all placeholder:text-slate-700 focus:border-blue-500/50 ${
+                          className={`block w-full max-w-full resize-none rounded-xl border bg-slate-950/70 px-4 py-3.5 text-sm leading-6 text-white outline-none transition-all placeholder:text-slate-700 focus:border-blue-500/50 ${
                             errors.coverLetter
                               ? "border-red-500/40"
                               : "border-slate-800"
