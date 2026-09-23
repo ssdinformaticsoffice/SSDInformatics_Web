@@ -437,61 +437,61 @@ const About = () => {
                 sm:gap-4
               "
               >
-                <a
-                  href="/services/website-development"
-                  className="
-                  inline-flex
-                  w-full
-                  items-center
-                  justify-center
-                  gap-2
-                  rounded-lg
-                  bg-blue-600
-                  px-6
-                  py-3
-                  text-sm
-                  font-semibold
-                  text-white
-                  transition
-                  duration-300
-                  hover:bg-blue-500
-                  hover:shadow-lg
-                  hover:shadow-blue-500/30
-                  sm:w-auto
-                  sm:px-7
-                  sm:py-3.5
-                "
-                >
-                  Explore Our Services
-                  <ArrowRight size={17} />
-                </a>
+             <a
+  href="/services/website-development?skipLoader=true"
+  className="
+    inline-flex
+    w-full
+    items-center
+    justify-center
+    gap-2
+    rounded-lg
+    bg-blue-600
+    px-6
+    py-3
+    text-sm
+    font-semibold
+    text-white
+    transition
+    duration-300
+    hover:bg-blue-500
+    hover:shadow-lg
+    hover:shadow-blue-500/30
+    sm:w-auto
+    sm:px-7
+    sm:py-3.5
+  "
+>
+  Explore Our Services
+  <ArrowRight size={17} />
+</a>
 
-                <a
-                  href="/contact"
-                  className="
-                  w-full
-                  rounded-lg
-                  border
-                  border-slate-600
-                  bg-slate-950/20
-                  px-6
-                  py-3
-                  text-center
-                  text-sm
-                  font-semibold
-                  text-white
-                  backdrop-blur-sm
-                  transition
-                  duration-300
-                  hover:border-blue-500
-                  hover:bg-blue-500/10
-                  sm:w-auto
-                  sm:px-7
-                  sm:py-3.5
-                "
-                >
-                  Contact Us
-                </a>
+              <a
+  href="/contact?skipLoader=true"
+  className="
+    w-full
+    rounded-lg
+    border
+    border-slate-600
+    bg-slate-950/20
+    px-6
+    py-3
+    text-center
+    text-sm
+    font-semibold
+    text-white
+    backdrop-blur-sm
+    transition
+    duration-300
+    hover:border-blue-500
+    hover:bg-blue-500/10
+    sm:w-auto
+    sm:px-7
+    sm:py-3.5
+  "
+>
+  Contact Us
+</a>
               </div>
             </motion.div>
           </div>
