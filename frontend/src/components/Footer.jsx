@@ -119,9 +119,7 @@ const Footer = () => {
               <Link to="/services">Services</Link>
             </li>
 
-            <li>
-              <Link to="/portfolio">Portfolio</Link>
-            </li>
+            
 
             <li>
               <Link
@@ -157,34 +155,42 @@ const Footer = () => {
             <span>Lucknow, Uttar Pradesh, India</span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <Link
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-blue-700"
-            >
-              <FaFacebookF />
-            </Link>
+{/* SOCIAL MEDIA LINKS */}
+<div className="flex items-center gap-3">
 
-            <Link
-              href="https://www.instagram.com/ssdinformatics?igsh=MWp0dmpjMDY4bDFwcw%3D%3D"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-orange-500"
-            >
-              <FaInstagram />
-            </Link>
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/profile.php?id=61594436541316/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-blue-700"
+  >
+    <FaFacebookF />
+  </a>
 
-            <Link
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-blue-700"
-            >
-              <FaLinkedinIn />
-            </Link>
-          </div>
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/ssdinformatics/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-orange-500"
+  >
+    <FaInstagram />
+  </a>
+
+  <a
+  href="https://www.linkedin.com/company/ssdinformatics/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="LinkedIn"
+  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-blue-200 hover:text-blue-700"
+>
+  <FaLinkedinIn />
+</a>  
+
+</div>
         </div>
       </div>
 

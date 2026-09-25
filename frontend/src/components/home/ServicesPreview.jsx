@@ -51,7 +51,7 @@ const services = [
 
 const ServicesPreview = () => {
   return (
-   <section className="relative overflow-hidden bg-slate-950 py-20 lg:py-18">
+   <section className="relative overflow-hidden bg-slate-950 py-20 lg:py-14">
 
   {/* Background Glow */}
 
