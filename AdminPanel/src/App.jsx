@@ -15,8 +15,6 @@ import SendOtp from "./Pages/SendOtp";
 import NewPassword from "./Pages/NewPassword";
 
 import Dashboard from "./Pages/Dashboard";
-import ManageAbout from "./Pages/ManageAbout";
-import ManageServices from "./Pages/ManageServices";
 import ManageContact from "./Pages/ManageContact";
 import Settings from "./Pages/Settings";
 import CareerApplications from "./Pages/CareerApplications";
@@ -24,9 +22,6 @@ import ManageCareers from "./Pages/ManageCareers";
 
 import ManageTeam from "./Pages/ManageTeam";
 import ManageBranches from "./Pages/ManageBranches";
-
-// Manage Home
-import ManageHome from "./Pages/ManageHome/ManageHome";
 
 const App = () => {
   return (
@@ -49,24 +44,6 @@ const App = () => {
           <Route
             path="/admin/dashboard"
             element={<Dashboard />}
-          />
-
-          {/* Manage Home */}
-          <Route
-            path="/admin/home"
-            element={<ManageHome />}
-          />
-
-          {/* Manage About */}
-          <Route
-            path="/admin/about"
-            element={<ManageAbout />}
-          />
-
-          {/* Manage Services */}
-          <Route
-            path="/admin/services"
-            element={<ManageServices />}
           />
 
           {/* Manage Contact */}

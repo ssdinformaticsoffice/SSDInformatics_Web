@@ -2,8 +2,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 import {
   LayoutDashboard,
-  Home,
-  Info,
   Briefcase,
   MessageSquare,
   Settings,
@@ -27,47 +25,37 @@ const Sidebar = ({
       path: "/admin/dashboard",
       icon: LayoutDashboard,
     },
+
     {
-      name: "Manage Home",
-      path: "/admin/home",
-      icon: Home,
-    },
-    {
-      name: "Manage About",
-      path: "/admin/about",
-      icon: Info,
-    },
-    {
-      name: "Services",
-      path: "/admin/services",
+      name: "Manage Careers",
+      path: "/admin/careers",
       icon: Briefcase,
     },
-    {
-    name: "Manage Careers",
-    path: "/admin/careers",
-    icon: Briefcase,
-  },
 
-  {
-  name: "Manage Team",
-  path: "/admin/team",
-  icon: UsersRound,
-},
-{
-  name: "Manage Branches",
-  path: "/admin/branches",
-  icon: GitBranch,
-},
+    {
+      name: "Manage Team",
+      path: "/admin/team",
+      icon: UsersRound,
+    },
+
+    {
+      name: "Manage Branches",
+      path: "/admin/branches",
+      icon: GitBranch,
+    },
+
     {
       name: "Manage Contact",
       path: "/admin/contact",
       icon: MessageSquare,
     },
+
     {
-  name: "Career Applications",
-  path: "/admin/career-applications",
-  icon: Briefcase,
-},
+      name: "Career Applications",
+      path: "/admin/career-applications",
+      icon: Briefcase,
+    },
+
     {
       name: "Settings",
       path: "/admin/settings",
@@ -131,7 +119,7 @@ const Sidebar = ({
             alt="SSD Informatics"
             className="w-14 h-14 sm:w-16 sm:h-16 lg:w-[72px] lg:h-[72px] object-contain flex-shrink-0"
           />
-          
+
           {/* SSD Informatics Text - In One Line */}
           <span className="text-base sm:text-lg lg:text-xl font-bold text-white truncate">
             SSD Informatics
@@ -221,12 +209,16 @@ const Sidebar = ({
                     {isActive && (
                       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-cyan-400 rounded-r-full shadow-lg shadow-cyan-400/50"></div>
                     )}
-                    <Icon 
-                      size={20} 
+
+                    <Icon
+                      size={20}
                       className={`flex-shrink-0 transition-transform duration-200 group-hover:scale-110 ${
-                        isActive ? "text-white" : "text-slate-400 group-hover:text-white"
+                        isActive
+                          ? "text-white"
+                          : "text-slate-400 group-hover:text-white"
                       }`}
                     />
+
                     <span>{item.name}</span>
                   </>
                 )}
@@ -260,10 +252,11 @@ const Sidebar = ({
             group
           "
         >
-          <LogOut 
-            size={20} 
+          <LogOut
+            size={20}
             className="transition-transform duration-200 group-hover:scale-110 group-hover:text-red-400"
           />
+
           <span>Logout</span>
         </button>
       </div>

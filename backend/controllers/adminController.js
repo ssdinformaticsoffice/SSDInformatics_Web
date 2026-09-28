@@ -196,6 +196,7 @@ export const SendOtp = async (req, res) => {
 };
 
 // verifying forgate otp----------------------------
+
 export const verifyForgotOtp = async (req, res) => {
   try {
     const { email, otp } = req.body;
@@ -249,7 +250,8 @@ export const verifyForgotOtp = async (req, res) => {
 
     return res.status(200).json({
       success: true,
-      message: "OTP verified successfully", resetToken
+      message: "OTP verified successfully",
+      resetToken,
     });
 
   } catch (error) {
@@ -264,43 +266,63 @@ export const verifyForgotOtp = async (req, res) => {
 
 
 // reset password ---------------------------------------
+
 export const resetPassword = async (req, res) => {
   try {
     const { newPassword, confirmNewPassword } = req.body;
+
     if (!newPassword || !confirmNewPassword) {
       return res.status(400)
-        .json({ success: false, message: "Both password fields are required", });
+        .json({
+          success: false,
+          message: "Both password fields are required",
+        });
     }
 
     if (newPassword !== confirmNewPassword) {
       return res.status(400)
-        .json({ success: false, message: "Passwords do not match", });
+        .json({
+          success: false,
+          message: "Passwords do not match",
+        });
     }
 
     const authHeader = req.headers.authorization;
 
     if (!authHeader) {
-      return res.status
-        .json({ success: false, message: "Reset token is required", });
+      return res.status(401)
+        .json({
+          success: false,
+          message: "Reset token is required",
+        });
     }
 
     const token = authHeader.split(" ")[1];
 
     if (!token) {
-      return res.status(401).json({ success: false, message: "Reset token is missing", });
+      return res.status(401).json({
+        success: false,
+        message: "Reset token is missing",
+      });
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     if (decoded.purpose !== "password-reset") {
       return res.status(401)
-        .json({ success: false, message: "Invalid reset token", });
+        .json({
+          success: false,
+          message: "Invalid reset token",
+        });
     }
 
     const user = await Admin.findById(decoded.id);
 
     if (!user) {
-      return res.status(404).json({ success: false, message: "Admin not found", });
+      return res.status(404).json({
+        success: false,
+        message: "Admin not found",
+      });
     }
 
     // Hash new password----------------------------------
@@ -313,7 +335,8 @@ export const resetPassword = async (req, res) => {
 
     return res.status(200)
       .json({
-        success: true, message: "Password changed successfully",
+        success: true,
+        message: "Password changed successfully",
       });
 
   } catch (error) {
@@ -323,6 +346,162 @@ export const resetPassword = async (req, res) => {
       return res.status(401).json({
         success: false,
         message: "Reset session expired. Please verify OTP again.",
+      });
+    }
+
+    return res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+    });
+  }
+};
+
+
+// =======================================================
+// Get Admin Profile
+// =======================================================
+
+export const getAdminProfile = async (req, res) => {
+  try {
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader) {
+      return res.status(401).json({
+        success: false,
+        message: "Authorization token is required",
+      });
+    }
+
+    const token = authHeader.split(" ")[1];
+
+    if (!token) {
+      return res.status(401).json({
+        success: false,
+        message: "Token is missing",
+      });
+    }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    const admin = await Admin.findById(decoded.id).select(
+      "-password -otp -otpExpiry"
+    );
+
+    if (!admin) {
+      return res.status(404).json({
+        success: false,
+        message: "Admin not found",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Admin profile fetched successfully",
+      admin,
+    });
+  } catch (error) {
+    console.error("Get Admin Profile Error:", error);
+
+    if (
+      error.name === "JsonWebTokenError" ||
+      error.name === "TokenExpiredError"
+    ) {
+      return res.status(401).json({
+        success: false,
+        message: "Invalid or expired token",
+      });
+    }
+
+    return res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+    });
+  }
+};
+
+
+// =======================================================
+// Update Admin Profile
+// =======================================================
+
+export const updateAdminProfile = async (req, res) => {
+  try {
+    const { name, email } = req.body;
+
+    if (!name || !email) {
+      return res.status(400).json({
+        success: false,
+        message: "Name and Email are required",
+      });
+    }
+
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader) {
+      return res.status(401).json({
+        success: false,
+        message: "Authorization token is required",
+      });
+    }
+
+    const token = authHeader.split(" ")[1];
+
+    if (!token) {
+      return res.status(401).json({
+        success: false,
+        message: "Token is missing",
+      });
+    }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    const admin = await Admin.findById(decoded.id);
+
+    if (!admin) {
+      return res.status(404).json({
+        success: false,
+        message: "Admin not found",
+      });
+    }
+
+    // Check whether another admin already uses this email
+    const existingAdmin = await Admin.findOne({
+      email,
+      _id: { $ne: admin._id },
+    });
+
+    if (existingAdmin) {
+      return res.status(400).json({
+        success: false,
+        message: "Email is already in use",
+      });
+    }
+
+    admin.name = name;
+    admin.email = email;
+
+    await admin.save();
+
+    return res.status(200).json({
+      success: true,
+      message: "Profile updated successfully",
+      admin: {
+        id: admin._id,
+        name: admin.name,
+        email: admin.email,
+        role: admin.role,
+      },
+    });
+  } catch (error) {
+    console.error("Update Admin Profile Error:", error);
+
+    if (
+      error.name === "JsonWebTokenError" ||
+      error.name === "TokenExpiredError"
+    ) {
+      return res.status(401).json({
+        success: false,
+        message: "Invalid or expired token",
       });
     }
 
