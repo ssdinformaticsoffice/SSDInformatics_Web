@@ -21,8 +21,8 @@ const ManageContact = () => {
   }, []);
 
 
-  const API_URL = import.meta.env.VITE_API_URL  ;
-  
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const fetchContacts = async () => {
     try {
       const res = await axios.get(
@@ -129,7 +129,7 @@ const ManageContact = () => {
             Header
         ================================= */}
 
-        <div className="text-center mb-5 sm:mb-6 lg:mb-7">
+        <div className=" mb-5 sm:mb-6 lg:mb-7">
 
           {/* Badge */}
 
@@ -195,7 +195,6 @@ const ManageContact = () => {
               sm:text-sm
               md:text-base
               max-w-2xl
-              mx-auto
               px-2
             "
           >

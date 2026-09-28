@@ -1,131 +1,371 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Settings = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [settings, setSettings] = useState({
-    companyName: "",
-    websiteName: "",
+    name: "",
     email: "",
-    phone: "",
-    address: "",
-    facebook: "",
-    instagram: "",
-    linkedin: "",
-    footerText: "",
+    role: "",
   });
 
-  const API_URL = import.meta.env.VITE_API_URL  ;
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
 
-  // Get Settings
-  const fetchSettings = async () => {
+  // ================================
+  // GET ADMIN PROFILE
+  // ================================
+
+  const fetchProfile = async () => {
     try {
-      const res = await axios.get(
-        `${API_URL}/settings`
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        toast.error("Admin session not found. Please login again.");
+        return;
+      }
+
+      const response = await axios.get(
+        `${API_URL}/admin/profile`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
 
-      if (res.data.data) {
-        setSettings(res.data.data);
+      const admin = response.data?.admin;
+
+      if (admin) {
+        setSettings({
+          name: admin.name || "",
+          email: admin.email || "",
+          role: admin.role || "",
+        });
+      } else {
+        toast.error("Admin profile not found");
       }
     } catch (error) {
-      console.log(error);
+      console.error("Profile Fetch Error:", error);
+
+      toast.error(
+        error.response?.data?.message ||
+          "Failed to load admin profile"
+      );
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchSettings();
+    fetchProfile();
   }, []);
 
+  // ================================
+  // HANDLE INPUT
+  // ================================
+
   const handleChange = (e) => {
-    setSettings({
-      ...settings,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+
+    setSettings((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
+
+  // ================================
+  // UPDATE PROFILE
+  // ================================
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const name = settings.name.trim();
+    const email = settings.email.trim();
+
+    if (!name) {
+      toast.error("Name is required");
+      return;
+    }
+
+    if (!email) {
+      toast.error("Email is required");
+      return;
+    }
+
     try {
-      await axios.post(
-        `${API_URL}/settings`,
-        settings
+      setSaving(true);
+
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        toast.error("Admin session expired. Please login again.");
+        return;
+      }
+
+      const response = await axios.put(
+        `${API_URL}/admin/profile`,
+        {
+          name,
+          email,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
 
-      alert("Settings Updated Successfully");
+      const admin = response.data?.admin;
+
+      if (response.data?.success && admin) {
+        toast.success(
+          response.data.message ||
+            "Profile updated successfully"
+        );
+
+        // Update localStorage admin data
+        const savedAdmin = localStorage.getItem("admin");
+
+        if (savedAdmin) {
+          try {
+            const oldAdmin = JSON.parse(savedAdmin);
+
+            localStorage.setItem(
+              "admin",
+              JSON.stringify({
+                ...oldAdmin,
+                name: admin.name,
+                email: admin.email,
+                role: admin.role,
+              })
+            );
+          } catch (error) {
+            console.error(
+              "Local Storage Admin Error:",
+              error
+            );
+          }
+        }
+
+        // Update form with latest data
+        setSettings({
+          name: admin.name || "",
+          email: admin.email || "",
+          role: admin.role || "",
+        });
+      } else {
+        toast.error(
+          response.data?.message ||
+            "Profile update failed"
+        );
+      }
     } catch (error) {
-      console.log(error);
+      console.error("Profile Update Error:", error);
+
+      toast.error(
+        error.response?.data?.message ||
+          "Failed to update profile"
+      );
+    } finally {
+      setSaving(false);
     }
   };
 
   return (
-    <div className="p-6 lg:p-8">
-      {/* Heading */}
-      <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
-        Website Settings
-      </h1>
+    <div className="w-full px-4 py-5 sm:px-6 lg:px-8 lg:py-8">
+      {/* ================================
+          HEADER
+      ================================= */}
 
-      <p className="text-slate-500 mt-2 mb-8">
-        Manage your company details, contact information and social media links.
-      </p>
+      <div className="mb-6 sm:mb-8">
+        <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+          Profile Settings
+        </h1>
 
-      {/* Form */}
+        <p className="mt-2 text-sm text-slate-400 sm:text-base">
+          Manage your admin profile information.
+        </p>
+      </div>
+
+      {/* ================================
+          PROFILE FORM
+      ================================= */}
+
       <form
         onSubmit={handleSubmit}
-        className="max-w-5xl bg-slate-900 rounded-2xl shadow-xl border border-slate-700 p-8"
+        className="
+          w-full
+          max-w-4xl
+          rounded-2xl
+          border
+          border-slate-700
+          bg-slate-900
+          p-5
+          shadow-xl
+          sm:p-6
+          lg:p-8
+        "
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {Object.keys(settings).map((key) => (
-            <div key={key}>
-              <label className="block text-sm font-medium text-slate-300 mb-2 capitalize">
-                {key.replace(/([A-Z])/g, " $1")}
-              </label>
+        {loading ? (
+          <div className="flex min-h-[220px] items-center justify-center">
+            <div className="flex items-center gap-3 text-sm text-slate-400">
+              <span className="h-5 w-5 animate-spin rounded-full border-2 border-slate-600 border-t-blue-500" />
+              Loading profile...
+            </div>
+          </div>
+        ) : (
+          <>
+            {/* ================================
+                FORM FIELDS
+            ================================= */}
 
-              <input
-                type="text"
-                name={key}
-                value={settings[key]}
-                onChange={handleChange}
-                placeholder={`Enter ${key.replace(/([A-Z])/g, " $1")}`}
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
+              {/* Name */}
+
+              <div>
+                <label
+                  htmlFor="name"
+                  className="mb-2 block text-sm font-medium text-slate-300"
+                >
+                  Name
+                </label>
+
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  value={settings.name}
+                  onChange={handleChange}
+                  placeholder="Enter your name"
+                  className="
+                    w-full
+                    rounded-xl
+                    border
+                    border-slate-700
+                    bg-slate-800
+                    px-4
+                    py-3
+                    text-sm
+                    text-white
+                    outline-none
+                    transition
+                    placeholder:text-slate-500
+                    focus:border-blue-500
+                    focus:ring-2
+                    focus:ring-blue-500/20
+                  "
+                />
+              </div>
+
+              {/* Email */}
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="mb-2 block text-sm font-medium text-slate-300"
+                >
+                  Email
+                </label>
+
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  value={settings.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email"
+                  className="
+                    w-full
+                    rounded-xl
+                    border
+                    border-slate-700
+                    bg-slate-800
+                    px-4
+                    py-3
+                    text-sm
+                    text-white
+                    outline-none
+                    transition
+                    placeholder:text-slate-500
+                    focus:border-blue-500
+                    focus:ring-2
+                    focus:ring-blue-500/20
+                  "
+                />
+              </div>
+
+              {/* Role */}
+
+              <div className="md:col-span-2">
+                <label
+                  htmlFor="role"
+                  className="mb-2 block text-sm font-medium text-slate-300"
+                >
+                  Role
+                </label>
+
+                <input
+                  id="role"
+                  type="text"
+                  name="role"
+                  value={settings.role}
+                  readOnly
+                  className="
+                    w-full
+                    rounded-xl
+                    border
+                    border-slate-700
+                    bg-slate-800
+                    px-4
+                    py-3
+                    text-sm
+                    text-slate-400
+                    outline-none
+                    cursor-not-allowed
+                  "
+                />
+
+                <p className="mt-2 text-xs text-slate-500">
+                  Admin role cannot be changed from profile settings.
+                </p>
+              </div>
+            </div>
+
+            {/* ================================
+                SAVE BUTTON
+            ================================= */}
+
+            <div className="mt-7 flex justify-end border-t border-slate-800 pt-6">
+              <button
+                type="submit"
+                disabled={saving}
                 className="
                   w-full
-                  px-4
-                  py-3
                   rounded-xl
-                  bg-slate-800
-                  border
-                  border-slate-700
+                  bg-blue-600
+                  px-7
+                  py-3
+                  text-sm
+                  font-semibold
                   text-white
-                  placeholder:text-slate-500
-                  outline-none
+                  shadow-lg
+                  shadow-blue-600/20
                   transition
-                  focus:border-blue-500
-                  focus:ring-2
-                  focus:ring-blue-500/30
+                  hover:bg-blue-700
+                  disabled:cursor-not-allowed
+                  disabled:opacity-50
+                  sm:w-auto
                 "
-              />
+              >
+                {saving ? "Saving..." : "Save Profile"}
+              </button>
             </div>
-          ))}
-        </div>
-
-        {/* Button */}
-        <div className="mt-8">
-          <button
-            type="submit"
-            className="
-              bg-blue-600
-              hover:bg-blue-700
-              text-white
-              font-semibold
-              px-8
-              py-3
-              rounded-xl
-              transition
-              shadow-lg
-            "
-          >
-            Save Settings
-          </button>
-        </div>
+          </>
+        )}
       </form>
     </div>
   );
