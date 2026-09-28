@@ -7,6 +7,8 @@ import {
   Cpu,
   Globe,
   ArrowRight,
+  BriefcaseBusiness,
+  Mail,
   Users,
   Clock,
   Award,
@@ -1007,9 +1009,9 @@ const About = () => {
                   {/* IMAGE */}
                   <div className="relative h-[260px] overflow-hidden sm:h-[300px] md:h-[320px] rounded-tl-2xl md:rounded-tr-none md:rounded-bl-2xl">
                     <img
-                      src="/images/founder.jpg"
+                      src="/images/akashVerma.jpeg"
                       alt="Founder and Director of SSD Informatics"
-                      className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      className="h-full w-full object-cover object-fit transition-transform duration-500 group-hover:scale-105"
                     />
 
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-slate-950/50" />
@@ -1043,16 +1045,44 @@ const About = () => {
                       growth while turning ideas into meaningful digital experiences.
                     </p>
 
-                    {/* LINKEDIN */}
-                    <a
-                      href="#"
-                      aria-label="Founder LinkedIn"
-                      className="mt-5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-400 transition-all duration-300 hover:border-blue-400/40 hover:bg-blue-500 hover:text-white"
-                    >
-                      <span className="text-[11px] font-bold">
-                        in
-                      </span>
-                    </a>
+                    {/* SOCIAL / PORTFOLIO LINKS */}
+                    <div className="mt-5 flex items-center gap-3">
+                      {/* LinkedIn */}
+                      <a
+                        href="https://www.linkedin.com/in/akash-verma-b45789434/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Founder LinkedIn"
+                        title="LinkedIn"
+                        className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-400 transition-all duration-300 hover:border-blue-400/40 hover:bg-blue-500 hover:text-white"
+                      >
+                        <span className="text-[11px] font-bold">
+                          in
+                        </span>
+                      </a>
+
+                      {/* Portfolio */}
+                      <a
+                        href="https://www.akashverma.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Founder Portfolio"
+                        title="Portfolio"
+                        className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cyan-500/20 bg-cyan-500/10 text-cyan-400 transition-all duration-300 hover:border-cyan-400/40 hover:bg-cyan-500 hover:text-white"
+                      >
+                        <BriefcaseBusiness size={16} />
+                      </a>
+
+                      {/* Gmail */}
+                      <a
+                        href="mailto:ssdinformatics.dir@gmail.com"
+                        aria-label="Email Founder"
+                        title="Email"
+                        className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-red-500/20 bg-red-500/10 text-red-400 transition-all duration-300 hover:border-red-400/40 hover:bg-red-500 hover:text-white"
+                      >
+                        <Mail size={16} />
+                      </a>
+                    </div>
 
                   </div>
                 </div>
@@ -1384,36 +1414,95 @@ const About = () => {
                             </p>
                           )}
 
-                          {teamMembers[teamIndex].linkedin && (
-                            <a
-                              href={teamMembers[teamIndex].linkedin}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label={`${teamMembers[teamIndex].name} LinkedIn`}
-                              className="
-                              mt-4
-                              inline-flex
-                              h-9
-                              w-9
-                              items-center
-                              justify-center
-                              rounded-full
-                              border
-                              border-blue-500/20
-                              bg-blue-500/10
-                              text-blue-400
-                              transition-all
-                              duration-300
-                              hover:border-blue-400/40
-                              hover:bg-blue-500
-                              hover:text-white
-                            "
-                            >
-                              <span className="text-xs font-bold">
-                                in
-                              </span>
-                            </a>
-                          )}
+                          <div className="mt-4 flex items-center justify-center gap-2.5">
+                            {/* LinkedIn */}
+                            {teamMembers[teamIndex].linkedin && (
+                              <a
+                                href={teamMembers[teamIndex].linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`${teamMembers[teamIndex].name} LinkedIn`}
+                                title="LinkedIn"
+                                className="
+                                inline-flex
+                                h-9
+                                w-9
+                                items-center
+                                justify-center
+                                rounded-full
+                                border
+                                border-blue-500/20
+                                bg-blue-500/10
+                                text-blue-400
+                                transition-all
+                                duration-300
+                                hover:border-blue-400/40
+                                hover:bg-blue-500
+                                hover:text-white
+                              "
+                              >
+                                <span className="text-xs font-bold">in</span>
+                              </a>
+                            )}
+
+                            {/* Portfolio */}
+                            {teamMembers[teamIndex].portfolio && (
+                              <a
+                                href={teamMembers[teamIndex].portfolio}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`${teamMembers[teamIndex].name} Portfolio`}
+                                title="Portfolio"
+                                className="
+                                inline-flex
+                                h-9
+                                w-9
+                                items-center
+                                justify-center
+                                rounded-full
+                                border
+                                border-cyan-500/20
+                                bg-cyan-500/10
+                                text-cyan-400
+                                transition-all
+                                duration-300
+                                hover:border-cyan-400/40
+                                hover:bg-cyan-500
+                                hover:text-white
+                              "
+                              >
+                                <BriefcaseBusiness size={16} />
+                              </a>
+                            )}
+
+                            {/* Gmail */}
+                            {teamMembers[teamIndex].email && (
+                              <a
+                                href={`mailto:${teamMembers[teamIndex].email}`}
+                                aria-label={`Email ${teamMembers[teamIndex].name}`}
+                                title="Email"
+                                className="
+                                inline-flex
+                                h-9
+                                w-9
+                                items-center
+                                justify-center
+                                rounded-full
+                                border
+                                border-red-500/20
+                                bg-red-500/10
+                                text-red-400
+                                transition-all
+                                duration-300
+                                hover:border-red-400/40
+                                hover:bg-red-500
+                                hover:text-white
+                              "
+                              >
+                                <Mail size={16} />
+                              </a>
+                            )}
+                          </div>
 
                         </div>
 
@@ -1563,36 +1652,95 @@ const About = () => {
                               </p>
                             )}
 
-                            {member.linkedin && (
-                              <a
-                                href={member.linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={`${member.name} LinkedIn`}
-                                className="
-                                mt-4
-                                inline-flex
-                                h-9
-                                w-9
-                                items-center
-                                justify-center
-                                rounded-full
-                                border
-                                border-blue-500/20
-                                bg-blue-500/10
-                                text-blue-400
-                                transition-all
-                                duration-300
-                                hover:border-blue-400/40
-                                hover:bg-blue-500
-                                hover:text-white
-                              "
-                              >
-                                <span className="text-xs font-bold">
-                                  in
-                                </span>
-                              </a>
-                            )}
+                            <div className="mt-4 flex items-center justify-center gap-2.5">
+                              {/* LinkedIn */}
+                              {member.linkedin && (
+                                <a
+                                  href={member.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`${member.name} LinkedIn`}
+                                  title="LinkedIn"
+                                  className="
+                                  inline-flex
+                                  h-9
+                                  w-9
+                                  items-center
+                                  justify-center
+                                  rounded-full
+                                  border
+                                  border-blue-500/20
+                                  bg-blue-500/10
+                                  text-blue-400
+                                  transition-all
+                                  duration-300
+                                  hover:border-blue-400/40
+                                  hover:bg-blue-500
+                                  hover:text-white
+                                "
+                                >
+                                  <span className="text-xs font-bold">in</span>
+                                </a>
+                              )}
+
+                              {/* Portfolio */}
+                              {member.portfolio && (
+                                <a
+                                  href={member.portfolio}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`${member.name} Portfolio`}
+                                  title="Portfolio"
+                                  className="
+                                  inline-flex
+                                  h-9
+                                  w-9
+                                  items-center
+                                  justify-center
+                                  rounded-full
+                                  border
+                                  border-cyan-500/20
+                                  bg-cyan-500/10
+                                  text-cyan-400
+                                  transition-all
+                                  duration-300
+                                  hover:border-cyan-400/40
+                                  hover:bg-cyan-500
+                                  hover:text-white
+                                "
+                                >
+                                  <BriefcaseBusiness size={16} />
+                                </a>
+                              )}
+
+                              {/* Gmail */}
+                              {member.email && (
+                                <a
+                                  href={`mailto:${member.email}`}
+                                  aria-label={`Email ${member.name}`}
+                                  title="Email"
+                                  className="
+                                  inline-flex
+                                  h-9
+                                  w-9
+                                  items-center
+                                  justify-center
+                                  rounded-full
+                                  border
+                                  border-red-500/20
+                                  bg-red-500/10
+                                  text-red-400
+                                  transition-all
+                                  duration-300
+                                  hover:border-red-400/40
+                                  hover:bg-red-500
+                                  hover:text-white
+                                "
+                                >
+                                  <Mail size={16} />
+                                </a>
+                              )}
+                            </div>
 
                           </div>
 
@@ -1716,7 +1864,7 @@ const About = () => {
 
                 </div>
 
-                <div className="flex justify-center lg:col-span-2 lg:justify-end">
+                <div className="hidden justify-center sm:flex lg:col-span-2 lg:justify-end">
 
                   <div className="relative">
 
@@ -1724,7 +1872,7 @@ const About = () => {
 
                     <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-500/20 to-cyan-500/10 backdrop-blur-sm sm:h-20 sm:w-20">
 
-                      <div className="flex gap-1.5">
+                      <div className="hidden gap-1.5 sm:flex">
 
                         <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-blue-400 sm:h-2 sm:w-2" />
 

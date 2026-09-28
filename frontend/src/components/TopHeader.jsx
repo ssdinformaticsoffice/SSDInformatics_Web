@@ -123,7 +123,7 @@ const TopHeader = () => {
 
             {/* Facebook */}
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61594436541316"
               aria-label="Facebook"
               className="
                 flex h-9 w-9 items-center justify-center
@@ -144,7 +144,7 @@ const TopHeader = () => {
 
             {/* Instagram */}
             <a
-              href="#"
+              href="https://www.instagram.com/ssdinformatics?stkn=MWp0dmpjMDY4bDFwcw=="
               aria-label="Instagram"
               className="
                 flex h-9 w-9 items-center justify-center
@@ -165,7 +165,7 @@ const TopHeader = () => {
 
             {/* LinkedIn */}
             <a
-              href="#"
+              href="https://www.linkedin.com/company/ssdinformatics/?viewAsMember=true"
               aria-label="LinkedIn"
               className="
                 flex h-9 w-9 items-center justify-center
