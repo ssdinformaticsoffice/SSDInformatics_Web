@@ -1007,14 +1007,14 @@ const About = () => {
                 <div className="grid items-center md:grid-cols-2">
 
                   {/* IMAGE */}
-                  <div className="relative h-[260px] overflow-hidden sm:h-[300px] md:h-[320px] rounded-tl-2xl md:rounded-tr-none md:rounded-bl-2xl">
+                  <div className="relative w-full overflow-hidden md:h-[320px] md:w-fit md:justify-self-center">
                     <img
                       src="/images/akashVerma.jpeg"
                       alt="Founder and Director of SSD Informatics"
-                      className="h-full w-full object-cover object-fit transition-transform duration-500 group-hover:scale-105"
+                      className="block h-auto w-full rounded-xl object-contain object-center md:h-full md:w-auto"
                     />
 
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-slate-950/50" />
+                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
                   </div>
 
                   {/* CONTENT */}
@@ -1919,3 +1919,7 @@ const About = () => {
 };
 
 export default About;
+
+
+
+
