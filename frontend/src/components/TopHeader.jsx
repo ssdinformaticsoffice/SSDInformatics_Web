@@ -23,7 +23,7 @@ const TopHeader = () => {
 
             {/* Phone */}
             <a
-              href="tel:+919235357547"
+              href="tel:+919196873594"
               className="
                 group flex shrink-0 items-center gap-2.5
                 text-[13px] sm:text-[14px]
@@ -49,7 +49,7 @@ const TopHeader = () => {
               </span>
 
               <span className="whitespace-nowrap md:inline hidden">
-                +91 9235327547
+                +91 9196873594
               </span>
             </a>
 
@@ -124,6 +124,8 @@ const TopHeader = () => {
             {/* Facebook */}
             <a
               href="https://www.facebook.com/profile.php?id=61594436541316"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="
                 flex h-9 w-9 items-center justify-center
@@ -145,6 +147,8 @@ const TopHeader = () => {
             {/* Instagram */}
             <a
               href="https://www.instagram.com/ssdinformatics?stkn=MWp0dmpjMDY4bDFwcw=="
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="
                 flex h-9 w-9 items-center justify-center
@@ -166,6 +170,7 @@ const TopHeader = () => {
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/company/ssdinformatics/?viewAsMember=true"
+              target="_blank" 
               aria-label="LinkedIn"
               className="
                 flex h-9 w-9 items-center justify-center

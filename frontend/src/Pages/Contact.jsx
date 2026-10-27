@@ -1522,18 +1522,25 @@ const ContactPage = () => {
               {/* 2 × 2 Contact info cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { Icon: Phone, title: "Phone Number", line1: "+91 9235327547" },
-                  { Icon: Mail, title: "Email Address", line1: "info@ssdinformatics.com", small: true },
-                  { Icon: MessageCircle, title: "Whatsapp", line1: "+91 9235327547" },
+                  { Icon: Phone, title: "Phone Number", line1: "+91 9196873594", href: "tel:+919196873594", ariaLabel: "Call SSD Informatics" },
+                  { Icon: Mail, title: "Email Address", line1: "info@ssdinformatics.com", small: true, href: "mailto:info@ssdinformatics.com", ariaLabel: "Email SSD Informatics" },
+                  { Icon: MessageCircle, title: "Whatsapp", line1: "+91 9196873594", href: "https://wa.me/919196873594", external: true, ariaLabel: "Chat with SSD Informatics on WhatsApp" },
                   {
                     Icon: MapPin, title: "Our Office",
                     line1: "SSD Informatics Pvt. Ltd.",
                     multi: ["Sector 5, Gomtinagar,", "Khargapur, Lucknow, UP"],
+                    href: "https://www.google.com/maps/place/SSD+Informatics+PVT.LTD./@26.8430986,81.0122374,17z/data=!3m1!4b1!4m6!3m5!1s0x399be37ad241e595:0xdafecf642828159!8m2!3d26.8430986!4d81.0122374!16s%2Fg%2F11zgf1kh7y?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+                    external: true,
+                    ariaLabel: "Open SSD Informatics office in Google Maps",
                   },
-                ].map(({ Icon, title, line1, small, multi }) => (
-                  <div
+                ].map(({ Icon, title, line1, small, multi, href, external, ariaLabel }) => (
+                  <a
                     key={title}
-                    className={`flex ${multi ? "items-start" : "items-center"} gap-4 transition-all duration-300 group cursor-default`}
+                    href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                    aria-label={ariaLabel}
+                    className={`flex h-full ${multi ? "items-start" : "items-center"} gap-4 rounded-[14px] text-left transition-all duration-300 group cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400`}
                     style={{
                       padding: "18px 20px",
                       borderRadius: "14px",
@@ -1574,7 +1581,7 @@ const ContactPage = () => {
                         {multi && multi.map((m, i) => <><br key={i} />{m}</>)}
                       </p>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
 
@@ -1590,7 +1597,7 @@ const ContactPage = () => {
               >
                 <iframe
                   title="SSD Informatics Private Limited — Gomti Nagar, Lucknow"
-                  src="https://maps.google.com/maps?q=Sector+5+Gomti+Nagar+Lucknow+Uttar+Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=SSD+Informatics+PVT.LTD.,26.8430986,81.0122374&z=17&output=embed"
                   width="100%" height="100%"
                   style={{ border: 0 }}
                   allowFullScreen="" loading="lazy"
@@ -1609,3 +1616,4 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
