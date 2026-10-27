@@ -10,6 +10,7 @@ import Stats from "../components/home/Stats";
 import Testimonials from "../components/home/Testimonials";
 import CTA from "../components/home/CTA";
 import HomePage from "./HomePage";
+import OurSoftware from "../components/home/OurSoftware";
 import OurTopClient from "../components/home/OurTopClient";
 import OurBranches from "../components/home/OurBranches";
 import Cirtficates from "../components/home/Cirtficates";
@@ -54,6 +55,7 @@ const Home = () => {
         <WhyChooseUs />
         <Process />
         <OurBranches />
+        <OurSoftware />
         <OurTopClient/>
         <Stats />
         <Testimonials />
@@ -73,3 +75,4 @@ const Home = () => {
 };
 
 export default Home;
+

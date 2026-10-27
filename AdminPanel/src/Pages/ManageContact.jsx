@@ -7,10 +7,13 @@ import {
   AlertCircle,
   CheckCircle,
   MessageCircle,
+  Eye,
+  X,
 } from "lucide-react";
 
 const ManageContact = () => {
   const [contacts, setContacts] = useState([]);
+  const [selectedContact, setSelectedContact] = useState(null);
 
   // ================================
   // Fetch Contacts
@@ -20,6 +23,16 @@ const ManageContact = () => {
     fetchContacts();
   }, []);
 
+  useEffect(() => {
+    if (!selectedContact) return undefined;
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") setSelectedContact(null);
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [selectedContact]);
 
   const API_URL = import.meta.env.VITE_API_URL  ;
   
@@ -599,18 +612,20 @@ const ManageContact = () => {
 
                 {/* Message */}
 
-                <p
-                  className="
-                    mt-3
-                    text-xs
-                    sm:text-sm
-                    text-blue-200/60
-                    line-clamp-2
-                    break-words
-                  "
+                <button
+                  type="button"
+                  onClick={() => setSelectedContact(item)}
+                  aria-label={`View full message from ${item.name}`}
+                  className="mt-3 block w-full rounded-lg text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400"
                 >
-                  {item.message}
-                </p>
+                  <span className="block text-xs sm:text-sm text-blue-200/70 line-clamp-2 break-words">
+                    {item.message || "No message provided."}
+                  </span>
+                  <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 transition-colors hover:text-cyan-300">
+                    <Eye size={14} aria-hidden="true" />
+                    View full message
+                  </span>
+                </button>
 
                 {/* Subject / Phone */}
 
@@ -757,8 +772,17 @@ const ManageContact = () => {
                       {item.subject}
                     </td>
 
-                    <td className="px-4 py-4 text-blue-200/50 text-sm truncate">
-                      {item.message}
+                    <td className="px-4 py-4 text-sm">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedContact(item)}
+                        aria-label={`View full message from ${item.name}`}
+                        title="View full message"
+                        className="inline-flex max-w-full items-center gap-2 rounded text-left text-blue-200/70 transition-colors hover:text-cyan-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400"
+                      >
+                        <span className="truncate">{item.message || "No message provided."}</span>
+                        <span className="shrink-0 text-xs font-semibold text-blue-400">View</span>
+                      </button>
                     </td>
 
                     <td className="px-4 py-4 text-blue-200/40 text-sm whitespace-nowrap">
@@ -797,6 +821,67 @@ const ManageContact = () => {
         </div>
 
       </div>
+
+      {selectedContact && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/75 p-4 backdrop-blur-sm"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setSelectedContact(null);
+          }}
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="contact-message-title"
+            className="w-full max-w-2xl overflow-hidden rounded-2xl border border-blue-400/20 bg-[#101d32] shadow-2xl shadow-black/50"
+          >
+            <header className="flex items-start justify-between gap-4 border-b border-white/10 bg-white/[0.03] px-5 py-4 sm:px-6">
+              <div className="flex min-w-0 items-start gap-3">
+                <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-blue-400/20 bg-blue-500/10 text-blue-300">
+                  <Mail size={19} aria-hidden="true" />
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue-300">Contact message</p>
+                  <h2 id="contact-message-title" className="mt-1 break-words text-lg font-bold text-white sm:text-xl">
+                    {selectedContact.subject || "No subject"}
+                  </h2>
+                  <p className="mt-1 text-sm text-blue-100/60">
+                    From {selectedContact.name || "Unknown sender"} · {new Date(selectedContact.createdAt).toLocaleString()}
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedContact(null)}
+                aria-label="Close message"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/10 text-blue-100/60 transition hover:border-white/20 hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400"
+              >
+                <X size={18} aria-hidden="true" />
+              </button>
+            </header>
+
+            <div className="max-h-[70vh] overflow-y-auto p-5 sm:p-6">
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-xl border border-white/5 bg-slate-950/35 p-3">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-blue-200/40">Email</p>
+                  <p className="mt-1 break-all text-sm text-blue-100">{selectedContact.email || "Not provided"}</p>
+                </div>
+                <div className="rounded-xl border border-white/5 bg-slate-950/35 p-3">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-blue-200/40">Phone</p>
+                  <p className="mt-1 break-all text-sm text-blue-100">{selectedContact.phone || "Not provided"}</p>
+                </div>
+              </div>
+
+              <div className="mt-4 rounded-xl border border-blue-400/10 bg-slate-950/40 p-4 sm:p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-300">Message</p>
+                <p className="mt-3 whitespace-pre-wrap break-words text-sm leading-7 text-slate-100/90">
+                  {selectedContact.message || "No message provided."}
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      )}
 
     </div>
   );

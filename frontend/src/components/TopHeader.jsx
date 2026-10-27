@@ -23,7 +23,7 @@ const TopHeader = () => {
 
             {/* Phone */}
             <a
-              href="tel:+919235357547"
+              href="tel:+919196873594"
               className="
                 group flex shrink-0 items-center gap-2.5
                 text-[13px] sm:text-[14px]
@@ -49,7 +49,7 @@ const TopHeader = () => {
               </span>
 
               <span className="whitespace-nowrap md:inline hidden">
-                +91 9235327547
+                +91 9196873594
               </span>
             </a>
 
